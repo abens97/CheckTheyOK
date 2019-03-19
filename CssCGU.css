@@ -5,7 +5,7 @@
 }
 
 header{
-	background-image: radial-gradient( ellipse at center ,white , limegreen );;
+	background-image: radial-gradient( ellipse at center ,white , #0EB039 );
 	color: white;
 	border-radius: 0px 0px 46px 46px;
 	border-width :0px;
@@ -29,7 +29,7 @@ header button{
 
 body{
 	background-position: bottom;
-	background-image:url(Images/e.jpg);
+	background-image:url(Images/.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -60,16 +60,17 @@ header hr{
 }
 
 #contenu button {
+	margin-top: 30%;
+	margin-right: 10%;
 	width : 350px;
 	height : 160px;	
 }
 
 footer{
-	height : 51px;
 	position : absolute;
-	bottom : 0;
+	bottom : 0px;
 	width : 99%;
-	padding-top : 20px;
+
 }
 
 figure img{
@@ -81,9 +82,8 @@ figure img{
 #Reseaux{
 	display : flex;             /* mettre les éléments dans une boîte */
 	justify-content : center;   /* aligner à la verticale */
-	position : absolute;
 	left : 30px;
-	bottom : 15px;
+	
 	text-align : center;
 	position: -webkit-sticky;
 }
@@ -108,7 +108,8 @@ hr{
 }
 
 .zonetexte {
-	box-shadow: 3px 2px olive, -1em 0 .4em olivedrab;
+
+	box-shadow: 1px 1px olive, -1em 0 .9em #ddd;
 	border-radius: 45px;
 	position: absolute;
 	overflow:scroll;
@@ -124,4 +125,13 @@ hr{
 	border-width:5px;
 	border-style:double;
 	border-color:green;
+}
+
+img{
+margin-top: 7px;
+	margin-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15%;
+  padding: 5px;
+  width: 8%;
 }

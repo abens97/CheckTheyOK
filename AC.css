@@ -6,7 +6,7 @@
 
 body
 {
-	width:100%;
+	width: 100%;
 	height: 100%;
 	background-image: url("file:///Users/bens/Desktop/CheckTheyOK/Images/d.jpg") no-repeat center center;
 	background-size: cover;
@@ -25,14 +25,17 @@ body
 	height: 22px;
 }
 
-.img
+img
 {
+
 	padding-top: 0px;
 	width: 800px;
 	height: 534px;
     border: 1px solid black;
 }
 
-
+.logo{
+	margin-left: 15px;
+}
 
 	
