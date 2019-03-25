@@ -136,7 +136,12 @@ body {
     background-image: linear-gradient(rgba(38,175,38,0.795), white 90%); /*Fond en dégradé*/
 }
 
-/*fin de la partie commune*/
+body{
+	background-position: bottom;
+	background-position: center;
+	background-size: cover;
+}
+
 
 #contenu{
 	text-align : center;
@@ -150,12 +155,26 @@ body {
 }
 
 #contenu button {
+	margin-top: 30%;
+	margin-right: 10%;
 	width : 350px;
 	height : 160px;	
 }
 
-button:hover{
-	background-color: lightgreen;
-	border:1px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.zonetexte {
+
+	box-shadow: 1px 1px olive, -1em 0 .9em #ddd;
+	position: absolute;
+	overflow:scroll;
+	width:1200px;
+	height:650px;
+	background-color: white;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	margin-top : 25px;
+	margin-left: 260px;
+	border-width:5px;
+	border-style:double;
+	border-color:green;
 }
