@@ -28,53 +28,37 @@
                 <h3>Remplissez les champs suivants</h3>
                     <article>
                         <form method="post" action="inscription.php">
-                            <p id = "form_haut">
-                                <div>
-                                    Civilité :
+                            <div id = "formulaire">
+                                <div id="form_gauche">
+                                    <label for="civilite">Civilité :</label>
+                                    <input type="radio" name="civilite" value="M.">M.
+                                    <input type="radio" name="civilite" value="Mme">Mme<br>
+                                    <label for="prenom">Prénom :</label>
+                                    <input type="text" name="prenom" maxlength="15"><br>
+                                    <label for="nom">Nom :</label>
+                                    <input type="text" name="nom" maxlength="25"><br>
+                                    <label for="clé_id">Clé d'identification :</label>
+                                    <input type="text" name="clé_id" maxlength="25" ><br>
+                                </div>
+                                <div id="form_droite">
+                                    <label for="tel">Numéro de téléphone :</label>
+                                    <input type="tel" name="tel" maxlength="10"><br>
+                                    <label for="email">Adresse e-mail :</label>
+                                    <input type="email" name="email" maxlength="25"><br>
+                                    <label for="mdp">Mot de passe :</label>
+                                    <input type="password" name="mdp" maxlength="25"><br>
+                                    <label for="mdp2">Confirmation du mot de passe :</label>
+                                    <input type="password" name="mdp2" maxlength="25"><br>
+                                </div>
+                            </div> 
+                            <div id="form_bas">
                                     <label>
-                                        <input type="radio" name="civilite" value="M.">M.
-                                        <input type="radio" name="civilite" value="Mme">Mme
+                                        <input type="checkbox" name="accepterCGU" value="y">J'accepte les conditions générales d'utilisation
                                     </label><br>
                                     <label>
-                                        Prénom :
-                                        <input type="text" name="prenom" maxlength="15">
-                                    </label><br>
-                                    <label>
-                                        Nom :
-                                        <input type="text" name="nom" maxlength="25">
-                                    </label><br>
-                                    <label>
-                                        Clé d'identification :
-                                        <input type="text" name="clé_id" maxlength="25" >
+                                        <input type="button" name="check_inscription" value="Créer un compte">
                                     </label><br>
                                 </div>
-                                <div>
-                                    <label>
-                                        Numéro de téléphone :
-                                        <input type="tel" name="tel" maxlength="10">
-                                    </label><br>
-                                    <label>
-                                        Adresse e-mail :
-                                        <input type="email" name="email" maxlength="25">
-                                    </label><br>
-                                    <label>
-                                        Mot de passe :
-                                        <input type="password" name="mdp" maxlength="25">
-                                    </label><br>
-                                    <label>
-                                        Confirmation du mot de passe :
-                                        <input type="password" name="mdp2" maxlength="25">
-                                    </label><br>
-                                </div>
-                            </p>
-                            <div>
-                                <label>
-                                    <input type="checkbox" name="accepterCGU" value="y">J'accepte les conditions générales d'utilisation
-                                </label><br>
-                                <label>
-                                    <input type="button" name="check_inscription" value="Créer un compte">
-                                </label><br>
-                            </div>
                         </form>                        
                     </article>
             </section>

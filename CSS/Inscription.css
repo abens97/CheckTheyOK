@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+﻿@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 @media(min-width: 768px) 
 {
@@ -130,19 +130,57 @@ body {
 	margin-top: 100px;
 	height: 860px;
 	max-height: 860px;
-    border: 3px solid #000000;
+    /*border: 3px solid #000000;*/
     background-image: linear-gradient(rgba(38,175,38,0.795), white 90%);
 }
 
+body h2 {
+	text-align: center;
+}
+
+body h3 {
+	text-align: center;
+}
+
+body section {
+	margin-top: 150px;
+}
+
+#formulaire {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+
 #form_gauche{
-	border: 1px solid #000000;
-	float: left;
-	width: 350px;
+	margin-left: 350px;
+	
 }
 #form_droite{
-	border: 1px solid #000000;
-	float: right;
+	margin-left: 250px;
+}
+#form_bas{
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
 	width: 350px;
+	text-align: center;
+}
+
+body label {
+	display: block;
+	width: 300px;
+	float: left;
+	margin-top: 15px;
+	
+}
+
+body input {
+	margin-top: 15px;
+}
 }
 }
 
