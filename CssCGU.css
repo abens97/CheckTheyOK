@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+
+*{
+	font-family : "Gothic+A1",sans-serif;
+}
+
+header{
+	background-image: radial-gradient( ellipse at center ,white , #0EB039 );
+	color: white;
+	border-radius: 0px 0px 46px 46px;
+	border-width :0px;
+	border-bottom-width:1px;
+	border-style:groove;
+	height : 126px;
+}
+header img{
+	float : left;
+	height : 70%;
+	margin-right : 2%;
+}
+header button{
+	float : right;
+	height : 50px;
+	width : 160px;
+	top : 10px;
+	font-family : "Gothic+A1",sans-serif;
+	background-image:linear-gradient();
+}
+
+body{
+	background-position: bottom;
+	background-image:url(Images/.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+header h2,header h3{
+	margin : 2px;
+}
+
+header hr{
+	margin-top : 10px;
+}
+
+#slogan{
+	text-align : center;
+	float : left;
+	margin-top : 25px;
+}
+
+#contenu{
+	text-align : center;
+	margin : 0px 40%;
+	margin-bottom : 10px;
+	width : 350px;
+}
+
+#boutons{
+	width : 20%;
+}
+
+#contenu button {
+	margin-top: 30%;
+	margin-right: 10%;
+	width : 350px;
+	height : 160px;	
+}
+
+footer{
+	position : absolute;
+	bottom : 0px;
+	width : 99%;
+
+}
+
+figure img{
+	height : 40px;
+	width : 40px;
+	border-radius : 50%;
+}
+
+#Reseaux{
+	display : flex;             /* mettre les éléments dans une boîte */
+	justify-content : center;   /* aligner à la verticale */
+	left : 30px;
+	
+	text-align : center;
+	position: -webkit-sticky;
+}
+
+
+
+#global{
+	display : flex;
+	justify-content : center;
+	align-items : center;
+}
+
+footer p{
+	position : absolute;
+	right : 40px;
+
+	top : 1px;
+}
+
+hr{
+	margin-top : 65px;
+}
+
+.zonetexte {
+
+	box-shadow: 1px 1px olive, -1em 0 .9em #ddd;
+	border-radius: 45px;
+	position: absolute;
+	overflow:scroll;
+	width:1200px;
+	height:500px;
+	background-color: white;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	margin-top : 45px;
+	margin-right : 65px;
+	margin-left : 65px;
+	border-width:5px;
+	border-style:double;
+	border-color:green;
+}
+
+img{
+margin-top: 7px;
+	margin-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15%;
+  padding: 5px;
+  width: 8%;
+}
