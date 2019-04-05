@@ -14,10 +14,9 @@ CREATE TABLE Utilisateur (
     numero_logement SMALLINT UNSIGNED,
     photo_profil BLOB,
     PRIMARY KEY (email)
-)
+);
 
-INSERT INTO Utilisateur
-VALUES ('domisep@checktheyok.fr', 4, NULL, NULL, 'Domisep', NULL, 'motdepassedomisep', NULL, NULL, NULL);
+INSERT INTO Utilisateur VALUES ('domisep@checktheyok.fr', 4, NULL, NULL, 'Domisep', NULL, 'motdepassedomisep', NULL, NULL, NULL);
 
 
 CREATE TABLE Logement (
@@ -29,20 +28,20 @@ CREATE TABLE Logement (
     presence_escalier BINARY(1),
     etat_personne_agee BINARY(1),
     PRIMARY KEY (numero_logement)
-)
+);
 
 CREATE TABLE Gestionnaire (
     id_gestionnaire  SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     debut_plage_logement SMALLINT UNSIGNED,
     fin_plage_logement SMALLINT UNSIGNED,
     PRIMARY KEY (id_gestionnaire)
-)
+);
 CREATE TABLE Activite (
     id_connexion  SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     email_utilisateur varchar(40) NOT NULL,
     date_connexion date,
     PRIMARY KEY (id_connexion)
-)
+);
 CREATE TABLE Consommation (
     id_consommation  mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
     numero_logement smallint unsigned NOT NULL,
@@ -50,7 +49,7 @@ CREATE TABLE Consommation (
     date_fin datetime,
     consommation_totale int unsigned,
     PRIMARY KEY (id_consommation)
-)
+);
 CREATE TABLE Piece (
     id_piece  mediumint unsigned NOT NULL AUTO_INCREMENT,
     numero_logement smallint unsigned NOT NULL,
@@ -59,7 +58,7 @@ CREATE TABLE Piece (
     nombre_actionneur tinyint unsigned,
     nombre_capteur tinyint unsigned,
     PRIMARY KEY (id_piece)
-)
+);
 CREATE TABLE Actionneur (
     id_actionneur  mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
     id_piece mediumint unsigned NOT NULL,
@@ -68,14 +67,14 @@ CREATE TABLE Actionneur (
     automatique char(1),
     seuil mediumint,
     PRIMARY KEY (id_actionneur)
-)
+);
 CREATE TABLE Capteur (
     id_capteur  mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
     id_piece mediumint unsigned NOT NULL,
     type_capteur char(1),
     valeur mediumint,
     PRIMARY KEY (id_capteur)
-)
+);
 CREATE TABLE Incident (
     id_incident  smallint UNSIGNED NOT NULL AUTO_INCREMENT,
     numero_logement smallint unsigned,
@@ -83,6 +82,6 @@ CREATE TABLE Incident (
     id_piece mediumint unsigned,
     type_incident varchar(40),
     type_capteur char(1),
-    type_capteur char(1),
+    type_actionneur char(1),
     PRIMARY KEY (id_incident)
-)
+);
