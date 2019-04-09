@@ -2,19 +2,12 @@
 
 <?php include "Header&Navigation&Footer.php";?>
 
+<style type="text/css">
+
+</style>
+
 <html>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Domisep</title>
+<!--Mettre ici le contenu de nos pages-->
 
-</head>
-
-	<body>
-
-
-
-						<!--Mettre ici le contenu de nos pages-->
-
-	</body>
 </html>

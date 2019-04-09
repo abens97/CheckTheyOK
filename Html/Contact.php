@@ -82,11 +82,11 @@
 		<i>Sommaire </i>
 		<br />
 
-			<button><a href="Resident.html">Espace résident</a></button><br />
+			<button><a href="Resident.php">Espace résident</a></button><br />
 		    <button><a href="#2">Ici</a></button><br />
 		    <button><a href="#3">La bas</a></button><br />
 		    <button><a href="#4">Autre page</a></button><br />
-		    <button><a href="Accueil.html">Retour</a></button>
+		    <button><a href="Accueil.php">Retour</a></button>
 		
 	</div>
 	<div id="Nouscontacter">
@@ -130,20 +130,20 @@
         	<HR align=center>
         	<div id = "Footer3">
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
-	            <a href = "FAQ.html"><u> FAQ </u></a> -
-	            <a href = "Email.html"><u>Nous contacter</u></a> -
-	            <a href = "CGU.html"><u> Conditions générales d'utilisations </u></a> -
+	            <a href = "FAQ.php"><u> FAQ </u></a> -
+	            <a href = "Contact.php"><u>Nous contacter</u></a> -
+	            <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 
-	                        <a href = "NOMPAGE.html"><img src = "../Images/twitter.png" width=70"></a> <br />
+	                        <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />
 	                        Twitter
 	                </div>
 	                <div>
-	                        <a href = "NOMPAGE.html"><img src = "../Images/instagram.png" width="70"> </a> <br />
+	                        <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"> </a> <br />
 	                        Instagram
 	                </div>
 	                <div>
-	                        <a href = "NOMPAGE.html"><img src = "../Images/facebook.png" width="70"></a> <br />
+	                        <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="70"></a> <br />
 	                        Facebook
 	                </div>
                 	<br />
