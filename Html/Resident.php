@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+		<?php include "header&footer.php";?>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Domisep</title>
