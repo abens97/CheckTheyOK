@@ -1,90 +1,32 @@
 <!DOCTYPE html>
-<html>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Domisep</title>
+<?php include "Header&Navigation&Footer.php";?>
 
-    <style type="text/css">
-    * {-moz-box-sizing: border-box; box-sizing: border-box;}
-        body {background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed; }
-        header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group; left:0; top:0;}
-        #Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;}
-        #Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
-        #Head1 img{border-radius: 35%;}
-        #Head2{ width:40%;margin: 0 auto;color: black;}
-        #Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
-        #Head3 {margin-right:1.3%;margin-top:1.5%;float:right;color: black;}
-        #Head3 img {border-radius: 35%;}
-        #Head3 button:hover{opacity: 0.5;padding: 2;border-radius: 15%;}
-        #Navigation{background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-left: -0.5%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;text-align: center;}
-        #Navigation button{display: table-cell;margin-left: auto;margin-right: auto; padding :0;width: 100%;transition: 0.3s;}
-        #Navigation button:hover{opacity: 0.4; transition:0.3s;padding: 10%; outline-width:  }
-        #Navigation a {color: grey;text-decoration: none;text-align: center;display: block;line-height: 50px; text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);font-size: 1.9em;}
-        #Navigation a:hover{color:green;}
-        footer {text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
-        #Footer2 {margin:0 auto;height: 100%;}
-        #Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
-        #Footer3 {display : flex; align-items:center;}
-        #Footer3 p {margin-left: 1%;float: left; padding-right: 20%;}
-        #Footer3 a {padding-right:1%;padding-left:1%;}
-        #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
-        #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
+<style type="text/css">
 
-		#zonetexte {
-		box-shadow: 1px 1px olive, -0.6em 0 .9em #ddd;
-		position: absolute;
-		overflow:scroll;
-		width:70%;
-		height:50%;
-		background-color: white;
-		padding-left: 40px;
-		padding-right: 40px;
-		padding-top: 20px;
-		margin-top : 5%;
-		margin-left: 20%;
-		border-width:5px;
-		border-style:double;
-		border-color:green;
-		color:black;
-		border-radius : 3%;
-		opacity: 0.9;
-		}
+        #zonetexte {
+        box-shadow: 1px 1px olive, -0.6em 0 .9em #ddd;
+        position: absolute;
+        overflow:scroll;
+        width:70%;
+        height:50%;
+        background-color: white;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        margin-top : 5%;
+        margin-left: 20%;
+        border-width:5px;
+        border-style:double;
+        border-color:green;
+        color:black;
+        border-radius : 3%;
+        opacity: 0.9;
+        }
         #article {font-weight: bold;text-decoration: underline;}
-
-	</style>
-</head>
-
-<body>
-
-	<header>
-		<div id ="Head1">
-			<img src = "../Images/logobase.png" alt="Logo" width="70"> 
-            <p>Check They're Ok !<p>     
-        </div>
-        <div id="Head3">
-			<img src="../Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
-			<button><i>Mon compte</i></button>
-		</div>
-        <div id="Head2"> <br />
-			<p>Conditions générales d'utilisation</p>		
-		</div>
-	</header> <br />
-
-	<div id="Navigation">
-		
-		<i>Sommaire </i>
-		<br />
-
-			<button><a href="Resident.html">Espace résident</a></button><br />
-		    <button><a href="#2">Ici</a></button><br />
-		    <button><a href="#3">La bas</a></button><br />
-		    <button><a href="#4">Autre page</a></button><br />
-		    <button><a href="Accueil.html">Retour</a></button>
-		
-	</div>
-
-<div id=zonetexte>    
+</style>
+<html>
+    <div id=zonetexte>    
 
     			<div id="article">ARTICLE 1 : Objet</div>
     				<p>Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement juridique de l’utilisation du site [votre site] et de ses services.</p>
@@ -164,37 +106,4 @@
                     <p>En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux de [nom de ville] sont compétents pour régler le contentieux.</p>
     </div>
 
-	<footer>
-			<br />
-            <div id="Footer2">
-            <img src = "../Images/Isep.png" alt="Isep" width="90"> 
-            <img src = "../Images/LogoDomisep.png" alt="Domisep" width="100" > 
-
-            <i>Équipe de techniciens : DA COSTA Sarah - MILLOT Pauline - GORGE BERNAT Arthur - POLO Romain - BELAMICH Leny - BENSOUDA Amine<i>
-        	</div>
-        	<br />
-        	<HR align=center>
-        	<div id = "Footer3">
-        		<p><i>CheckThey'OK© 2018-2019</i></p>	-
-	            <a href = "FAQ.html"><u> FAQ </u></a> -
-	            <a href = "NousContacter.html"><u>Nous contacter</u></a> -
-	            <a href = "CGU.html"><u> Conditions générales d'utilisations </u></a> -
-	            <div id = "FooterReseaux">
-	                <div> 
-	                        <a href = "NOMPAGE.html"><img src = "../Images/twitter.png" width=70"></a> <br />
-	                        Twitter
-	                </div>
-	                <div>
-	                        <a href = "NOMPAGE.html"><img src = "../Images/instagram.png" width="70"> </a> <br />
-	                        Instagram
-	                </div>
-	                <div>
-	                        <a href = "NOMPAGE.html"><img src = "../Images/facebook.png" width="70"></a> <br />
-	                        Facebook
-	                </div>
-                	<br />
-            	</div>
-        	</div>
-    </footer>
-</body>
 </html>

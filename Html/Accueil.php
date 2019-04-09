@@ -14,14 +14,11 @@
 		#Head1 img{border-radius: 35%;}
 		#Head2{ width:40%;margin: 0 auto;color: black;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
-		#Head3 {margin-right:1.3%;float:right;color: black;margin-top:4%;}
+		#Head3 {margin-right:1.3%;float:right;color: black;margin-top:4%;font-size: 0.9em;}
+		#Head3 button {font-size: 1.1em;}
 		#Head3 img {border-radius: 35%;}
-		#Head3 button:hover{opacity: 0.5;padding: 2;border-radius: 15%;}
-		#Navigation{background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-left: -0.5%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;text-align: center;}
-		#Navigation button{display: table-cell;margin-left: auto;margin-right: auto; padding :0;width: 100%;transition: 0.3s;}
-		#Navigation button:hover{opacity: 0.4; transition:2s;padding: 10%; }
-		#Navigation a {color: grey;text-decoration: none;text-align: center;display: block;line-height: 50px; text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);font-size: 1.9em;}
-		#Navigation a:hover{color:green;}
+		#Head3 a{margin-right: 13%;margin-left: 14%;}
+		#Head3 input{color:black;font-size: 0.8em;background ;}
 		footer {text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
 		#Footer2 {margin:0 auto;height: 100%;}
 		#Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
@@ -43,27 +40,29 @@
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-					<form method="post" action="Resident.php">
-							<label for="id">ID</label>
-							<input type="text" <id="nom" name="nom">
-							<label for="mdp">MDP</label>
-							<input type="text" <id="e-mail" name="e-mail">
-							<input type="submit" value="Se connecter">
-							<a href = "Inscription.html"><button>  S'inscrire  </button></a>	
-					</form>
-        
+			<form method="post" action="Resident.php">
+				<label for="identifiant">Identifiant :</label>
+				<input type="text" <id="Identifiant" name="Identifiant">
+				<label for="mdp">Mot de passe :</label>					
+				<input type="text" <id="mdp" name="mdp">
+				<b>|</b>
+				<input type="submit" value="Se connecter">
+			</form>				
+			</br>
+			<a href = "Inscription.php">  S'inscrire  ?</a>	
+			<a href = "mdp.php">  Mot de passe oublié ?</a>
 		</div>
         <div id="Head2"> <br />
 			<p>Accueil</p>		
 		</div>
 	</header> <br />
 
-	<div id="Diapo">
-		
-		
-		
-	</div>
-
+	<div id="Diapo">		
+	</div>	
+	<h3>
+ 		<p>Nos offres : <br /> Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est sans doute la solution que <em>Vous</em> attendiez
+ 		</p>
+	</h3>
 
 	<footer>
 			<br />
@@ -77,20 +76,20 @@
         	<HR align=center>
         	<div id = "Footer3">
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
-	            <a href = "FAQ.html"><u> FAQ </u></a> -
-	            <a href = "Email.html"><u>Nous contacter</u></a> -
-	            <a href = "CGU.html"><u> Conditions générales d'utilisations </u></a> -
+	            <a href = "FAQ.php"><u> FAQ </u></a> -
+	            <a href = "Contact.php"><u>Nous contacter</u></a> -
+	            <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 
-	                        <a href = "NOMPAGE.html"><img src = "../Images/twitter.png" width=70"></a> <br />
+	                        <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />
 	                        Twitter
 	                </div>
 	                <div>
-	                        <a href = "NOMPAGE.html"><img src = "../Images/instagram.png" width="70"> </a> <br />
+	                        <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"> </a> <br />
 	                        Instagram
 	                </div>
 	                <div>
-	                        <a href = "NOMPAGE.html"><img src = "../Images/facebook.png" width="70"></a> <br />
+	                        <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="70"></a> <br />
 	                        Facebook
 	                </div>
                 	<br />
