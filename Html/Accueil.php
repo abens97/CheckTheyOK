@@ -43,10 +43,10 @@
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-					<form method="post" action="messagerie.php">
-							<label for="nom">ID</label>
+					<form method="post" action="Resident.php">
+							<label for="id">ID</label>
 							<input type="text" <id="nom" name="nom">
-							<label for="e-mail">MDP</label>
+							<label for="mdp">MDP</label>
 							<input type="text" <id="e-mail" name="e-mail">
 							<input type="submit" value="Se connecter">
 							<a href = "Inscription.html"><button>  S'inscrire  </button></a>	
