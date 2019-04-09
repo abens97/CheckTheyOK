@@ -26,7 +26,6 @@
         #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
         #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
 
-        .contenu {text-align: center; margin:0 auto;}
 
     </style>
 </head>
@@ -48,7 +47,7 @@
                     </form>
         </div>
         <div id="Head2"> <br />
-            <p>Récupérer son mot de passe</p>      
+            <p>Titre de la page</p>      
         </div>
     </header>
 
@@ -64,9 +63,9 @@
             <HR align=center>
             <div id = "Footer3">
                 <p><i>CheckThey'OK© 2018-2019</i></p>   -
-                <a href = "FAQ.html"><u> FAQ </u></a> -
-                <a href = "Email.html"><u>Nous contacter</u></a> -
-                <a href = "CGU.html"><u> Conditions générales d'utilisations </u></a> -
+                <a href = "FAQHC.php"><u> FAQ </u></a> -
+                <a href = "ContactHC.php"><u>Nous contacter</u></a> -
+                <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
                             <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />

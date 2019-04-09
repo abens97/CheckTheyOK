@@ -45,7 +45,7 @@
 			<button><i>Mon compte</i></button>
         </div>
         <div id="Head2"> <br />
-			<p>Page Type</p>		
+			<p>Titre de la page</p>		
 		</div>
         
 
