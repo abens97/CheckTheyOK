@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php include "Header&Navigation&Footer.php";?>
+<?php include "Header&FooterHorsConnexion.php";?>
 
 <style type="text/css">
 
