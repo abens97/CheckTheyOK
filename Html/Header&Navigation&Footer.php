@@ -45,7 +45,19 @@
 			<button><i>Mon compte</i></button>
         </div>
         <div id="Head2"> <br />
-			<p>Titre de la page</p>		
+			<?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
+			<p> Conditions Générales d'Utilisations </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Resident.php'):?>
+			<p> Résident </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='PageType.php'):?>
+			<p> PageType </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Contact.php'):?>
+			<p> Contact </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Profil.php'):?>
+			<p> Mon Profil </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='FAQ.php'):?>
+			<p> FAQ </p>
+			<?php endif ?>
 		</div>
         
 

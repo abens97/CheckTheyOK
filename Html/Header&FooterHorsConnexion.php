@@ -49,7 +49,21 @@
 			<a href = "mdp.php">  Mot de passe oublié ?</a>
 		</div>
         <div id="Head2"> <br />
-			<p>Titre de la page</p>		
+            <?php if (basename($_SERVER['PHP_SELF'])=='CGUHC.php'):?>
+			<p> Conditions Générales d'Utilisations </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Accueil.php'):?>
+			<p> Accueil </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='ContactHC.php'):?>
+			<p> Contact </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='FAQHC.php'):?>
+			<p> FAQ </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='mdp.php'):?>
+			<p> Mot de passe oublié ? </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='mdpenvoye.php'):?>
+			<p> Mot de passe envoyé </p>
+            <?php elseif (basename($_SERVER['PHP_SELF'])=='Inscription.php'):?>
+			<p> Inscription </p>
+			<?php endif ?>	
 		</div>
 	</header> <br />
 
@@ -64,9 +78,9 @@
             <HR align=center>
             <div id = "Footer3">
                 <p><i>CheckThey'OK© 2018-2019</i></p>   -
-                <a href = "FAQ.php"><u> FAQ </u></a> -
-                <a href = "Contact.php"><u>Nous contacter</u></a> -
-                <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a> -
+                <a href = "FAQHC.php"><u> FAQ </u></a> -
+                <a href = "ContactHC.php"><u>Nous contacter</u></a> -
+                <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
                             <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=40"></a> <br />
