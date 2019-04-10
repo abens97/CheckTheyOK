@@ -6,7 +6,7 @@
     <title>Domisep</title>
 
     <style type="text/css">
-        .contenu {text-align: center; margin:0 auto;}
+        .contenu { margin:0 auto;}
     </style>
 </head>
 

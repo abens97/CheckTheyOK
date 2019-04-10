@@ -32,7 +32,7 @@
 
 <header>
 		<div id ="Head1">
-			<img src = "../Images/logobase.png" alt="Logo" width="70"> 
+			<a href="Accueil.php"><img src = "../Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
