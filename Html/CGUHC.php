@@ -14,8 +14,8 @@
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 20px;
-        margin-top : 5%;
-        margin-left: 20%;
+        margin-top : 4%;
+        margin-left: 11%;
         border-width:5px;
         border-style:double;
         border-color:green;

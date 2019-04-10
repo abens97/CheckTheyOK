@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Domisep</title>
     <style type="text/css">
- 		body {background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed; }
-		header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group; left:0; top:0;}
+ 		body {margin:0 auto;background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed; }
+		header { margin:0 auto;text-align: center;background-color: white; opacity: 0.7; display :table-header-group; left:0; top:0;}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
 		#Head1 img{border-radius: 35%;}
@@ -16,7 +16,7 @@
 		#Head3 button {font-size: 1.1em;}
 		#Head3 img {border-radius: 35%;}
 		#Head3 a{margin-right: 13%;margin-left: 14%;}
-        footer {text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
+        footer {margin:0 auto;text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
         #Footer2 {margin:0 auto;height: 100%;}
         #Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
         #Footer3 {display : flex; align-items:center;}
@@ -36,7 +36,7 @@
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-			<form method="post" action="Resident.php">
+			<form method="post" action="Statistiques.php">
 				<label for="identifiant">Identifiant :</label>
 				<input type="text" <id="Identifiant" name="Identifiant">
 				<label for="mdp">Mot de passe :</label>					
@@ -64,9 +64,9 @@
             <HR align=center>
             <div id = "Footer3">
                 <p><i>CheckThey'OK© 2018-2019</i></p>   -
-                <a href = "FAQ.php"><u> FAQ </u></a> -
-                <a href = "Contact.php"><u>Nous contacter</u></a> -
-                <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a> -
+                <a href = "FAQHC.php"><u> FAQ </u></a> -
+                <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
+                <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
                             <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=40"></a> <br />
