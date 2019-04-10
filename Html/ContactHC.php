@@ -5,14 +5,14 @@
 <style type="text/css">
 
 		#Nouscontacter{margin-left : 40%;}
-		label {
+		#Nouscontacter label {
   			/* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
   			display: inline-block;
   			width: 125px;
   			text-align: center;
   			margin-top:10px;
 		}
-		textarea {
+		#Nouscontacter textarea {
 		  /* Pour aligner correctement les champs multilignes et leurs étiquettes */
 		  vertical-align: top;
 		  margin-top:10px;
@@ -26,7 +26,7 @@
 		  background-color: white;
 		}
 
-		input{
+		#Nouscontacter input{
   		background-color: white;	
   		width: 200px;
   		margin-top:10px;

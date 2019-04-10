@@ -7,7 +7,7 @@
 	<style type="text/css">
 	* {-moz-box-sizing: border-box; box-sizing: border-box;}
 		body {background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed; }
-		header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group; left:0; top:0;}
+		header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group; margin-left:-0.5%;}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
 		#Head1 img{border-radius: 35%;}
@@ -85,7 +85,7 @@
 	                        Twitter
 	                </div>
 	                <div>
-	                        <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"> </a> <br />
+	                        <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"></a> <br />
 	                        Instagram
 	                </div>
 	                <div>

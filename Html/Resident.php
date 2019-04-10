@@ -15,8 +15,8 @@
 		<div id = "section">
 			<div id = "carre1"><h3>Lumière</h3></div>
 			<div id = "carre2"><h3>Température</h3></div>
-			<div id = "carre3"><h3>Passage</h3></div>
-			<div id = "carre4"><h3>Cris</h3></div>
+			<div id = "carre3"><h3>Volets</h3></div>
+			<div id = "carre4"><h3>Ventilateur</h3></div>
 		</div>
 
 </html> 

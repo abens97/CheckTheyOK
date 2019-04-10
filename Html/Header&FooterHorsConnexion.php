@@ -16,17 +16,15 @@
 		#Head3 button {font-size: 1.1em;}
 		#Head3 img {border-radius: 35%;}
 		#Head3 a{margin-right: 13%;margin-left: 14%;}
-		#Head3 input{color:black;font-size: 0.8em;background ;}
-		footer {text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
-		#Footer2 {margin:0 auto;height: 100%;}
-		#Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
-		#Footer3 {display : flex; align-items:center;}
-		#Footer3 p {margin-left: 1%;float: left; padding-right: 20%;}
-		#Footer3 a {padding-right:1%;padding-left:1%;}
-		#FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
-		#FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
+        footer {text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
+        #Footer2 {margin:0 auto;height: 100%;}
+        #Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
+        #Footer3 {display : flex; align-items:center;}
+        #Footer3 p {margin-left: 1%;float: left; padding-right: 20%;}
+        #Footer3 a {padding-right:1%;padding-left:1%;}
+        #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
+        #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
 
-		#Diapo {margin:0 auto;background-image: url(../Images/s.jpg);}
     </style>
 </head>
 
@@ -60,27 +58,26 @@
             <div id="Footer2">
             <img src = "../Images/Isep.png" alt="Isep" width="90"> 
             <img src = "../Images/LogoDomisep.png" alt="Domisep" width="100" > 
-
             <i>Équipe de techniciens : DA COSTA Sarah - MILLOT Pauline - GORGE BERNAT Arthur - POLO Romain - BELAMICH Leny - BENSOUDA Amine<i>
             </div>
             <br />
             <HR align=center>
             <div id = "Footer3">
                 <p><i>CheckThey'OK© 2018-2019</i></p>   -
-                <a href = "FAQHC.php"><u> FAQ </u></a> -
-                <a href = "ContactHC.php"><u>Nous contacter</u></a> -
-                <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a> -
+                <a href = "FAQ.php"><u> FAQ </u></a> -
+                <a href = "Contact.php"><u>Nous contacter</u></a> -
+                <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
-                            <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />
+                            <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=40"></a> <br />
                             Twitter
                     </div>
                     <div>
-                            <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"> </a> <br />
+                            <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="40"></a> <br />
                             Instagram
                     </div>
                     <div>
-                            <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="70"></a> <br />
+                            <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="40"></a> <br />
                             Facebook
                     </div>
                     <br />
