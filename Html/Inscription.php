@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-
 <html>
-    
-    <head>
-        <meta charset="utf-8">
-        <link rel = "stylesheet" href = "../CSS/Inscription.css"/>
-        <title>Domisep - Inscription</title>
-    </head>
+<?php include "Header&FooterHorsConnexion.php";?>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Domisep</title>
+
+    <style type="text/css">
+        .contenu {text-align: center; margin:0 auto;}
+    </style>
+</head>
+
+<body>
 
     <header>
-        <img src = "../Images/logobase.png">
-        <div id = "slogan">
-            <h2> Check They're Ok ! </h2>
-            <h3> <i> Domisep </i> </h3>
-        </div>
-        <a href = "javascript:history.go(-1)">
-            <button> <font size="+2"> Retour </font> </button>
-        </a>
-    </header>
-       
-    
 
-    <body> 
-        <div class="contenu_principal">
+    </header> <br />
+
+        <div class="contenu">
             <section>
                 <h2>Création compte référent</h3>
                 <h3>Remplissez les champs suivants</h3>
@@ -63,44 +57,6 @@
                     </article>
             </section>
         </div>
-    </body>
-    
-    
-    
-    <footer>
-        <div id = "global">
-            <div id = "Reseaux">
-                <div id = "Facebook"> 
-                    <figure>
-                        <a href = "NOMPAGE.html">
-                            <img src = "../Images/twitter.png">
-                        </a>
-                        <figcaption>Twitter</figcaption>
-                    </figure>
-                </div>
-                
-                <div id = "Instagram">
-                    <figure>
-                        <a href = "NOMPAGE.html">
-                            <img src = "../Images/instagram.png">
-                        </a>
-                        <figcaption>Instagram</figcaption>
-                    </figure>
-                </div>
-                
-                <div id ="Facebook">
-                    <figure>
-                        <a href = "NOMPAGE.html">
-                            <img src = "../Images/facebook.png">
-                        </a>
-                        <figcaption>Facebook</figcaption>
-                    </figure>
-                </div>
-            </div>
-            <a href = "CGU.html">
-                <p> <u> Conditions générales d'utilisations </u> </p>
-            </a>
-        </div>
-    </footer>
 
+</body>
 </html>
