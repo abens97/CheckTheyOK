@@ -5,13 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
 	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Asap');
 	* {-moz-box-sizing: border-box; box-sizing: border-box;}
 		body {margin:0 auto;background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed; }
 		header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group;}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
 		#Head1 img{border-radius: 35%;}
-        #Head2{ width:40%;margin: 0 auto;color: black;}
+        #Head2{ width:40%;margin: 0 auto;color: black;text-align: center;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
 		#Head3 {text-decoration: none;margin-right:1.3%;margin-top:1.5%;float:right;color: black;}
 		#Head3 img {border-radius: 35%;}
@@ -53,8 +54,12 @@
         <div id="Head2"> <br />
 			<?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
 			<p> Conditions Générales d'Utilisations </p>
-			<?php elseif (basename($_SERVER['PHP_SELF'])=='Resident.php'):?>
-			<p> Résident </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Programmer.php'):?>
+			<p> Programmer sa maison </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Logements.php'):?>
+			<p> Configurer ses logements</p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Statistiques.php'):?>
+			<p> Bienvenue sur l'espace résident, [prénom]</p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='PageType.php'):?>
 			<p> PageType </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Contact.php'):?>
