@@ -47,7 +47,7 @@
                             </div>
                             <div id="form_bas">
                                  <label>
-                                     <input type="checkbox" name="accepterCGU" value="y">J'accepte les conditions générales d'utilisation
+                                     <input type="checkbox" name="accepterCGU" value="y">J'accepte les <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a>
                                  </label><br>
                                  <label>
                                      <input id= "button_valider" type="button" name="check_inscription" value="Créer un compte">
