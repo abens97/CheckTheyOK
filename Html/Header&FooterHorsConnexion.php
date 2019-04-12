@@ -37,15 +37,15 @@
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-			<form method="post" action="Statistiques.php">
+			<form method="post" action="../controleurs/ct_connexion.php">
 				<label for="identifiant">Identifiant :</label>
-				<input type="text" <id="Identifiant" name="Identifiant">
+				<input type="text" id="Identifiant" name="Identifiant">
 				<label for="mdp">Mot de passe :</label>					
-				<input type="text" <id="mdp" name="mdp">
+				<input type="text" id="mdp" name="mdp">
 				<b>|</b>
 				<input type="submit" value="Se connecter">
 			</form>				
-			</br>
+			<br>
 			<a href = "Inscription.php">  <i>S'inscrire  ?</i></a>	
 			<a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
 		</div>
