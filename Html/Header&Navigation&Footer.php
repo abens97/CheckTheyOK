@@ -76,7 +76,7 @@
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='ventilateur.php'):?>
 			<p> Configurer le ventilateur </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='volets.php'):?>
-			<p> Configurer sa lles volets </p>
+			<p> Configurer les volets </p>
 			<?php endif ?>
 		</div>
         
