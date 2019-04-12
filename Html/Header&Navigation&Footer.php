@@ -7,20 +7,21 @@
 	<style type="text/css">
 	@import url('https://fonts.googleapis.com/css?family=Asap');
 	* {-moz-box-sizing: border-box; box-sizing: border-box;}
-		body {margin:0 auto;background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed; }
+		body {margin:0 auto;background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed;overflow-x: hidden;overflow-y: hidden }
 		header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group;}
-		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;}
+		@keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
+		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
 		#Head1 img{border-radius: 35%;}
-        #Head2{ width:40%;margin: 0 auto;color: black;text-align: center;}
+        #Head2{ width:40%;margin: 0 auto;color: black;text-align: center;transform:translateY(-100rem);animation: slideIn 0.5s forwards;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
-		#Head3 {text-decoration: none;margin-right:1.3%;margin-top:1.5%;float:right;color: black;}
+		#Head3 {text-decoration: none;margin-right:1.3%;margin-top:1.5%;float:right;color: black;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
 		#Head3 img {border-radius: 35%;}
 		#Head3 button:hover{opacity: 0.6;padding: 2;border-radius: 15%;}
 		#Head3 a {text-decoration: none;}
-		#Navigation{transition:1s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;}
+		#Navigation{transition:1s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
 		#Navigation button{display: table-cell;margin-left: auto;margin-right: auto; padding :0;width: 100%;transition: 0.3s;}
-		#Navigation button:hover{text-align: center;opacity: 0.9; transition:1s;padding: 10%;}
+		#Navigation button:hover{text-align: center;opacity: 0.6; transition:1s;padding: 10%;background-color: lightgrey;}
 		#Navigation a {color: grey;text-decoration: none;text-align: center;display: block;line-height: 50px; text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);font-size: 1.9em;}
 		#Navigation a:hover{color:green;}
 		#Navigation:hover {width:12%;transition:1s;}
@@ -68,6 +69,14 @@
 			<p> Mon Profil </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='FAQ.php'):?>
 			<p> FAQ </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='lumiere.php'):?>
+			<p> Configurer l'éclairage </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='temperature.php'):?>
+			<p> Configurer la chauffage </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='ventilateur.php'):?>
+			<p> Configurer le ventilateur </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='volets.php'):?>
+			<p> Configurer sa lles volets </p>
 			<?php endif ?>
 		</div>
         

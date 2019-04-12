@@ -6,14 +6,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Domisep</title>
 	<style type="text/css">
-	h3 {font-family: 'Asap', sans-serif;text-align: center;}
+	h3 {text-shadow: 2px 14px 6px rgba(30, 64, 0, 0.5);font-family: 'Asap', fantasy, sans-serif;text-align: center;}
 	.slider{
     margin: 20px 25%;
 	overflow: hidden;
     height: 350px;
     width: 50%;
     border: 4px solid white;
-    border-radius: 4px;
+    border-radius: 4px;  
+
+    box-shadow: -2px 30px 40px rgba(30, 64, 0, 0.5);
 }
 
 .slider figure div{
@@ -32,10 +34,14 @@
 	width: 500%;
 	margin: 0;
 	left: 0;
-	animation: 18s slide infinite;}
+	animation: slide 18s linear infinite;}
 
 @keyframes slide{0%{left: 0%}10%{left: 0%;}16%{left: -100%;}22%{left: -100%;}28%{left: -200%;}34%{left: -200%;}40%{left: -300%;}46%{left: -300%;}52%{left: -400%;}58%{left: -400%;}64%{left: -300%;}70%{left: -300%;}76%{left: -200%;}82%{left: -200%;}88%{left: -100%;}94%{left: -100%;}100%{left: 0%;}}
+
+
 	</style>
+
+
 </head>
 
 <body>
@@ -63,9 +69,9 @@
 				</div>
 			</figure>
 		</div>
-	</br>
+	</br></br>
 	<h3>
- 		Nos offres : <br /> Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est sans doute la solution que <em>Vous</em> attendiez
+ 		 Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est sans doute la solution que <em>Vous</em> attendiez
 	</h3>
 
 </body>

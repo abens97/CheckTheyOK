@@ -6,7 +6,7 @@
     <title>Domisep</title>
 
     <style type="text/css">
-        .contenu { margin:0 auto;}
+        .contenu { margin-right: 40%;}
     </style>
 </head>
 
@@ -17,10 +17,10 @@
     </header> <br />
 
         <div class="contenu">
-            <section>
+           
                 <h2>Création compte référent</h3>
                 <h3>Remplissez les champs suivants</h3>
-                    <article>
+                   
                         <form method="post" action="inscription.php">
                             <div id = "formulaire">
                                 <div id="form_gauche">
@@ -54,8 +54,8 @@
                                  </label><br>
                             </div>
                         </form>                        
-                    </article>
-            </section>
+                    
+    
         </div>
 
 </body>
