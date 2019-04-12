@@ -71,7 +71,7 @@
     <footer>
             <br />
             <div id="Footer2">
-            <img src = "../Images/Isep.png" alt="Isep" width="90"> 
+            <a href = "https://www.isep.fr" target="_blank"><img src = "../Images/Isep.png" alt="Isep" width="90"></a> 
             <img src = "../Images/LogoDomisep.png" alt="Domisep" width="100" > 
             <i>Équipe de techniciens : DA COSTA Sarah - MILLOT Pauline - GORGE BERNAT Arthur - POLO Romain - BELAMICH Leny - BENSOUDA Amine<i>
             </div>
