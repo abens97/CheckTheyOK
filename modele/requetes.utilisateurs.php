@@ -1,10 +1,15 @@
 <?php
 
 function estInscrit(PDO $bdd, String $Email, String $MotdePasse) : bool {
-    $req = $bdd->prepare("SELECT * FROM utilisateurs WHERE Email = ? AND MotdePasse = ?");
+    $req = $bdd->prepare("SELECT * FROM utilisateur WHERE email = ? AND mot_de_passe = ?");
     $req->execute(array($Email,$MotdePasse));
     $n=$req->rowCount();
     return ($n==1);
+}
+
+function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephone, String $email, String $mot_de_passe) {
+    $req = $bdd->prepare("INSERT INTO utilisateur(nom,prenom,numero_telephone,email,mot_de_passe)VALUES(?,?,?,?,?)");
+    $req->execute(array($nom,$prenom,$numero_telephone,$email,$mot_de_passe));
 }
 
 ?> 

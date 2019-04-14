@@ -25,6 +25,7 @@
         #Footer3 a {padding-right:1%;padding-left:1%;}
         #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
         #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
+        #erreur {color:red;}
 
     </style>
 </head>
@@ -41,13 +42,21 @@
 				<label for="identifiant">Identifiant :</label>
 				<input type="text" id="Identifiant" name="Identifiant">
 				<label for="mdp">Mot de passe :</label>					
-				<input type="text" id="mdp" name="mdp">
+				<input type="password" id="mdp" name="mdp">
 				<b>|</b>
-				<input type="submit" value="Se connecter">
+				<input type="submit" id="boutonconnexion" value="Se connecter">
 			</form>				
 			<br>
 			<a href = "Inscription.php">  <i>S'inscrire  ?</i></a>	
-			<a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
+            <a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
+            <br>
+            <div id="erreur">
+            <?php if(isset($_GET["erreur"])) {
+                echo $_GET["erreur"];
+            }
+            ?>
+            </div>
+
 		</div>
         <div id="Head2"> <br />
             <?php if (basename($_SERVER['PHP_SELF'])=='CGUHC.php'):?>
@@ -78,7 +87,7 @@
             <br />
             <HR align=center>
             <div id = "Footer3">
-                <p><i>CheckThey'OK© 2018-2019</i></p>   -
+                <p><i>CheckThey'reOK© 2018-2019</i></p>   -
                 <a href = "FAQHC.php"><u> FAQ </u></a> -
                 <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
                 <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a> -
