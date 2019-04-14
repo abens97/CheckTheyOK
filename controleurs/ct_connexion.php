@@ -13,7 +13,7 @@
         }
     }
     else{
-        header("Location:../Html/Accueil.php?erreur='Veuillez remplir tous les champs !'");
+        header("Location:../Html/Accueil.php?erreur=Veuillez remplir tous les champs !");
     }
   
 ?>

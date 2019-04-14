@@ -13,6 +13,6 @@ if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['numero
     header("Location:../Html/Accueil.php");
 }
 else{
-    header("Location:../Html/Inscription.php?erreurinscription='Veuillez remplir tous les champs !'");
+    header("Location:../Html/Inscription.php?erreurinscription=Veuillez remplir tous les champs !");
 }
 ?>

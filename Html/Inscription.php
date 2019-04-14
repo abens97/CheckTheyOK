@@ -6,7 +6,8 @@
     <title>Domisep</title>
 
     <style type="text/css">
-        .contenu { margin-right: 40%;}
+        .contenu {text-align:center;}
+        #erreur {color:red;}
     </style>
 </head>
 
@@ -41,10 +42,12 @@
                                     <input type="password"  id="mot_de_passe" name="mdp" maxlength="25"><br>
                                     <label for="mdp2">Confirmation du mot de passe :</label>
                                     <input type="password" id="mot_de_passe2" name="mdp2" maxlength="25"><br>
+                                    <div id="erreur">
                                     <?php if(isset($_GET["erreurinscription"])) {
-                                        echo $_GET["erreurinscription"];
+                                        echo $_GET['erreurinscription'];
                                     }
                                     ?>
+                                    </div>
                                 </div>
                             </div>
                             <div id="form_bas">
