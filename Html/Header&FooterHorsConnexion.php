@@ -43,11 +43,16 @@
 				<label for="mdp">Mot de passe :</label>					
 				<input type="text" id="mdp" name="mdp">
 				<b>|</b>
-				<input type="submit" value="Se connecter">
+				<input type="submit" id="boutonconnexion" value="Se connecter">
 			</form>				
 			<br>
 			<a href = "Inscription.php">  <i>S'inscrire  ?</i></a>	
-			<a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
+            <a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
+            <?php if(isset($_GET["erreur"])) {
+                echo $_GET["erreur"];
+            }
+            ?>
+
 		</div>
         <div id="Head2"> <br />
             <?php if (basename($_SERVER['PHP_SELF'])=='CGUHC.php'):?>
