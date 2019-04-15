@@ -11,7 +11,7 @@
         .Nettoyer { content: "";display: table;clear: both;}
         #erreur {color:red;}
         #form_demi, #form_bas  {float: left;position: relative;width:100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding-left: 30px;padding-right: 30px;padding-bottom: 16px;}
-        @media only screen and (min-width: 48em) { #form_demi {width: 50%;}
+        @media only screen and (min-width: 48em) {#form_demi {width: 50%;}} 
         #contenu h2,h3{align-items: center;}
     </style>
 </head>

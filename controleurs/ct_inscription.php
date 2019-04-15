@@ -11,6 +11,7 @@ if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['numero
     Inscrire($bdd, $nom, $prenom, $numero_telephone, $email, $mot_de_passe);
     header("Location:../Html/Accueil.php");
 }
+
 else{
     header("Location:../Html/Inscription.php?erreurinscription=Veuillez remplir tous les champs !");
 }
