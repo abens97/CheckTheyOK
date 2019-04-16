@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+<?php
+	session_start();
+	include "../modele/connexion.php";
+	include "../modele/requetes.utilisateurs.php";
+?>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
@@ -50,7 +56,7 @@
         </div>
         <div id="Head3">
 			<img src="../Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
-			<button><a href="Accueil.php"><i>Se déconnecter</i></a></button>
+			<button><a href="Accueil.php?deconnexion=ok"><i>Se déconnecter</i></a></button>
         </div>
         <div id="Head2"> <br />
 			<?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
@@ -60,7 +66,10 @@
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Logements.php'):?>
 			<p> Configurer ses logements</p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Statistiques.php'):?>
-			<p> Bienvenue sur l'espace résident, [prénom]</p>
+			<p> Bienvenue sur l'espace résident,<?php
+			recupereNom($bdd, $_SESSION["mail"]);
+			?>
+			</p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='PageType.php'):?>
 			<p> PageType </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Contact.php'):?>

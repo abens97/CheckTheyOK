@@ -12,4 +12,10 @@ function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephon
     $req->execute(array($nom,$prenom,$numero_telephone,$email,$mot_de_passe));
 }
 
+function recupereNom(PDO $bdd, String $Email){
+    $req = $bdd->prepare("SELECT prenom FROM utilisateur WHERE email = ?");
+    $req->execute(array($Email));
+    $row=$req->fetch();
+    echo $row["prenom"];
+}
 ?> 

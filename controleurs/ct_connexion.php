@@ -6,6 +6,8 @@
         $MotdePasse = htmlspecialchars($_POST["mdp"]);
     
         if(estInscrit($bdd,$Email,$MotdePasse)) {
+            session_start();
+            $_SESSION["mail"]= $Email;
             header("Location:../Html/Programmer.php");
         }
         else {

@@ -7,15 +7,15 @@
         <section>
 
     	   <article id = "contenu1" name = "Profil">
+                <form method="POST" action="" enctype="multipart/form-data">
         		<label for = "nom">Nom </label>
         		<input type = "text" name ="nom"><br>
         		<label for = "prenom">Prénom </label>
         		<input type = "text" name ="prenom"><br>
         		<label for = "mdp">Mot de passe</label>
-        		<input type = "text" name ="mdp">
-                <p>Changer la photo de profil</p>
-                <!--<img src =  "appareil.png">-->
-
+        		<input type = "text" name ="mdp"> <br>
+                <label> Avatar : </label>
+                <input type="file" name="avatar"/> <br>
                 <select name = "langues">
 
                     <option value="français">français</option>
@@ -42,6 +42,7 @@
             <label>par sms</label><br>
             <input type = checkbox>
             <label>par e-mail</label><br>
+            <input type = "submit" value ="Mettre à jour mon profil" > <br>
 
 
         </article>

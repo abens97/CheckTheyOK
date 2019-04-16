@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<?php include "Header&FooterHorsConnexion.php";?>
+
+	<?php 
+	session_start();
+	if(isset($_GET["deconnexion"])){
+		session_destroy();
+	}
+	include "Header&FooterHorsConnexion.php";
+	?>
 <head>
 		
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

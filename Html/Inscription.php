@@ -54,7 +54,7 @@
                                 <div id="ligne">
                                     <div id="form_demi">
                                         <label for="tel">Numéro de téléphone :</label>
-                                        <input type="tel" id="numero_telephone" name="tel" maxlength="10"><br>
+                                        <input type="number" id="numero_telephone" name="tel" maxlength="10"><br>
                                     </div>
                                     <div id="form_demi">
                                         <label for="email">Adresse e-mail :</label>
