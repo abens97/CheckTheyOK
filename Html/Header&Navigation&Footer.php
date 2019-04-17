@@ -66,7 +66,7 @@
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Logements.php'):?>
 			<p> Configurer ses logements</p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Statistiques.php'):?>
-			<p> Bienvenue sur l'espace résident,<?php
+			<p> Bienvenue sur l'espace résident <?php
 			recupereNom($bdd, $_SESSION["mail"]);
 			?>
 			</p>

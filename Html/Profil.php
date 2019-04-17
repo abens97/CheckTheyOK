@@ -44,7 +44,6 @@
             <label>par e-mail</label><br>
             <input type = "submit" value ="Mettre à jour mon profil" > <br>
 
-
         </article>
 
         </section>
