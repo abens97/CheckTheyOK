@@ -6,7 +6,7 @@
     <title>Domisep</title>
     <style type="text/css">
         @keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
- 		body {margin:0 auto;background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed; }
+ 		body {margin:0 auto;background-color: #000000; color: white; height:100%;max-width: 100%; background: url(../Images/H.jpg);background-size:cover;display : table;  }
 		header { margin:0 auto;text-align: center;background-color: white; opacity: 0.7; display :table-header-group; left:0; top:0;}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
@@ -82,7 +82,7 @@
             <div id="Footer2">
             <a href = "https://www.isep.fr" target="_blank"><img src = "../Images/Isep.png" alt="Isep" width="90"></a> 
             <img src = "../Images/LogoDomisep.png" alt="Domisep" width="100" > 
-            <i>Équipe de techniciens : DA COSTA Sarah - MILLOT Pauline - GORGE BERNAT Arthur - POLO Romain - BELAMICH Leny - BENSOUDA Amine<i>
+            <i>Équipe de techniciens : Sarah DA COSTA - Pauline MILLOT - Leny BELAMICH - Romain POLO - Arthur GORGE BERNAT - Amine BENSOUDA <i>
             </div>
             <br />
             <HR align=center>
