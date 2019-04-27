@@ -20,8 +20,9 @@
 
     <header>
 
-    </header> <br />
-
+    </header>
+    
+     <br />
         
             <div id="contenu">
                 <h2>Création compte référent</h2>
@@ -54,12 +55,16 @@
                                 <div id="ligne">
                                     <div id="form_demi">
                                         <label for="tel">Numéro de téléphone :</label>
-                                        <input type="number" id="numero_telephone" name="tel" maxlength="10"><br>
+                                        <input type="number" placeholder='0601020304' id="numero_telephone" name="tel" maxlength="10"><br>
                                     </div>
                                     <div id="form_demi">
                                         <label for="email">Adresse e-mail :</label>
                                         <input type="email" id="email" name="email" maxlength="25"><br>
                                     </div>
+                                    <div id="form_demi">
+                                        <label for="email">Confirmation de votre e-mail :</label>
+                                        <input type="email" id="email2" name="email2" maxlength="25"><br>
+                                    </div>                                  
                                 </div>
                                 <div id="ligne">
                                     <div id="form_demi">

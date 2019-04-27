@@ -1,5 +1,8 @@
 <?php
 
+    include ("../modele/connexion.php");
+    include ("../modele/requetes.utilisateurs.php");
+
     if(isset($_FILES["avatar"]) AND !empty($_FILES["avatar"]['name'])) 
     {
         $taillemax = 2097152;

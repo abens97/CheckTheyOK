@@ -11,7 +11,7 @@
             header("Location:../Html/Programmer.php");
         }
         else {
-            header("Location:../Html/Accueil.php?erreur='Identifiant ou mot de passe incorrects'");
+            header("Location:../Html/Accueil.php?erreur=Identifiant ou mot de passe incorrects");
         }
     }
     else{

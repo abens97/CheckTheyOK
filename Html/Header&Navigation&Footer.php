@@ -67,7 +67,7 @@
 			<p> Configurer ses logements</p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Statistiques.php'):?>
 			<p> Bienvenue sur l'espace résident <?php
-			recupereNom($bdd, $_SESSION["mail"]);
+			recupereNom($bdd, $_SESSION["email"]);
 			?>
 			</p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='PageType.php'):?>
