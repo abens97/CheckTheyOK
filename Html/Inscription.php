@@ -6,27 +6,25 @@
     <title>Domisep</title>
 
     <style type="text/css">
+
         #formulaire {max-width:800px;margin:0 auto;width:100%;}
-        #ligne {width: 100%;}
+        #ligne {width: 100%;font-family:"Jazz LET"; font-size: 27px;text-shadow:4px 4px 6px black;}
         .Nettoyer { content: "";display: table;clear: both;}
         #erreur {color:red;}
         #form_demi, #form_bas  {float: left;position: relative;width:100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding-left: 30px;padding-right: 30px;padding-bottom: 16px;}
-        @media only screen and (min-width: 48em) {#form_demi {width: 50%;}} 
-        #contenu h2,h3{align-items: center;}
+        @media only screen and (min-width: 48em) { #form_demi {width: 50%;}
+        #contenu {align-items: center; margin: 0 auto;}
+        #ligne input.value i {color:grey;}
     </style>
 </head>
 
 <body>
 
-    <header>
-
-    </header> <br />
-
         
             <div id="contenu">
-                <h2>Création compte référent</h2>
+                <h2>Création de compte </h2>
                 <h3>Remplissez les champs suivants</h3>
-                    
+            </div>     
                         <form method="post" action="../controleurs/ct_inscription.php">
                             <div id = "formulaire" class="Nettoyer">
 
@@ -38,7 +36,7 @@
                                     </div>
                                     <div id="form_demi">
                                         <label for="type">Type de compte :</label>
-                                        <input type="text" id="type" name="type" maxlength="15"><br>
+                                        <input type="text" id="type" name="type" maxlength="15" value="Résident..."><br>
                                     </div>
                                 </div>
                                 <div id="ligne">
@@ -91,7 +89,7 @@
                                 </div>
                             </div>
                         </form>     
-</div>
+
                                        
                     
     
