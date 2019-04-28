@@ -1,9 +1,10 @@
 <?php
     include ("../modele/connexion.php");
     include ("../modele/requetes.utilisateurs.php");
-    if(!empty($_POST["Identifiant"]) AND !empty($_POST["mdp"])){
+    if(!empty($_POST["Identifiant"]) AND !empty($_POST["mdp"]))
+    {
         $Email = htmlspecialchars($_POST["Identifiant"]);
-        $MotdePasse = htmlspecialchars($_POST["mdp"]);
+        $MotdePasse = sha1($_POST["mdp"]);
     
         if(estInscrit($bdd,$Email,$MotdePasse)) {
             session_start();
