@@ -9,7 +9,7 @@ CREATE TABLE Utilisateur (
     prenom VARCHAR(10),
     nom VARCHAR(30) NOT NULL,
     numero_telephone CHAR(13),
-    mot_de_passe VARCHAR(30) NOT NULL,
+    mot_de_passe VARCHAR(255) NOT NULL,
     cle_id CHAR(20),
     numero_logement SMALLINT UNSIGNED,
     photo_profil BLOB,
