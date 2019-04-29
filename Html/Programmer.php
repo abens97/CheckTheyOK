@@ -4,14 +4,20 @@
 
 <style type="text/css">
 
-		#section {background-color: white; opacity: 0.7;  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;}
+		#section {background-color: white; opacity: 0.7;  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;transition:0.5s;}
+		#section:hover {padding: 9px; transition:0.5s;}
 		#section a{color:white;}
 		#section a:hover{opacity: 0.5;}
 		#carre1 {background-color: grey; opacity: 0.8; float :left; width: 45%; height: 40%; margin-top: 1.6%; margin-left: 2.4%; margin-right: 2.4%;margin-bottom: 1.6%;border-bottom-left-radius: 15%; border-bottom-right-radius:2% ; border-top-right-radius:16% ; border-top-left-radius:33%;}
 		#carre2 {background-color: grey; opacity: 0.8; float :left; width: 45%; height: 40%; margin-top: 1.6%; margin-left: 2.4%; margin-right: 2.4%;margin-bottom: 1.6%;border-bottom-right-radius: 15%; border-bottom-left-radius:2% ; border-top-left-radius:16% ; border-top-right-radius:33%;}
 		#carre3 {background-color: grey; opacity: 0.8; float :left; width: 45%; height: 40%; margin-top: 1.6%; margin-left: 2.4%; margin-right: 2.4%;margin-bottom: 1.6%;border-top-left-radius: 15%; border-top-right-radius:2% ; border-bottom-right-radius:16% ; border-bottom-left-radius:33%;}
 		#carre4 {background-color: grey; opacity: 0.8; float :left; width: 45%; height: 40%; margin-top: 1.6%; margin-left: 2.4%; margin-right: 2.4%;margin-bottom: 1.6%;border-top-right-radius: 15%; border-top-left-radius:2% ; border-bottom-left-radius:16% ; border-bottom-right-radius:33%;}
-
+		@keyframes slideOut {from{}to{transform:translateX(0);transform:translateY(350rem);}}
+		@keyframes slideUp {from{}to{transform:translateX(0);transform:translateY(-350rem);}}
+		#carre2:hover {animation: slideUp 0.3s backwards;}
+		#carre1:hover {animation: slideUp 0.3s backwards;}
+		#carre3:hover {animation: slideOut 0.3s backwards;}
+		#carre4:hover {animation: slideOut 0.3s backwards;}
 </style>
 
 <html>
