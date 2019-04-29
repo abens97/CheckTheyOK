@@ -11,12 +11,14 @@ overflow: hidden
 ;margin: 0 auto;
 height :60%;
 }
+
 </style>
 
 <html>
-
 <div id="Escalier">
 	<img src="../Images/esc.jpg">
 </div>
+
+<!--Mettre ici le contenu de nos pages-->
 
 </html>
