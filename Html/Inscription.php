@@ -10,7 +10,7 @@
         h1{font-size: 200%;font-style: normal;}
         h2{font-size: 120%;}
         #formulaire {width:70%;margin:0 auto;display:table;padding-top: 6%;}
-        #ligne {width: 100%; font-size: 140%;text-shadow:0px 2px 5px grey, 0px -2px 5px grey, 2px 0px 3px grey, -2px 0px 4px grey;}
+        #ligne {padding-left:6%;width: 100%; font-size: 140%;text-shadow:0px 2px 5px grey, 0px -2px 5px grey, 2px 0px 3px grey, -2px 0px 4px grey;}
         .Nettoyer { content: "";display: table;clear: both;}
         #erreur {color:red;}
         #form_demi, #form_bas  {float: left;width:50%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: table-cell;padding-top: 1%;}
