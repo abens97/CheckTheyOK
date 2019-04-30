@@ -25,16 +25,17 @@
 		#Head3 img {border-radius: 18px;padding-bottom: 4%; }
 		#Head3 button:hover{opacity: 0.6;padding: 4px;border-radius: 15%;}
 		#Head3 a {text-decoration: none;}
-		#Navigation{text-align: center; transition:1s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
+		#Navigation{text-align: center; transition:0.8s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
 		#Navigation button{display: table-cell;margin-left: auto;margin-right: auto; padding :0;width: 100%;transition: 0.3s;}
-		#Navigation button:hover{text-align: center;opacity: 0.6; transition:1s;padding: 10%;background-color: lightgrey;}
+		#Navigation button:hover{text-align: center;opacity: 0.6; transition:0.4s;padding: 10%;background-color: lightgrey;}
 		#Navigation a {color: grey;text-decoration: none;text-align: center;display: block;line-height: 50px; text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);font-size: 1.9em;}
 		#Navigation a:hover{color:green;}
 		#Navigation:hover {width:12%;transition:1s;}
-		#Navigation img {display: none;}
-		#Navigation:hover img {display: block;float:left;align-items:baseline;padding:0;}
-		#titre{margin-left: 20%;}
-		#Navigation:hover #titre {margin-left: 14%;}
+		#Navigation img {display: none;transition:0.4s;}
+		#Navigation:hover img {display: block;float:right;transition:1s;}
+		
+		#Navigation:hover #titre {margin:0;text-align:center;margin-left:29%;transition:0.2s;position: relative}
+		
 		footer {text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
 		#Footer2 {margin:0 auto;height: 100%;}
 		#Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
@@ -52,9 +53,9 @@
   padding: 16px 35px;
   background-color: inherit;
   font-family: inherit; 
-  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.26));
   -webkit-box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.48);
   box-shadow: -2px -3px 3px rgba(0, 0, 0, 0.48);
@@ -63,7 +64,11 @@
   border-radius: 7px;
 }
 #descente a:hover, #descente:hover #dropprofil {
-  background-color: #91B7A7;
+
+    background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
+  background-image: -moz-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
+  background-image: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
+  background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.66));
 }
 #descente a {
   float: right;
@@ -100,7 +105,7 @@ margin-left: 5%;
 }
 
 #descente:hover #descente-content {
-
+	transition: 2s;
   display: block;
 }
 
@@ -162,9 +167,10 @@ margin-left: 5%;
 	</header> <br />
 
 	<div id="Navigation">
-		<div id="titre">
 		<img src = "../Images/loupe.png" alt="Logo" width="35"> 
-		<i>Menu</i></div>
+		<div id="titre">
+			<i>Menu</i>
+		</div>
 		
 
 			<button><a href="Statistiques.php">Journal</a></button><br />
