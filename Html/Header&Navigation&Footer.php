@@ -97,7 +97,6 @@
 		<img src = "../Images/loupe.png" alt="Logo" width="35"> 
 		<i>Menu</i></div>
 		
-
 			<button><a href="Statistiques.php">Journal</a></button><br />
 		    <button><a href="Programmer.php">Commander</a></button><br />
 		    <button><a href="Logements.php">Logements</a></button><br />
@@ -105,10 +104,9 @@
 		    <button><a href="Accueil.php">Accueil</a></button>
 			<?php
 				if(isset($_POST["deconnexion"])){
-				echo 'proozkakzfaz';
 				session_destroy();
 				header("Location:Accueil.php");
-			}
+				}
 			?>
 		
 	</div>

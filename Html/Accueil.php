@@ -2,7 +2,6 @@
 <html>
 
     <?php 
-        
     if(isset($_SESSION['email'])){
         include "Header&Navigation&Footer.php";
     }

@@ -5,7 +5,6 @@
 ?>
 
 <style type="text/css">
-
 		#section {background-color: white; opacity: 0.7;  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;}
 		#section a{color:white;}
 		#section a:hover{opacity: 0.5;}
