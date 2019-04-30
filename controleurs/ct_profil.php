@@ -7,7 +7,7 @@
     {
         $taillemax = 2097152;
         $extensionsValides = array('jpg','jpeg','gif','png')
-        if($_FILES['avatar']['size'] <= taillemax) 
+        if($_FILES['avatar']['size'] <= $taillemax) 
         {
             $extensionsUpload = strtolower(substr(strrchr($_FILES['avatar']['name'],'.'),1)); 
             if(in_array($extensionsUpload,$extensionsValides))

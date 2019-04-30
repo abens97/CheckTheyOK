@@ -8,7 +8,7 @@
     
         if(estInscrit($bdd,$Email,$MotdePasse)) {
             session_start();
-            $_SESSION["mail"]= $Email;
+            $_SESSION["email"]= $Email;
             header("Location:../Html/Programmer.php");
         }
         else {

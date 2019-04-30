@@ -82,7 +82,7 @@
                                 <div id="ligne">            
                                     <div id="form_bas">
                                          <label>
-                                             <input type="checkbox" name="accepterCGU" value="y">J'accepte les <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a>
+                                             <input type="checkbox" name="accepterCGU" value="y">J'accepte les <a href = "CGUHC.php"><u> Conditions générales d'utilisation </u></a>
                                          </label><br>
                                     </div>
                                     <div id="form_bas">

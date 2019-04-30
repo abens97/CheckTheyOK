@@ -90,7 +90,7 @@
                 <p><i>CheckThey'reOK© 2018-2019</i></p>   -
                 <a href = "FAQHC.php"><u> FAQ </u></a> -
                 <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-                <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a> -
+                <a href = "CGUHC.php"><u> Conditions générales d'utilisation </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
                             <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=40"></a> <br />

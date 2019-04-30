@@ -12,7 +12,7 @@ CREATE TABLE Utilisateur (
     mot_de_passe VARCHAR(255) NOT NULL,
     cle_id CHAR(20),
     numero_logement SMALLINT UNSIGNED,
-    photo_profil BLOB,
+    avatar VARCHAR(255),
     PRIMARY KEY (email)
 );
 

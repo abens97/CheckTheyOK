@@ -24,21 +24,25 @@ if(isset($_POST['check_inscription'])){
                 else 
                 {
                     $erreur = 'Vos mots de passe ne correspondent pas !';
+                    header("Location:../Html/Inscription.php");
                 }
             }
             else 
             {
                 $erreur = "Votre adresse e-mail n'est pas valide ! ";
+                header("Location:../Html/Inscription.php");
             }
         } 
         else 
         {
             $erreur = 'Vos adresses e-mails ne correspondent pas !';
+            header("Location:../Html/Inscription.php");
         }  
     }
     else
     {
         $erreur= 'Veuillez remplir tous les champs !';
+        header("Location:../Html/Inscription.php");
     }
 }
 ?>

@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
-<?php
-	session_start();
+<?php 			
+    session_start();
 	include "../modele/connexion.php";
 	include "../modele/requetes.utilisateurs.php";
 ?>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
@@ -56,7 +54,9 @@
         </div>
         <div id="Head3">
 			<img src="../Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
-			<button><a href="Accueil.php?deconnexion=ok"><i>Se déconnecter</i></a></button>
+			<form method='POST' action="">
+			<input type='submit' value = 'Se déconnecter' id='deconnexion' name='deconnexion'>
+			</form>
         </div>
         <div id="Head2"> <br />
 			<?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
@@ -103,6 +103,13 @@
 		    <button><a href="Logements.php">Logements</a></button><br />
 		    <button><a href="Profil.php">Profil</a></button><br />
 		    <button><a href="Accueil.php">Accueil</a></button>
+			<?php
+				if(isset($_POST["deconnexion"])){
+				echo 'proozkakzfaz';
+				session_destroy();
+				header("Location:Accueil.php");
+			}
+			?>
 		
 	</div>
 
@@ -120,7 +127,7 @@
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
 	            <a href = "FAQ.php"><u> FAQ </u></a> -
 	            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-	            <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a> -
+	            <a href = "CGU.php"><u> Conditions générales d'utilisation </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 
 	                        <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />

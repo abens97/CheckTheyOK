@@ -18,4 +18,10 @@ function recupereNom(PDO $bdd, String $Email){
     $row=$req->fetch();
     echo $row["prenom"];
 }
-?> 
+
+function avatar(PDO $bdd, String $extensionsUpload) {
+    $updateavatar = $bdd->prepare('UPDATE utilisateur SET avatar = :avatar WHERE email = :email');
+    $updateavatar->execute(array('avatar' => $_SESSION['email'].'.'.$extensionsUpload,'email' => $_SESSION['email']));
+}
+
+?>

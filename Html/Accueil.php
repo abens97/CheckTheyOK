@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-	<?php 
-	session_start();
-	if(isset($_GET["deconnexion"])){
-		session_destroy();
-	}
-	include "Header&FooterHorsConnexion.php";
+    <?php 
+        
+    if(isset($_SESSION['email'])){
+        include "Header&Navigation&Footer.php";
+    }
+    else {
+        include 'Header&FooterHorsConnexion.php';
+    }
 	?>
 <head>
 		

@@ -2,6 +2,9 @@
 
 <html>
     <?php include "Header&Navigation&Footer.php";?>
+    <style type="text/css">
+    *{text-align : center;}
+</style>
     <body>
 
         <section>
