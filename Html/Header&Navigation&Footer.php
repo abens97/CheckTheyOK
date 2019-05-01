@@ -174,10 +174,10 @@ margin-left: 5%;
 			<i>Menu</i>
 		</div>
 		
-
 			<button><a href="Statistiques.php">Journal</a></button><br />
 		    <button><a href="Programmer.php">Programmer</a></button><br />
 		    <button><a href="Logements.php">Logements</a></button><br />
+		    <button><a href="Sav.php">S.A.V.</a></button><br />
 		
 	</div>
 
