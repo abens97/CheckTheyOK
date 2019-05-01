@@ -4,7 +4,7 @@
 
 <style type="text/css">
 
-#zone {background-color: white; opacity: 0.7;  border-radius: 8px; width:65%; text-align: center;display: table; margin: 0 auto;margin-top: 6%; color: grey;font-size: 28px;: center;}
+#Temperature {background-color: white; opacity: 0.7;  border-radius: 8px; width:65%; text-align: center;display: table; margin: 0 auto;margin-top: 6%; color: grey;font-size: 28px;: center;}
 #infotemp{margin:0 auto;display : block;width: 100%;}
 #ligne {display: table-row;width: 100%;margin:0 auto;margin-top: 4%;}
 [type="number"] {width: 20%;}
@@ -12,7 +12,7 @@
 
 <html>
 
-<div id="zone">
+<div id="Temperature">
 	<div id="infotemp">La température actuelle est de X°C
 	</div>
 	<hr width="75%" color=#82A898>

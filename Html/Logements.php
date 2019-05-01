@@ -35,7 +35,7 @@
     <a href="#"><img src = "../Images/Add.png" alt="Logo" width="70"></a>
   </div>
 
-  <div id="zone" class="Nettoyer"  >
+  <div id="zone" class="Nettoyer">
     
     <div id="infologement">
       Nouveau logement

@@ -126,7 +126,9 @@ margin-left: 5%;
 		      <div id="descente-content">
 		        <a href="#">&#8635 Adresse email</a>
 		        <a href="#">&#8635 Mot de passe</a>
+		        <a href="#">&#8635 Téléphone</a>
 		        <a href="#">&#8635 Photo de profil</a>
+		        <a href="#">&#8635 Langue</a>
 		        <a href="Accueil.php?deconnexion=ok">&#10174 Se deconnecter</a>
 		      </div>
 		    </div>

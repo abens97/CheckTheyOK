@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="Combo.css">
 <style type="text/css">
 
-		#section {background-color: white; opacity: 0.7;  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;transition:0.5s;}
+		#section {background-color: white; opacity: 0.7;  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;transition:0.5s;transition:scale(0.3);}
 		#section:hover {padding: 9px; transition:0.5s;margin-top: 4%;}
 		#section a{color:white;}
 		#section a:hover{opacity: 0.5;}
@@ -19,14 +19,67 @@
 		#carre1:hover {transform: perspective(500px) scaleZ(1.6) rotateX(-35deg);}
 		#carre3:hover {transform: perspective(500px) scaleZ(1.6) rotateX(35deg);}
 		#carre4:hover {transform: perspective(500px) scaleZ(1.6) rotateX(35deg);}
+
+		#LaTemperature {background-color: white; opacity: 0.7;  border-radius: 8px; width:65%; text-align: center;display: none; margin: 0 auto;margin-top: 6%; color: grey;font-size: 28px;: center;}
+		#infotemp{margin:0 auto;display : block;width: 100%;}
+		#ligne {display: table-row;width: 100%;margin:0 auto;margin-top: 4%;}
+		[type="number"] {width: 20%;}
 </style>
+<script type="text/javascript">
+// pour se mettre à l'étape 1 dès le départ
+            var initial=document.getElementById("section");
+
+            // fonction pour changer l'étape
+
+            function ChangerContenu(s)
+            {
+                
+                if (1==s)
+                 {
+                 	document.getElementById("section").style.display = "none"
+                    document.getElementById("LaLumino").style.display = "table"
+                }
+                if (2==s)
+                 {
+                 	document.getElementById("section").style.display = "none"
+                    document.getElementById("LaTemperature").style.display = "table"
+                }
+                if (3==s)
+                 {
+                 	document.getElementById("section").style.display = "none"
+                    document.getElementById("LesVolets").style.display = "table"
+                }
+                if (4==s)
+                 {
+                 	document.getElementById("section").style.display = "none"
+                    document.getElementById("LeVentilo").style.display = "table"
+                }
+            }
+</script>
 </head>
 <html>
 		<div id = "section">
-			<a href = "lumiere.php"><div id = "carre1"><br /><img src="../Images/lumiere.png"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
-			<a href = "temperature.php"><div id = "carre2"><br /><img src="../Images/temperature.png"  alt="Température" width="80"> <br /><h3>Température</h3></div></a>
-			<a href = "volets.php"><div id = "carre3"><br /><img src="../Images/volets.png"  alt="Volets" width="80"> <br /><h3>Volets</h3></div></a>
-			<a href = "ventilateur.php"><div id = "carre4"><br /><img src="../Images/ventilateur.png"  alt="Ventilateur" width="80"> <br /><h3>Ventilateur</h3></div></a>
+			<a onclick="ChangerContenu(1)"><div id = "carre1"><br /><img src="../Images/lumiere.png"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
+			<a onclick="ChangerContenu(2)"><div id = "carre2"><br /><img src="../Images/temperature.png"  alt="Température" width="80"> <br /><h3>Température</h3></div></a>
+			<a onclick="ChangerContenu(3)"><div id = "carre3"><br /><img src="../Images/volets.png"  alt="Volets" width="80"> <br /><h3>Volets</h3></div></a>
+			<a onclick="ChangerContenu(4)"><div id = "carre4"><br /><img src="../Images/ventilateur.png"  alt="Ventilateur" width="80"> <br /><h3>Ventilateur</h3></div></a>
+		</div>
+
+		<div id="LaTemperature">
+			<div id="infotemp">La température actuelle est de X°C
+			</div>
+			<hr width="75%" color=#82A898>
+			<div id="ligne">
+			<input type="checkbox" name="Ventilateur" value="i">
+			Activer/Désactiver le ventilateur
+			</div>
+			<div id="ligne">
+			<input type="checkbox" name="AutoVentilateur" value="i">
+			Activer/Désactiver l'automatisation du ventilateur
+			</div>
+			<div id="ligne">
+			Je veux que le ventilatur s'allume quand il fait
+			<input type="number" id="templimite" placeholder="__°C" name="templimite" maxlength="3"> °C
 		</div>
 
 </html> 
