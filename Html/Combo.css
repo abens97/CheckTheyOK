@@ -1,8 +1,9 @@
 .dropdown {
+  margin-top: -4%;
   display: inline-block;
   position: relative;
   overflow: hidden;
-  height: 28px;
+  height: 25px;
   width: 150px;
   background: #f2f2f2;
   border: 1px solid;
