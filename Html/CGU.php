@@ -6,7 +6,7 @@
 		include 'Header&Navigation&Footer.php';
 	}
     else {
-		include 'Header&FooterHorsConnexion.php';
+        include 'Header&FooterHorsConnexion.php';
     }
 ?>
 
