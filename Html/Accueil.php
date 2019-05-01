@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-    <?php 
+	<?php
+	session_start();
     if(isset($_SESSION['email'])){
-        include "Header&Navigation&Footer.php";
-    }
+		include 'Header&Navigation&Footer.php';
+		echo 'azdkzlkdlkdezkdzakm';
+	}
     else {
-        include 'Header&FooterHorsConnexion.php';
+		include 'Header&FooterHorsConnexion.php';
+		echo 'odllddloedloedoedlo';
     }
 	?>
 <head>

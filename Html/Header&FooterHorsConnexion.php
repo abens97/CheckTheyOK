@@ -59,13 +59,13 @@
 
 		</div>
         <div id="Head2"> <br />
-            <?php if (basename($_SERVER['PHP_SELF'])=='CGUHC.php'):?>
+            <?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
 			<p> Conditions Générales d'Utilisations </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Accueil.php'):?>
 			<p> Accueil </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='ContactHC.php'):?>
 			<p> Contact </p>
-			<?php elseif (basename($_SERVER['PHP_SELF'])=='FAQHC.php'):?>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='FAQ.php'):?>
 			<p> FAQ </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='mdp.php'):?>
 			<p> Mot de passe oublié ? </p>
@@ -88,9 +88,9 @@
             <HR align=center>
             <div id = "Footer3">
                 <p><i>CheckThey'reOK© 2018-2019</i></p>   -
-                <a href = "FAQHC.php"><u> FAQ </u></a> -
+                <a href = "FAQ.php"><u> FAQ </u></a> -
                 <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-                <a href = "CGUHC.php"><u> Conditions générales d'utilisation </u></a> -
+                <a href = "CGU.php"><u> Conditions générales d'utilisation </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
                             <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=40"></a> <br />

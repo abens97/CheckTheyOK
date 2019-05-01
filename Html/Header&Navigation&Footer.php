@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php 			
-    session_start();
+<?php 
 	include "../modele/connexion.php";
 	include "../modele/requetes.utilisateurs.php";
 ?>
@@ -57,6 +56,12 @@
 			<form method='POST' action="">
 			<input type='submit' value = 'Se déconnecter' id='deconnexion' name='deconnexion'>
 			</form>
+			<?php
+				if(isset($_POST["deconnexion"])){
+				session_destroy();
+				header("Location:Accueil.php");
+				}
+			?>
         </div>
         <div id="Head2"> <br />
 			<?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
@@ -102,12 +107,6 @@
 		    <button><a href="Logements.php">Logements</a></button><br />
 		    <button><a href="Profil.php">Profil</a></button><br />
 		    <button><a href="Accueil.php">Accueil</a></button>
-			<?php
-				if(isset($_POST["deconnexion"])){
-				session_destroy();
-				header("Location:Accueil.php");
-				}
-			?>
 		
 	</div>
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <?php
+	session_start();
 	include "Header&Navigation&Footer.php";
 ?>
 

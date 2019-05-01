@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 
-<?php include "Header&Navigation&Footer.php" ;?>
+<?php     
+    session_start();
+    if(isset($_SESSION['email'])){
+		include 'Header&Navigation&Footer.php';
+	}
+    else {
+		include 'Header&FooterHorsConnexion.php';
+    }
+?>
 
 <style type="text/css">
 
