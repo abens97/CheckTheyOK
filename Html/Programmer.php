@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="Combo.css">
 <style type="text/css">
 
-		#section {background-color: white; opacity: 0.7;  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;transition:0.5s;transition:scale(0.3);}
+		#section {background-color: white; opacity: 0.7;  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;transition:0.5s;padding: 0;}
 		#section:hover {padding: 9px; transition:0.5s;margin-top: 4%;}
 		#section a{color:white;}
 		#section a:hover{opacity: 0.5;}
@@ -36,13 +36,27 @@
                 
                 if (1==s)
                  {
+
                  	document.getElementById("section").style.display = "none"
                     document.getElementById("LaLumino").style.display = "table"
                 }
                 if (2==s)
                  {
-                 	document.getElementById("section").style.display = "none"
+                 	document.getElementById("section").style.transition="2.2s"
+                 	document.getElementById("section").style.margin= "unset"
+                 	document.getElementById("section").style.transform= "scale(0.7)"
+                 	document.getElementById("section").style.margin= "-1% 0% 0% 20%"
+                 	document.getElementById("LaTemperature").style.margin= "6% 0% 0% 17%"
+                 	document.getElementById("section").style.float="left"
                     document.getElementById("LaTemperature").style.display = "table"
+                    document.getElementById("carre1").style.width = "20%"
+                    document.getElementById("carre2").style.width = "20%"
+                    document.getElementById("carre3").style.width = "20%"
+                    document.getElementById("carre4").style.width = "20%"
+                    document.getElementById("section").style.width = "60%"
+                    document.getElementById("section").style.background = "none"
+
+
                 }
                 if (3==s)
                  {
@@ -66,7 +80,7 @@
 		</div>
 
 		<div id="LaTemperature">
-			<div id="infotemp">La température actuelle est de X°C
+			<div id="infotemp">La température actuelle est de __°C
 			</div>
 			<hr width="75%" color=#82A898>
 			<div id="ligne">

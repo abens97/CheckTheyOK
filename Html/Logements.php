@@ -6,7 +6,7 @@
 <style type="text/css">
 #ajouter {margin-left:15%;margin-top:6%;display:table;}
 #ajouter img:hover {opacity: 0.7;}
-#zone {padding-bottom:1%;background-color: white; opacity: 0.9;  border-radius: 8px; width:65%; display: table; margin: 0 auto;margin-top: -1%; color: grey;}
+#zone {padding-bottom:1%;background-color: white; opacity: 0.9;  border-radius: 8px; width:65%; display: none; margin: 0 auto;margin-top: -1%; color: grey;}
 #zone button {float:right;font-size: 150%;border-radius: 4px;  background-color: inherit;
   font-family: inherit;margin-right: 5%;
   background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));
@@ -31,7 +31,7 @@
 </head>
 <html>
   
-  <div id="ajouter">
+  <div id="ajouter" onclick="document.getElementById('zone').style.display = 'table'">
     <a href="#"><img src = "../Images/Add.png" alt="Logo" width="70"></a>
   </div>
 

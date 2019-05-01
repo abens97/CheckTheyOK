@@ -25,7 +25,7 @@
 		#Head3 img {border-radius: 18px;padding-bottom: 4%; }
 		#Head3 button:hover{opacity: 0.6;padding: 4px;border-radius: 15%;}
 		#Head3 a {text-decoration: none;}
-		#Navigation{text-align: center; transition:0.8s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
+		#Navigation{text-align: center; transition:0.8s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 12%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
 		#Navigation button{display: table-cell;margin-left: auto;margin-right: auto; padding :0;width: 100%;transition: 0.3s;}
 		#Navigation button:hover{text-align: center;opacity: 0.6; transition:0.4s;padding: 10%;background-color: lightgrey;}
 		#Navigation a {color: grey;text-decoration: none;text-align: center;display: block;line-height: 50px; text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);font-size: 1.9em;}
