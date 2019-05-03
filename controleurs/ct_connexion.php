@@ -1,23 +1,36 @@
+
 <?php
     include ("../modele/connexion.php");
     include ("../modele/requetes.utilisateurs.php");
-    if(!empty($_POST["Identifiant"]) AND !empty($_POST["mdp"]))
-    {
-        $Email = htmlspecialchars($_POST["Identifiant"]);
-        $MotdePasse = sha1($_POST["mdp"]);
+
+    $Email = isset($_POST['Email']) ? $_POST['Email'] : '';
+    $MotdePasse = sha1(isset($_POST['mdp']) ? $_POST['mdp'] : '');
+    $ok = true;
+    $messages = array();
+    if ( !isset($Email) || empty($Email) ) {
+        $ok = false;
+        $messages[] = 'Veuillez écrire votre E-mail ! ';
+    }
+    if ( !isset($MotdePasse) || empty($MotdePasse) ) {
+        $ok = false;
+        $messages[] = 'Veuillez écrire votre mot de passe !';
+    }
     
+    if ($ok) {
         if(estInscrit($bdd,$Email,$MotdePasse)) {
             session_start();
             $_SESSION["email"]= $Email;
-            header("Location:../Html/Programmer.php");
-        }
-        else {
-            header("Location:../Html/Accueil.php?erreur=Identifiant ou mot de passe incorrects");
+            $ok = true;
+        } else {
+            $ok = false;
+            $messages[] = 'E-mail ou mot de passe incorrect !';
         }
     }
-    else{
-        header("Location:../Html/Accueil.php?erreur=Veuillez remplir tous les champs !");
-    }
-  
+    echo json_encode(
+        array(
+            'ok' => $ok,
+            'messages' => $messages
+        )
+    );
 ?>
 

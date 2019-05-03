@@ -13,10 +13,11 @@
 		#Head1 img{border-radius: 35%;}
 		#Head2{ width:40%;margin: 0 auto;color: black;transform:translateY(-100rem);animation: slideIn 0.5s forwards;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
-		#Head3 {margin-right:1.3%;float:right;color: black;margin-top:4%;font-size: 0.9em;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
-		#Head3 button {font-size: 1.1em;}
-		#Head3 img {border-radius: 35%;}
-		#Head3 a{margin-right: 13%;margin-left: 14%;text-decoration: none;text-shadow:2px 6px 3px grey;}
+		.form {margin-right:1.3%;float:right;color: black;margin-top:4%;font-size: 0.9em;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
+		.form button {font-size: 1.1em;}
+		.form img {border-radius: 35%;}
+		.form a{margin-right: 13%;margin-left: 14%;text-decoration: none;text-shadow:2px 6px 3px grey;}
+        #form-messages{background-color : rgb(255,232,232);border: 1px solid red;color:red;display:none;font: size 12px;font-weight: bold;margin-bottom: 10px;padding: 10px 25px;max-width: 250px;}
         footer {margin:0 auto;text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
         #Footer2 {margin:0 auto;height: 100%;}
         #Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
@@ -26,6 +27,7 @@
         #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
         #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
         #erreur {color:red;}
+        
 
     </style>
 </head>
@@ -33,29 +35,24 @@
 <body>
 
 <header>
-		<div id ="Head1">
+	<div id ="Head1">
 			<a href="Accueil.php"><img src = "../Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
-        </div>
-        <div id="Head3">
-			<form method="post" action="../controleurs/ct_connexion.php">
-				<label for="identifiant">Identifiant :</label>
-				<input type="text" id="Identifiant" name="Identifiant">
-				<label for="mdp">Mot de passe :</label>					
-				<input type="password" id="mdp" name="mdp">
-				<b>|</b>
-				<input type="submit" id="boutonconnexion" value="Se connecter">
-			</form>				
+    </div>
+    <div class='form'>
+		<ul id='form-messages'></ul>
+		<label for="Email">Email</label>
+		<input type="text" id='Email' spellcheck="false">
+
+		<label for="mdp">Mot de passe</label>
+		<input type="password" id='mdp'>
+
+		<button type='submit' id='btn-submit'>Login</button>
+			
 			<br>
 			<a href = "Inscription.php">  <i>S'inscrire  ?</i></a>	
             <a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
-            <br>
-            <div id="erreur">
-            <?php if(isset($_GET["erreur"])) {
-                echo $_GET["erreur"];
-            }
-            ?>
-            </div>
+    
 
 		</div>
         <div id="Head2"> <br />
@@ -108,5 +105,49 @@
                 </div>
             </div>
     </footer>
+    <script>
+		const form ={
+			Email: document.getElementById('Email'),
+			Motdepasse: document.getElementById('mdp'),
+			submit: document.getElementById('btn-submit'),
+			messages: document.getElementById('form-messages'),
+		};
+
+		form.submit.addEventListener('click',() => {
+			const request =new XMLHttpRequest();
+
+			request.onload =() => {
+				let responseObject = null;
+				try{
+					responseObject = JSON.parse(request.responseText);
+				} catch(e) {
+					console.error('Could not parse JSON!');
+				}
+				if (responseObject){
+					handleResponse(responseObject);
+				}
+			}
+			const requestData =`Email=${form.Email.value}&mdp=${form.Motdepasse.value}`;
+			request.open('post',"../controleurs/ct_connexion.php");
+			request.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+			request.send(requestData);
+		});
+
+		function handleResponse(responseObject) {
+			if(responseObject.ok){
+				location.href='Programmer.php';
+			} else{
+				while (form.messages.firstChild) {
+					form.messages.removeChild(form.messages.firstChild);
+				}
+				responseObject.messages.forEach((message)  => {
+					const li = document.createElement('li');
+					li.textContent = message;
+					form.messages.appendChild(li);
+				});
+				form.messages.style.display ='block';
+			}
+		}
+	</script>
 </body>
 </html>
