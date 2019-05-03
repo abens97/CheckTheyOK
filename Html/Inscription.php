@@ -15,6 +15,7 @@
         @media only screen and (min-width: 48em) { #form_demi {width: 50%;}}
         #contenu {align-items: center; margin: 0 auto;}
         #ligne input.value i {color:grey;}
+        
     </style>
 </head>
 
@@ -46,7 +47,7 @@
                                     </div>
                                     <div id="form_demi">
                                         <label for="prenom">Prénom :</label>
-                                        <input type="text" id="prenom" name="prenom" maxlength="15"><br>
+                                        <input type="text" placeholder='Votre prénom' id="prenom" name="prenom" maxlength="15" value="<?php if(isset($prenom)) {echo $prenom;}?>"  ><br>
                                     </div>
                                 </div>
                                 <div id="ligne">
@@ -72,8 +73,8 @@
                                         <label for="mdp2">Confirmation du mot de passe :</label>
                                         <input type="password" id="mot_de_passe2" name="mdp2" maxlength="25"><br>
                                         <div id="erreur">
-                                        <?php if(isset($_GET["erreurinscription"])) {
-                                            echo $_GET['erreurinscription'];
+                                        <?php if(isset($_erreur)) {
+                                            echo $erreur;
                                         }
                                         ?>
                                         </div>
