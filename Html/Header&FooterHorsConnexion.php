@@ -42,10 +42,10 @@
     <div class='form'>
 		<ul id='form-messages'></ul>
 		<label for="Email">Email</label>
-		<input type="text" id='Email' spellcheck="false">
+		<input type="email" id='E-mail' spellcheck="false">
 
 		<label for="mdp">Mot de passe</label>
-		<input type="password" id='mdp'>
+		<input type="password" id='modp' name='modp'>
 
 		<button type='submit' id='btn-submit'>Login</button>
 			
@@ -54,7 +54,7 @@
             <a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
     
 
-		</div>
+	</div>
         <div id="Head2"> <br />
             <?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
 			<p> Conditions Générales d'Utilisations </p>
@@ -107,8 +107,8 @@
     </footer>
     <script>
 		const form ={
-			Email: document.getElementById('Email'),
-			Motdepasse: document.getElementById('mdp'),
+			Email: document.getElementById('E-mail'),
+			Motdepasse: document.getElementById('modp'),
 			submit: document.getElementById('btn-submit'),
 			messages: document.getElementById('form-messages'),
 		};
@@ -127,13 +127,14 @@
 					handleResponse(responseObject);
 				}
 			}
-			const requestData =`Email=${form.Email.value}&mdp=${form.Motdepasse.value}`;
+			const requestData =`E-mail=${form.Email.value}&modp=${form.Motdepasse.value}`;
 			request.open('post',"../controleurs/ct_connexion.php");
 			request.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 			request.send(requestData);
+		
 		});
 
-		function handleResponse(responseObject) {
+		function handleResponse (responseObject) {
 			if(responseObject.ok){
 				location.href='Programmer.php';
 			} else{

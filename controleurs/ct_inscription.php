@@ -1,48 +1,44 @@
 <?php
- 
-include ("../modele/connexion.php");
-include ("../modele/requetes.utilisateurs.php");
-$nom = htmlspecialchars($_POST["nom"]);
-$prenom = htmlspecialchars($_POST["prenom"]);
-$numero_telephone = htmlspecialchars($_POST["tel"]);
-$email = htmlspecialchars($_POST["email"]);
-$email2 = htmlspecialchars($_POST['email']);
-$mot_de_passe = sha1($_POST["mdp"]);
-$mot_de_passe2 = sha1($_POST['mdp2']);
+    include ("../modele/connexion.php");
+    include ("../modele/requetes.utilisateurs.php");
 
-if(isset($_POST['check_inscription'])){
-    if (!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['tel']) AND !empty($_POST['email']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
-        if ($email == $email2)
-        {
-            if (filter_var($email, FILTER_VALIDATE_EMAIL)) 
-            {
-                if ($mot_de_passe == $mot_de_passe2)
-                {
-                    Inscrire($bdd, $nom, $prenom, $numero_telephone, $email, $mot_de_passe);
-                    header("Location:../Html/Programmer.php");
-                }
-                else 
-                {
-                    $erreur = 'Vos mots de passe ne correspondent pas !';
-                    header("Location:../Html/Inscription.php");
-                }
-            }
-            else 
-            {
-                $erreur = "Votre adresse e-mail n'est pas valide ! ";
-                header("Location:../Html/Inscription.php");
-            }
-        } 
-        else 
-        {
-            $erreur = 'Vos adresses e-mails ne correspondent pas !';
-            header("Location:../Html/Inscription.php");
-        }  
+    $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
+    $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : '';
+    $numero_telephone = isset($_POST['tel']) ? $_POST['tel'] : '';
+    $Email = isset($_POST['Email']) ? $_POST['Email'] : '';
+    $Email2 = isset($_POST['Email2']) ? $_POST['Email2'] : '';
+    $MotdePasse = sha1(isset($_POST['mdp']) ? $_POST['mdp'] : '');
+    $MotdePasse2 = sha1(isset($_POST['mdp']) ? $_POST['mdp'] : '');
+    $ok = true;
+    $messages = array();
+
+    if (!isset($nom) || empty($nom) || !isset($prenom) || empty($prenom) || !isset($numero_telephone) || empty($numero_telephone) || !isset($Email) || empty($Email) || !isset($MotdePasse) || empty($MotdePasse) || !isset($MotdePasse2) || empty($MotdePasse2)) {
+        $ok = false;
+        $messages[] = 'Veuillez remplir tous les champs obligatoires !';
     }
-    else
-    {
-        $erreur= 'Veuillez remplir tous les champs !';
-        header("Location:../Html/Inscription.php");
+    if (sha1(isset($MotdePasse)) != sha1(isset($MotdePasse2)) ) {
+        $ok = false;
+        $messages[] = 'Vos mots de passe ne correspondent pas !';
     }
-}
+    if (isset($Email) != isset($Email2)) {
+        $ok = false;
+        $message[] = 'Vos adresses e-mails ne correspondent pas !';
+    }
+    
+    if ($ok) {
+        if(Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $MotdePasse) {
+            session_start();
+            $_SESSION["Email"]= $Email;
+            $ok = true;
+        } else {
+            $ok = false;
+            $messages[] = 'Une erreur c\'est produite ! Veuillez recommencer !';
+        }
+    }
+    echo json_encode(
+        array(
+            'ok' => $ok,
+            'messages' => $messages
+        )
+    );
 ?>
