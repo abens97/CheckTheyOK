@@ -7,7 +7,7 @@ function estInscrit(PDO $bdd, String $Email, String $MotdePasse) : bool {
     return ($n==1);
 }
 
-function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephone, String $email, String $mot_de_passe) {
+function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephone, String $Email, String $MotdePasse) {
     $req = $bdd->prepare("INSERT INTO utilisateur(nom,prenom,numero_telephone,email,mot_de_passe)VALUES(?,?,?,?,?)");
     $req->execute(array($nom,$prenom,$numero_telephone,$email,$mot_de_passe));
 }

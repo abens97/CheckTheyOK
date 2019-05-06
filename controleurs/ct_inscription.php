@@ -7,8 +7,8 @@
     $numero_telephone = isset($_POST['tel']) ? $_POST['tel'] : '';
     $Email = isset($_POST['Email']) ? $_POST['Email'] : '';
     $Email2 = isset($_POST['Email2']) ? $_POST['Email2'] : '';
-    $MotdePasse = sha1(isset($_POST['mdp']) ? $_POST['mdp'] : '');
-    $MotdePasse2 = sha1(isset($_POST['mdp']) ? $_POST['mdp'] : '');
+    $MotdePasse = (isset($_POST['mdp']) ? $_POST['mdp'] : '');
+    $MotdePasse2 = (isset($_POST['mdp']) ? $_POST['mdp'] : '');
     $ok = true;
     $messages = array();
 
@@ -16,7 +16,7 @@
         $ok = false;
         $messages[] = 'Veuillez remplir tous les champs obligatoires !';
     }
-    if (sha1(isset($MotdePasse)) != sha1(isset($MotdePasse2)) ) {
+    if ((isset($MotdePasse)) != (isset($MotdePasse2)) ) {
         $ok = false;
         $messages[] = 'Vos mots de passe ne correspondent pas !';
     }
