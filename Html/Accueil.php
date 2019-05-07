@@ -2,14 +2,18 @@
 <html>
 
 	<?php
+
 	session_start();
+	
     if(isset($_SESSION['email'])){
 		include 'Header&Navigation&Footer.php';
 	}
     else {
 		include 'Header&FooterHorsConnexion.php';
-    }
+	}
+	
 	?>
+
 <head>
 		
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

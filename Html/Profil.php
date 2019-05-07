@@ -1,10 +1,18 @@
 <!DOCTYPE Html>
 
 <html>
-<?php 
+
+<?php
 	session_start();
-    include "Header&Navigation&Footer.php";
-?>    
+	
+    if(isset($_SESSION['email'])){
+		include 'Header&Navigation&Footer.php';
+	}
+    else {
+		header('Location:Accueil.php');
+	}
+?> 
+
     <style type="text/css">
     *{text-align : center;}
 </style>
