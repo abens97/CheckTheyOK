@@ -6,11 +6,12 @@
     <title>Domisep</title>
     <style type="text/css">
         @keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
- 		body {margin:0 auto;background-color: #000000; color: white; height:100%;max-width: 100%; background: url(../Images/H.jpg);background-size:cover;display : table;  }
+ 		body {margin:0 auto;background-color: #000000; color: white; height:100%;width: 100%; background: url(../Images/H.jpg);background-size:cover;display : table;  }
 		header { margin:0 auto;text-align: center;background-color: white; opacity: 0.7; display :table-header-group; left:0; top:0;}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
-		#Head1 img{border-radius: 35%;}
+		#Head1 img{border-radius: 18px;}
+        
 		#Head2{ width:40%;margin: 0 auto;color: black;transform:translateY(-100rem);animation: slideIn 0.5s forwards;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
 		.form {margin-right:1.3%;float:right;color: black;margin-top:4%;font-size: 0.9em;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
@@ -26,8 +27,7 @@
         #Footer3 a {padding-right:1%;padding-left:1%;}
         #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
         #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
-        #erreur {color:red;}
-        
+        #erreur {color:red;font-style: italic;font-size: 130%;}
 
     </style>
 </head>
@@ -49,10 +49,17 @@
 
 		<button type='submit' id='btn-submit'>Login</button>
 			
+				<b>|</b>
 			<br>
 			<a href = "Inscription.php">  <i>S'inscrire  ?</i></a>	
             <a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
-    
+            <br>
+            <div id="erreur">
+            <?php if(isset($_GET["erreur"])) {
+                echo $_GET["erreur"];
+            }
+            ?>
+            </div>
 
 	</div>
         <div id="Head2"> <br />

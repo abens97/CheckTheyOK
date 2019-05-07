@@ -13,7 +13,7 @@
 <style type="text/css">
 
         #zonetexte {
-        box-shadow: 1px 1px olive, -0.6em 0 .9em #ddd;
+        box-shadow: 1px 1px green, -0.6em 0 .9em grey;
         position: absolute;
         overflow:scroll;
         width:70%;
@@ -26,9 +26,9 @@
         margin-left: 20%;
         border-width:5px;
         border-style:double;
-        border-color:green;
+        border-color:#82A898;
         color:black;
-        border-radius : 3%;
+        border-radius : 10px;
         opacity: 0.9;
         }
         #article {font-weight: bold;text-decoration: underline;}

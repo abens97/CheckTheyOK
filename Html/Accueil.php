@@ -16,7 +16,7 @@
 
 <head>
 		
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
 	<title>Domisep</title>
 	<style type="text/css">
 	h3 {text-shadow: 2px 14px 6px rgba(30, 64, 0, 0.5);font-family: 'Asap', fantasy, sans-serif;text-align: center;}
@@ -27,7 +27,6 @@
     width: 50%;
     border: 4px solid white;
     border-radius: 4px;  
-
     box-shadow: -2px 30px 40px rgba(30, 64, 0, 0.5);
 }
 

@@ -15,23 +15,24 @@
 		@keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
-		#Head1 img{border-radius: 35%;}
+		#Head1 img{border-radius: 18px;}
         #Head2{ width:40%;margin: 0 auto;color: black;text-align: center;transform:translateY(-100rem);animation: slideIn 0.5s forwards;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
-		#Head3 {text-decoration: none;margin-right:1.3%;margin-top:1.5%;float:right;color: black;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
-		#Head3 img {border-radius: 35%;}
-		#Head3 button:hover{opacity: 0.6;padding: 2;border-radius: 15%;}
+		#Head3 {text-decoration: none;margin-right:1.3%;margin-top:1%;float:right;color: black;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
+		#Head3 img {border-radius: 18px;padding-bottom: 4%; }
+		#Head3 button:hover{opacity: 0.6;padding: 4px;border-radius: 15%;}
 		#Head3 a {text-decoration: none;}
-		#Navigation{transition:1s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 6%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
+		#Navigation{text-align: center; transition:0.8s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 12%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
 		#Navigation button{display: table-cell;margin-left: auto;margin-right: auto; padding :0;width: 100%;transition: 0.3s;}
-		#Navigation button:hover{text-align: center;opacity: 0.6; transition:1s;padding: 10%;background-color: lightgrey;}
+		#Navigation button:hover{text-align: center;opacity: 0.6; transition:0.4s;padding: 10%;background-color: lightgrey;}
 		#Navigation a {color: grey;text-decoration: none;text-align: center;display: block;line-height: 50px; text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);font-size: 1.9em;}
 		#Navigation a:hover{color:green;}
 		#Navigation:hover {width:12%;transition:1s;}
-		#Navigation img {display: none;}
-		#Navigation:hover img {display: block;float:left;align-items:baseline;padding:0;}
-		#titre{margin-left: 20%;}
-		#Navigation:hover #titre {margin-left: 14%;}
+		#Navigation img {display: none;transition:0.4s;}
+		#Navigation:hover img {display: block;float:right;transition:1s;}
+		
+		#Navigation:hover #titre {margin:0;text-align:center;margin-left:29%;transition:0.2s;position: relative}
+		
 		footer {text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
 		#Footer2 {margin:0 auto;height: 100%;}
 		#Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
@@ -40,6 +41,70 @@
 		#Footer3 a {padding-right:1%;padding-left:1%;}
 		#FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
 		#FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
+		#descente #dropprofil {
+  margin:0 auto;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 16px 35px;
+  background-color: inherit;
+  font-family: inherit; 
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.26));
+  -webkit-box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.48);
+  box-shadow: -2px -3px 3px rgba(0, 0, 0, 0.48);
+  border: 3px solid;
+  border-color: lightgrey grey lightgrey;
+  border-radius: 7px;
+}
+#descente a:hover, #descente:hover #dropprofil {
+
+    background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
+  background-image: -moz-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
+  background-image: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
+  background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.66));
+}
+#descente a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  
+  text-decoration: none;
+}
+#descente-content {
+margin-left: 5%;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+#descente-content a {
+	
+  float: none;
+  color: grey;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);
+}
+
+#descente-content a:hover { color: white;text-decoration: none;text-align: center;transition:0.8s;padding: 13%;
+  background-color: grey;
+}
+
+#descente:hover #descente-content {
+	transition: 2s;
+  display: block;
+}
 
 	</style>
 </head>
@@ -53,6 +118,18 @@
         </div>
         <div id="Head3">
 			<img src="../Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
+			<div id="descente">
+			<button id="dropprofil"><i>Gérer son profil</i></a></button>
+		      <div id="descente-content">
+		        <a href="#">&#8635 Adresse email</a>
+		        <a href="#">&#8635 Mot de passe</a>
+		        <a href="#">&#8635 Téléphone</a>
+		        <a href="#">&#8635 Photo de profil</a>
+		        <a href="#">&#8635 Langue</a>
+		        <a href="Accueil.php?deconnexion=ok">&#10174 Se deconnecter</a>
+		      </div>
+		    </div>
+			
 			<form method='POST' action="">
 			<input type='submit' value = 'Se déconnecter' id='deconnexion' name='deconnexion'>
 			</form>
@@ -86,7 +163,7 @@
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='lumiere.php'):?>
 			<p> Configurer l'éclairage </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='temperature.php'):?>
-			<p> Configurer la chauffage </p>
+			<p> Configurer le chauffage </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='ventilateur.php'):?>
 			<p> Configurer le ventilateur </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='volets.php'):?>
@@ -98,15 +175,15 @@
 	</header> <br />
 
 	<div id="Navigation">
-		<div id="titre">
 		<img src = "../Images/loupe.png" alt="Logo" width="35"> 
-		<i>Menu</i></div>
+		<div id="titre">
+			<i>Menu</i>
+		</div>
 		
 			<button><a href="Statistiques.php">Journal</a></button><br />
-		    <button><a href="Programmer.php">Commander</a></button><br />
+		    <button><a href="Programmer.php">Programmer</a></button><br />
 		    <button><a href="Logements.php">Logements</a></button><br />
-		    <button><a href="Profil.php">Profil</a></button><br />
-		    <button><a href="Accueil.php">Accueil</a></button>
+		    <button><a href="Sav.php">S.A.V.</a></button><br />
 		
 	</div>
 
