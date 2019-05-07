@@ -16,7 +16,7 @@
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
 		.form {margin-right:1.3%;float:right;color: black;margin-top:4%;font-size: 0.9em;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
 		.form button {font-size: 1.1em;}
-		.form img {border-radius: 35%;}
+		.form img {border-radius: 18px;}
 		.form a{margin-right: 13%;margin-left: 14%;text-decoration: none;text-shadow:2px 6px 3px grey;}
         #form-messages{background-color : rgb(255,232,232);border: 1px solid red;color:red;display:none;font: size 12px;font-weight: bold;margin-bottom: 10px;padding: 10px 25px;max-width: 250px;}
         footer {margin:0 auto;text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
@@ -46,20 +46,13 @@
 
 		<label for="mdp">Mot de passe</label>
 		<input type="password" id='modp' name='modp'>
-
+		<b>|</b>
 		<button type='submit' id='btn-submit'>Login</button>
 			
-				<b>|</b>
 			<br>
 			<a href = "Inscription.php">  <i>S'inscrire  ?</i></a>	
             <a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
             <br>
-            <div id="erreur">
-            <?php if(isset($_GET["erreur"])) {
-                echo $_GET["erreur"];
-            }
-            ?>
-            </div>
 
 	</div>
         <div id="Head2"> <br />

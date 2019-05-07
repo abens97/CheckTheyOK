@@ -16,7 +16,7 @@
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
 		#Head1 img{border-radius: 18px;}
-        #Head2{ width:40%;margin: 0 auto;color: black;text-align: center;transform:translateY(-100rem);animation: slideIn 0.5s forwards;}
+    #Head2{ width:40%;margin: 0 auto;color: black;text-align: center;transform:translateY(-100rem);animation: slideIn 0.5s forwards;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
 		#Head3 {text-decoration: none;margin-right:1.3%;margin-top:1%;float:right;color: black;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
 		#Head3 img {border-radius: 18px;padding-bottom: 4%; }
@@ -60,14 +60,14 @@
   border-color: lightgrey grey lightgrey;
   border-radius: 7px;
 }
-#descente a:hover, #descente:hover #dropprofil {
+#descente a:hover, #descente:hover #dropprofil, #descente-content input:hover {
 
     background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
   background-image: -moz-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
   background-image: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
   background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.66));
 }
-#descente a {
+#descente a, #descente-content input {
   float: right;
   font-size: 16px;
   color: white;
@@ -86,7 +86,7 @@ margin-left: 5%;
   text-align: center;
 }
 
-#descente-content a {
+#descente-content a, #descente-content input {
 	
   float: none;
   color: grey;
@@ -97,7 +97,7 @@ margin-left: 5%;
   text-shadow: 2px 10px 7px rgba(0,0,0,0,0.2);
 }
 
-#descente-content a:hover { color: white;text-decoration: none;text-align: center;transition:0.8s;padding: 13%;
+#descente-content a:hover, #descente-content input:hover { color: white;text-decoration: none;text-align: center;transition:0.8s;padding: 13%;
   background-color: grey;
 }
 
@@ -126,13 +126,14 @@ margin-left: 5%;
 		        <a href="#">&#8635 Téléphone</a>
 		        <a href="#">&#8635 Photo de profil</a>
 		        <a href="#">&#8635 Langue</a>
-		        <a href="Accueil.php?deconnexion=ok">&#10174 Se deconnecter</a>
+						<form method='POST' action="">
+						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
+						</form>
+		    
 		      </div>
 		    </div>
 			
-			<form method='POST' action="">
-			<input type='submit' value = 'Se déconnecter' id='deconnexion' name='deconnexion'>
-			</form>
+
 			<?php
 				if(isset($_POST["deconnexion"])){
 				session_destroy();
