@@ -114,7 +114,7 @@
                                 <div id="ligne">            
                                     <div id="form2_bas">
                                          
-                                             <input type="checkbox" name="accepterCGU" value="y">
+                                             <input type="checkbox" name="accepterCGU" id="accepterCGU" value="y">
                                              <label>J'accepte les <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a>
                                          </label><br>
                                     </div>
@@ -125,10 +125,6 @@
                                     </div>
                                 </div>
                             </div>
-                           
-
-        
-
                              
     <script>
 		const form2 ={

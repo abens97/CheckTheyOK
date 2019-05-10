@@ -4,19 +4,20 @@
     include ("../modele/requetes.utilisateurs.php");
 
     $Email = isset($_POST['E-mail']) ? $_POST['E-mail'] : '';
-    $MotdePasse = sha1(isset($_POST['modp']) ? $_POST['modp'] : '');
+    $MotdePasse = isset($_POST['modp']) ? $_POST['modp'] : '';
     $ok = true;
     $messages = array();
     if ( !isset($Email) || empty($Email) ) {
         $ok = false;
         $messages[] = 'Veuillez écrire votre E-mail ! ';
     }
-    if ( !sha1(isset($MotdePasse)) || empty(sha1($MotdePasse)) ) {    /* Probleme ici à modifier */
+    if ( empty($MotdePasse) ) {    /* Probleme ici à modifier */
         $ok = false;
         $messages[] = 'Veuillez écrire votre mot de passe !';
     }   
     if ($ok) {
-        if(estInscrit($bdd,$Email,$MotdePasse)) {
+        $mdpCrypte = sha1($MotdePasse);
+        if(estInscrit($bdd,$Email,$mdpCrypte)) {
             session_start();
             $_SESSION["email"]= $Email;
             $ok = true;

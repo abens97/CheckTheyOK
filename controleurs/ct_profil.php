@@ -1,7 +1,7 @@
 <?php
 
-    include ("../modele/connexion.php");
-    include ("../modele/requetes.utilisateurs.php");
+    require ("../modele/connexion.php");
+    require ("../modele/requetes.utilisateurs.php");
 
     if(isset($_FILES["avatar"]) AND !empty($_FILES["avatar"]['name'])) 
     {

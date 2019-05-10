@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <?php
 	session_start();
@@ -10,6 +9,8 @@
 		header('Location:Accueil.php');
 	}
 ?>
+<!DOCTYPE html>
+
 
 <head>
 	<link rel="stylesheet" type="text/css" href="Combo.css">

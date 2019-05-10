@@ -3,6 +3,11 @@
 <?php 
 	include "../modele/connexion.php";
 	include "../modele/requetes.utilisateurs.php";
+	if(isset($_POST["deconnexion"])){
+			session_destroy();
+			header("Location:Accueil.php");
+	}
+	
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -62,7 +67,7 @@
 }
 #descente a:hover, #descente:hover #dropprofil, #descente-content input:hover {
 
-    background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
+  background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
   background-image: -moz-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
   background-image: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));
   background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.66));
@@ -133,13 +138,6 @@ margin-left: 5%;
 		      </div>
 		    </div>
 			
-
-			<?php
-				if(isset($_POST["deconnexion"])){
-				session_destroy();
-				header("Location:Accueil.php");
-				}
-			?>
         </div>
         <div id="Head2"> <br />
 			<?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>

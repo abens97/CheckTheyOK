@@ -1,6 +1,6 @@
 <?php
-    include ("../modele/connexion.php");
-    include ("../modele/requetes.utilisateurs.php");
+    require ("../modele/connexion.php");
+    require ("../modele/requetes.utilisateurs.php");
 
     $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
     $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : '';
@@ -12,7 +12,8 @@
     $ok = true;
     $messages = array();
 
-    if (!isset($nom) || empty($nom) || !isset($prenom) || empty($prenom) || !isset($numero_telephone) || empty($numero_telephone) || !isset($Email) || empty($Email) || !isset($MotdePasse) || empty($MotdePasse) || !isset($MotdePasse2) || empty($MotdePasse2)) {
+    if (empty($nom) || empty($prenom) ||empty($numero_telephone) || empty($Email) || empty($MotdePasse) || empty($MotdePasse2)) 
+    {
         $ok = false;
         $messages[] = 'Veuillez remplir tous les champs obligatoires !';
     }
