@@ -24,4 +24,11 @@ function avatar(PDO $bdd, String $extensionsUpload) {
     $updateavatar->execute(array('avatar' => $_SESSION['email'].'.'.$extensionsUpload,'email' => $_SESSION['email']));
 }
 
+function recupereTypeUser(PDO $bdd, Char $Email){
+    $req = $bdd->prepare("SELECT type_utilisateur FROM utilisateur WHERE email = ?");
+    $req->execute(array($Email));
+    $row=$req->fetch();
+    return $row["type_utilisateur"];
+}
+
 ?>
