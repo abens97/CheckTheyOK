@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-
+<?php 
+	include "modele/connexion.php";
+?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Domisep</title>
     <style type="text/css">
         @keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
- 		body {margin:0 auto;background-color: #000000; color: white; height:100%;width: 100%; background: url(../Images/H.jpg);background-size:cover;display : table;  }
+ 		body {margin:0 auto;background-color: #000000; color: white; height:100%;width: 100%; background: url(Images/H.jpg);background-size:cover;display : table;  }
 		header { margin:0 auto;text-align: center;background-color: white; opacity: 0.7; display :table-header-group; left:0; top:0;}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
 		#Head1 p{font-family: "Jazz LET", fantasy; padding:0;}
@@ -36,7 +38,7 @@
 
 <header>
 	<div id ="Head1">
-			<a href="Accueil.php"><img src = "../Images/logobase.png" alt="Logo" width="70"></a>
+			<a href="Accueil.php"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
     </div>
     <div class='form'>
@@ -77,8 +79,8 @@
     <footer>
             <br />
             <div id="Footer2">
-            <a href = "https://www.isep.fr" target="_blank"><img src = "../Images/Isep.png" alt="Isep" width="90"></a> 
-            <img src = "../Images/LogoDomisep.png" alt="Domisep" width="100" > 
+            <a href = "https://www.isep.fr" target="_blank"><img src = "Images/Isep.png" alt="Isep" width="90"></a> 
+            <img src = "Images/LogoDomisep.png" alt="Domisep" width="100" > 
             <i>Équipe de techniciens : Sarah DA COSTA - Pauline MILLOT - Leny BELAMICH - Romain POLO - Arthur GORGE BERNAT - Amine BENSOUDA <i>
             </div>
             <br />
@@ -90,15 +92,15 @@
                 <a href = "CGU.php"><u> Conditions générales d'utilisation </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
-                            <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=40"></a> <br />
+                            <a href = "http://www.twitter.com" target="_blank"><img src = "Images/twitter.png" width=40"></a> <br />
                             Twitter
                     </div>
                     <div>
-                            <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="40"></a> <br />
+                            <a href = "http://www.instagram.com" target="_blank"><img src = "Images/instagram.png" width="40"></a> <br />
                             Instagram
                     </div>
                     <div>
-                            <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="40"></a> <br />
+                            <a href = "http://www.facebook.com" target="_blank"><img src = "Images/facebook.png" width="40"></a> <br />
                             Facebook
                     </div>
                     <br />
@@ -106,6 +108,8 @@
             </div>
     </footer>
     <script>
+
+	
 		const form ={
 			Email: document.getElementById('E-mail'),
 			Motdepasse: document.getElementById('modp'),
@@ -133,10 +137,15 @@
 			request.send(requestData);
 		
 		});
-
+		$Type_user = recupereTypeUser($bdd,$Email);
 		function handleResponse (responseObject) {
 			if(responseObject.ok){
-				location.href='Programmer.php';
+				if(true) {
+					location.href='Logements.php';
+				}
+				else {
+					location.href='Programmer.php';
+				}
 			} else{
 				while (form.messages.firstChild) {
 					form.messages.removeChild(form.messages.firstChild);
@@ -149,6 +158,8 @@
 				form.messages.style.display ='block';
 			}
 		}
+
+		
 	</script>
 	</body>
 </html>

@@ -3,14 +3,14 @@
 
 	<?php
 
-	session_start();
+	//session_start();
 	
-    if(isset($_SESSION['email'])){
+    /*if(isset($_SESSION['email'])){
 		include 'Header&Navigation&Footer.php';
 	}
     else {
 		include 'Header&FooterHorsConnexion.php';
-	}
+	}*/
 	
 	?>
 
@@ -61,23 +61,23 @@
 	<div class="slider">
 			<figure>
 				<div class="slide">
-					<img src="../Images/d.jpg">
+					<img src="Images/d.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="../Images/fd.jpg">
+					<img src="Images/fd.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="../Images/s.jpg">
+					<img src="Images/s.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="../Images/l.jpg">
+					<img src="Images/l.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="../Images/M.jpg">
+					<img src="Images/M.jpg">
 				</div>
 			</figure>
 		</div>
