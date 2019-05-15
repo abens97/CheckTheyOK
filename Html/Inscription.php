@@ -33,6 +33,7 @@
         #form2-messages{background-color : rgb(255,232,232);border: 1px solid red;color:red;display:none;font: size 12px;font-weight: bold;margin-bottom: 10px;padding: 10px 25px;max-width: 250px;}
         
     </style>
+    
 </head>
 
 <body>
@@ -56,7 +57,7 @@
                                         <label for="type">Type de compte :</label>
                                          <div class="dropdown">
                                             <select name="one" class="dropdown-select">
-                                              <option value=""><i>-- Selectionner --<i></option>
+                                              <option value=""><i>-- Selectionner --</i></option>
                                               <option value="1">Résident</option>
                                               <option value="2">Référent</option>
                                               <option value="3">Administrateur</option>
@@ -119,9 +120,8 @@
                                          </label><br>
                                     </div>
                                     <div id="form2_bas">
-                                         <label>
                                              <button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Valider</button>
-                                         </label><br>
+                                         <br>
                                     </div>
                                 </div>
                             </div>
