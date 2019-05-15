@@ -23,9 +23,9 @@ if ($isConnected==false) {
 
 
 // Appel des fonctions du contrôleur
-require ("controleurs/fonctions.php") ;
+require ("controleurs/fonctions.php");
 // Appel des fonctions liées à l'affichage
-include("vues/fonctions.php");
+require ("vues/fonctions.php");
 
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET

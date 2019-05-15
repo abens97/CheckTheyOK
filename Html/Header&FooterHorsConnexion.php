@@ -34,11 +34,13 @@
     </style>
 </head>
 
+
+
 <body>
 
 <header>
 	<div id ="Head1">
-			<a href="Accueil.php"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
+			<a href="index.php?cible=ct_connexion&action=see_Accueil"><img src = "Images/logobase.png" alt="Logo" width="70"></a> <!--Corriger le lien !-->
             <p>Check They're Ok !<p>     
     </div>
     <div class='form'>
@@ -52,8 +54,8 @@
 		<button type='submit' id='btn-submit'>Login</button>
 			
 			<br>
-			<a href = "Inscription.php">  <i>S'inscrire  ?</i></a>	
-            <a href = "mdp.php">  <i>Mot de passe oublié ?</i></a>
+			<a href = "index.php?cible=ct_connexion&action=see_Inscription">  <i>S'inscrire  ?</i></a>	
+            <a href = "index.php?cible=ct_connexion&action=see_Mdpoublie">  <i>Mot de passe oublié ?</i></a>
             <br>
 
 	</div>
@@ -86,10 +88,10 @@
             <br />
             <HR align=center>
             <div id = "Footer3">
-                <p><i>CheckThey'reOK© 2018-2019</i></p>   -
-                <a href = "FAQ.php"><u> FAQ </u></a> -
+                <p><i>CheckThey'reOK© 2018-2019</i></p>   
+                <a href = "index.php?cible=ct_connexion&action=see_Faq"><u> FAQ </u></a> -
                 <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-                <a href = "CGU.php"><u> Conditions générales d'utilisation </u></a> -
+                <a href = "index.php?cible=ct_connexion&action=see_Cgu"><u> Conditions générales d'utilisation </u></a> -
                 <div id = "FooterReseaux">
                     <div> 
                             <a href = "http://www.twitter.com" target="_blank"><img src = "Images/twitter.png" width=40"></a> <br />
@@ -109,6 +111,7 @@
     </footer>
     <script>
 
+	
 	
 		const form ={
 			Email: document.getElementById('E-mail'),

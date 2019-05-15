@@ -44,3 +44,23 @@ function crypterMdp($password) {
     return password_hash($password, PASSWORD_BCRYPT);
 }
 
+function seeAccueil() {
+    require ("Html/Header&FooterHorsConnexion.php");
+    require ("Html/Accueil.php");
+}
+
+function seeInscription() {
+    require ("Html/Inscription.php");
+}
+
+function seeMdpoublie() {
+    require ("Html/mdp.php");
+}
+
+function seeFaq() {
+    require ("Html/FAQ.php");
+}
+
+function seeCgu() {
+    require ("Html/CGU.php");
+}
