@@ -7,8 +7,8 @@
     $numero_telephone = isset($_POST['tel']) ? $_POST['tel'] : '';
     $Email = isset($_POST['Email']) ? $_POST['Email'] : '';
     $Email2 = isset($_POST['Email2']) ? $_POST['Email2'] : '';
-    $MotdePasse = (isset($_POST['mdp']) ? $_POST['mdp'] : '');
-    $MotdePasse2 = (isset($_POST['mdp']) ? $_POST['mdp'] : '');
+    $MotdePasse = isset($_POST['mdp']) ? $_POST['mdp'] : '';
+    $MotdePasse2 = isset($_POST['mdp']) ? $_POST['mdp'] : '';
     $ok = true;
     $messages = array();
 
@@ -27,11 +27,14 @@
     }
     
     if ($ok) {
-        if(Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $MotdePasse) {
+        if(Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $MotdePasse) 
+        {
             session_start();
             $_SESSION["Email"]= $Email;
             $ok = true;
-        } else {
+            header('Location:Accueil.php');
+        } 
+        else {
             $ok = false;
             $messages[] = 'Une erreur c\'est produite ! Veuillez recommencer !';
         }

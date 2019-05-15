@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <?php include "Header&FooterHorsConnexion.php";?>
+
 <head>
+
+    <script type="text/javascript" language="javascript" src="javascripts/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="javascripts/script.js"></script>
     <link rel="stylesheet" type="text/css" href="Combo.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Domisep</title>
@@ -31,6 +35,7 @@
         input, button {opacity: 0.8;font-family: normal;}
         @media only screen and (min-width: 48em) { #form2_demi {width: 50%;}}
         #form2-messages{background-color : rgb(255,232,232);border: 1px solid red;color:red;display:none;font: size 12px;font-weight: bold;margin-bottom: 10px;padding: 10px 25px;max-width: 250px;}
+        .error_form {font-size: 15px; font-family: Arial; color: #FF0052;}
         
     </style>
 </head>
@@ -44,8 +49,8 @@
             </div>     
 
             <div class='form2'>
-		        <ul id='form2-messages'></ul> 
-
+		        <form id=registration_form action ="../controleurs/ct_inscription.php" method="post">
+                <table>
                                 <div id="ligne">
                                     <div id="form2_demi">
                                         <label for="civilite">Civilité :</label>
@@ -55,7 +60,7 @@
                                     <div id="form2_demi">
                                         <label for="type">Type de compte :</label>
                                          <div class="dropdown">
-                                            <select name="one" class="dropdown-select">
+                                            <select name="one" class="dropdown-select" id='type'>
                                               <option value=""><i>-- Selectionner --<i></option>
                                               <option value="1">Résident</option>
                                               <option value="2">Référent</option>
@@ -82,32 +87,35 @@
                                         <input type="text" placeholder="XX.XX.XX.XX.XX" id="tel" name="tel" maxlength="10"><br>
                                     </div>
                                     <div id="form2_demi">
-                                        <label for="pseudo">Pseudo :</label>
-                                        <input type="text" id="pseudo" placeholder="Utilisateur" name="pseudo" maxlength="15"><br>
+                                        <label for="form-username">Pseudo :</label>
+                                        <input type="text" id="form_username" placeholder="Utilisateur" name="form_username" maxlength="15"><br>
+                                        <span class="error_form" id="username_error_message"></span>
                                     </div>                                
                                 </div>
 
                                 <div id="ligne">
                                     <div id="form2_demi">
-                                        <label for="email">Adresse e-mail :</label>
-                                        <input type="email" id="Email" placeholder="Adresse@email.com" name="Email" maxlength="30"><br>
+                                        <label for="form_email">Adresse e-mail :</label>
+                                        <input type="email" id="form_email" placeholder="Adresse@email.com" name="form_email" maxlength="30"><br>
+                                        <span class="error_form" id="email_error_message"></span>
                                     </div>
                                     <div id="form2_demi">
-                                        <label for="email">Confirmation de votre e-mail :</label>
-                                        <input type="email" id="Email2" placeholder="Adresse@email.com" name="Email2" maxlength="30"><br>
-                                    </div>                                  
+                                        <label for="form_retype_email">Confirmation de votre e-mail :</label>
+                                        <input type="email" id="form_retype_email" placeholder="Adresse@email.com" name="form_retype_email" maxlength="30"><br>
+                                        <span class="error_form" id="retype_email_error_message"></span>
+                                    </div>                                
                                 </div>
 
                                 <div id="ligne">
                                     <div id="form2_demi">
-                                        <label for="mdp">Mot de passe :</label>
-                                        <input type="password"  id="mdp" placeholder="******" name="mdp" maxlength="25"><br>
+                                        <label for="form_password">Mot de passe :</label>
+                                        <input type="password"  id="form_password" placeholder="******" name="form_password" maxlength="25"><br>
+                                        <span class="error_form" id="password_error_message"></span>
                                     </div>
                                     <div id="form2_demi">
-                                        <label for="mdp2">Confirmation du mot de passe :</label>
-                                        <input type="password" id="mdp2" placeholder="******"name="mdp2" maxlength="25"><br>
-                                        <div id="erreur">
-                                        </div>
+                                        <label for="form_retype_password">Confirmation du mot de passe :</label>
+                                        <input type="password" id="form_retype_password" placeholder="******"name="form_retype_password" maxlength="25"><br>
+                                        <span class="error_form" id="retype_password_error_message"></span>
                                     </div>
                                 </div> 
 
@@ -115,9 +123,9 @@
                                     <div id="form2_bas">
                                          
                                              <input type="checkbox" name="accepterCGU" id="accepterCGU" value="y">
-                                             <label>J'accepte les <a href = "CGUHC.php"><u> Conditions générales d'utilisations </u></a>
+                                             <label>J'accepte les <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a>
                                          </label><br>
-                                    </div>
+                                    </div> 
                                     <div id="form2_bas">
                                          <label>
                                              <button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Valider</button>
@@ -125,61 +133,9 @@
                                     </div>
                                 </div>
                             </div>
-                             
-    <script>
-		const form2 ={
-			nom: document.getElementById('nom'),
-            prenom: document.getElementById('prenom'),
-            numero_telephone: document.getElementById('tel'),
-			Email: document.getElementById('Email'),
-			Email2: document.getElementById('Email2'),
-			MotdePasse: document.getElementById('mdp'),
-			MotdePasse2: document.getElementById('mdp2'),
-			submit: document.getElementById('btn-submit2'),
-			messages: document.getElementById('form2-messages'),
-		};
-
-		form2.submit.addEventListener('click',() => {
-			const request =new XMLHttpRequest();
-
-			request.onload =() => {
-				let responseObject = null;
-				try{
-					responseObject = JSON.parse(request.responseText);
-				} catch(e) {
-					console.error('Could not parse JSON!');
-				}
-				if (responseObject){
-					handleResponse(responseObject);
-				}
-			}
-			const requestData =`nom=${form2.nom.value}&prenom=${form2.prenom.value}&tel=${form2.numero_telephone.value}&Email=${form2.Email.value}&Email2=${form2.Email2.value}&mdp=${form2.MotdePasse.value}&mdp2=${form2.MotdePasse2.value}`;
-			request.open('post',"../controleurs/ct_inscription.php");
-			request.setRequestHeader('Content-type','application/x-www-form2-urlencoded');
-			request.send(requestData);
-		
-		});
-
-		function handleResponse (responseObject) {
-			if(responseObject.ok){
-				location.href='Programmer.php';
-			} else{
-				while (form2.messages.firstChild) {
-					form2.messages.removeChild(form2.messages.firstChild);
-				}
-				responseObject.messages.forEach((message)  => {
-					const li = document.createElement('li');
-					li.textContent = message;
-					form2.messages.appendChild(li);
-				});
-				form2.messages.style.display ='block';
-			}
-		}
-	</script>
-                                       
-                    
-    
-      
+                </table>
+                </form>
 
 </body>
+
 </html>

@@ -120,7 +120,7 @@ margin-left: 5%;
 		<div id ="Head1">
 			<a href="Accueil.php"><img src = "../Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
-        </div>
+      </div>
         <div id="Head3">
 			<img src="../Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
 			<div id="descente">
@@ -167,6 +167,8 @@ margin-left: 5%;
 			<p> Configurer le ventilateur </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='volets.php'):?>
 			<p> Configurer les volets </p>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='volets.php'):?>
+			<p> Accueil </p>
 			<?php endif ?>
 		</div>
         
