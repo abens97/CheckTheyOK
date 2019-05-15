@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	
-    if(isset($_SESSION['email'])){
-		include 'Header&Navigation&Footer.php';
-	}
-    else {
-		header('Location:Accueil.php');
-	}
+  session_start();
+
+  if(isset($_SESSION['email'])){
+    include 'Header&Navigation&Footer.php';
+  }
+  else {
+    header('Location:index.php?cible=ct_connexion');
+  }
 ?>
 <head>
 <link rel="stylesheet" type="text/css" href="Combo.css">
@@ -41,7 +41,7 @@
 <html>
   
   <div id="ajouter" onclick="document.getElementById('zone').style.display = 'table'">
-    <a href="#"><img src = "../Images/Add.png" alt="Logo" width="70"></a>
+    <a href="#"><img src = "Images/Add.png" alt="Logo" width="70"></a>
   </div>
 
   <div id="zone" class="Nettoyer">

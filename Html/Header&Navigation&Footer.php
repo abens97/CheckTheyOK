@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <?php 
-	include "../modele/connexion.php";
-	include "../modele/requetes.utilisateurs.php";
+	
+	//Inutile avec ce code
+	/*
 	if(isset($_POST["deconnexion"])){
 			session_destroy();
 			header("Location:Accueil.php");
 	}
-	
+	*/
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -15,7 +16,7 @@
 	<style type="text/css">
 	@import url('https://fonts.googleapis.com/css?family=Asap');
 	* {-moz-box-sizing: border-box; box-sizing: border-box;}
-		body {background-color: #000000; color: white; height:100%;width:100%;background: url(../Images/H.jpg);background-size:cover;display : table; background-position: fixed;overflow-x: hidden;overflow-y: hidden }
+		body {background-color: #000000; color: white; height:100%;width:100%;background: url(Images/H.jpg);background-size:cover;display : table; background-position: fixed;overflow-x: hidden;overflow-y: hidden }
 		header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group;}
 		@keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
@@ -118,11 +119,11 @@ margin-left: 5%;
 
 	<header>
 		<div id ="Head1">
-			<a href="Accueil.php"><img src = "../Images/logobase.png" alt="Logo" width="70"></a>
+			<a href="index.php?cible=ct_user&action=see_Accueil_User"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-			<img src="../Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
+			<img src="Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
 			<div id="descente">
 			<button id="dropprofil"><i>Gérer son profil</i></a></button>
 		      <div id="descente-content">
@@ -131,7 +132,7 @@ margin-left: 5%;
 		        <a href="#">&#8635 Téléphone</a>
 		        <a href="#">&#8635 Photo de profil</a>
 		        <a href="#">&#8635 Langue</a>
-						<form method='POST' action="">
+						<form method='POST' action='index.php?cible=ct_user&action=deconnexion'>
 						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
 						</form>
 		    
@@ -174,23 +175,24 @@ margin-left: 5%;
 	</header> <br />
 
 	<div id="Navigation">
-		<img src = "../Images/loupe.png" alt="Logo" width="35"> 
+		<img src = "Images/loupe.png" alt="Logo" width="35"> 
 		<div id="titre">
 			<i>Menu</i>
 		</div>
-		
-			<button><a href="Statistiques.php">Journal</a></button><br />
-		    <button><a href="Programmer.php">Programmer</a></button><br />
-		    <button><a href="Logements.php">Logements</a></button><br />
-		    <button><a href="Sav.php">S.A.V.</a></button><br />
+
+				<button><a href="index.php?cible=ct_user&action=see_Accueil_User">Accueil</a></button><br />
+				<button><a href="index.php?cible=ct_user&action=see_Statistiques">Journal</a></button><br />
+		    <button><a href="index.php?cible=ct_user&action=see_Programmer">Programmer</a></button><br />
+		    <button><a href="index.php?cible=ct_user&action=see_Logements">Logements</a></button><br />
+		    <button><a href="index.php?cible=ct_user&action=see_Sav">S.A.V.</a></button><br />
 		
 	</div>
 
 	<footer>
 			<br />
             <div id="Footer2">
-            <a href = "https://www.isep.fr" target="_blank"><img src = "../Images/Isep.png" alt="Isep" width="90"></a> 
-            <img src = "../Images/LogoDomisep.png" alt="Domisep" width="100" > 
+            <a href = "https://www.isep.fr" target="_blank"><img src = "Images/Isep.png" alt="Isep" width="90"></a> 
+            <img src = "Images/LogoDomisep.png" alt="Domisep" width="100" > 
 
             <i>Équipe de techniciens : Sarah DA COSTA - Pauline MILLOT - Leny BELAMICH - Romain POLO - Arthur GORGE BERNAT - Amine BENSOUDA<i>
         	</div>
@@ -198,20 +200,20 @@ margin-left: 5%;
         	<HR align=center>
         	<div id = "Footer3">
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
-	            <a href = "FAQ.php"><u> FAQ </u></a> -
+	            <a href = "index.php?cible=ct_user&action=see_Faq_User"><u> FAQ </u></a> -
 	            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-	            <a href = "CGU.php"><u> Conditions générales d'utilisation </u></a> -
+	            <a href = "index.php?cible=ct_user&action=see_Cgu_User"><u> Conditions générales d'utilisation </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 
-	                        <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />
+	                        <a href = "http://www.twitter.com" target="_blank"><img src = "Images/twitter.png" width=70"></a> <br />
 	                        Twitter
 	                </div>
 	                <div>
-	                        <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"></a> <br />
+	                        <a href = "http://www.instagram.com" target="_blank"><img src = "Images/instagram.png" width="70"></a> <br />
 	                        Instagram
 	                </div>
 	                <div>
-	                        <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="70"></a> <br />
+	                        <a href = "http://www.facebook.com" target="_blank"><img src = "Images/facebook.png" width="70"></a> <br />
 	                        Facebook
 	                </div>
                 	<br />

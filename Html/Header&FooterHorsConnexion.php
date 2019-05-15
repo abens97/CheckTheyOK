@@ -40,25 +40,24 @@
 
 <header>
 	<div id ="Head1">
-			<a href="index.php?cible=ct_connexion&action=see_Accueil"><img src = "Images/logobase.png" alt="Logo" width="70"></a> <!--Corriger le lien !-->
+			<a href="index.php?cible=ct_connexion&action=see_Accueil"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
     </div>
-    <div class='form'>
+    <form method='post' action='index.php?cible=ct_connexion&action=connexion'>
 		<ul id='form-messages'></ul>
 		<label for="Email">Email</label>
-		<input type="email" id='E-mail' spellcheck="false">
+		<input type="text" id='E-mail' name='email' spellcheck="false">
 
 		<label for="mdp">Mot de passe</label>
 		<input type="password" id='modp' name='modp'>
 		<b>|</b>
-		<button type='submit' id='btn-submit'>Login</button>
+		<input type='submit' id='btn-submit'>Login</input>
 			
 			<br>
 			<a href = "index.php?cible=ct_connexion&action=see_Inscription">  <i>S'inscrire  ?</i></a>	
             <a href = "index.php?cible=ct_connexion&action=see_Mdpoublie">  <i>Mot de passe oublié ?</i></a>
             <br>
-
-	</div>
+	</form>
         <div id="Head2"> <br />
             <?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
 			<p> Conditions Générales d'Utilisations </p>
@@ -112,7 +111,7 @@
     <script>
 
 	
-	
+	/*
 		const form ={
 			Email: document.getElementById('E-mail'),
 			Motdepasse: document.getElementById('modp'),
@@ -161,8 +160,8 @@
 				form.messages.style.display ='block';
 			}
 		}
-
-		
+	*/
+	
 	</script>
 	</body>
 </html>

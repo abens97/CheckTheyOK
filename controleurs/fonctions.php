@@ -58,9 +58,47 @@ function seeMdpoublie() {
 }
 
 function seeFaq() {
+    require ("Html/Header&FooterHorsConnexion.php");
     require ("Html/FAQ.php");
 }
 
 function seeCgu() {
+    require ("Html/Header&FooterHorsConnexion.php");
     require ("Html/CGU.php");
+}
+
+function seeFaqUser() {
+    require ("Html/Header&Navigation&Footer.php");
+    require ("Html/FAQ.php");
+}
+
+function seeCguUser() {
+    require ("Html/Header&Navigation&Footer.php");
+    require ("Html/CGU.php");
+}
+
+function seeAccueilUser() {
+    require ("Html/Header&Navigation&Footer.php");
+    require ("Html/AccueilUser.php");
+}
+
+function seeStatistiques() {
+    require ("Html/Statistiques.php");
+}
+
+function seeProgrammer() {
+    require ("Html/Programmer.php");
+}
+
+function seeLogements() {
+    require ("Html/Logements.php");
+}
+
+function seeSav() {
+    require ("Html/Sav.php");
+}
+
+function seeAccueilDomisep() {
+    require ("Html/Header&Navigation&Footer.php");
+    require ("Html/Accueil.php");
 }

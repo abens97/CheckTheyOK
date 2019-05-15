@@ -12,7 +12,7 @@
 ?>
 
 <style type="text/css">
-#Escalier {
+#Construction {
 border: 4px solid lightgrey;
 border-radius: 4px;
 width:34%;
@@ -24,7 +24,7 @@ height :60%;
 </style>
 
 <html>
-<div id="Escalier">
+<div id="Construction">
 	<img src="Images/pageConstruction.png">
 </div>
 
