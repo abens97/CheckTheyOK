@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	require ("Html/Header&Navigation&Footer.php");
+	
 ?>
 
 <style type="text/css">
@@ -18,6 +17,11 @@ height :60%;
 </style>
 
 <html>
+<div>
+    Statistiques de Domisep
+    <p>-> Visualiser le nombre d'utilisateurs inscrits en fonction du temps</p>
+    <p>-> Filter la visualisation (par période/gestionnaire)</p>
+</div>
 <div id="Construction">
 	<img src="Images/pageConstruction.png">
 </div>

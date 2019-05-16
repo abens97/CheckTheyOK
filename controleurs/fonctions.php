@@ -50,10 +50,12 @@ function seeAccueil() {
 }
 
 function seeInscription() {
+    require ("Html/Header&FooterHorsConnexion.php");
     require ("Html/Inscription.php");
 }
 
 function seeMdpoublie() {
+    require ("Html/Header&FooterHorsConnexion.php");
     require ("Html/mdp.php");
 }
 
@@ -78,27 +80,56 @@ function seeCguUser() {
 }
 
 function seeAccueilUser() {
-    require ("Html/Header&Navigation&Footer.php");
+    //require ("Html/Header&Navigation&Footer.php");
     require ("Html/AccueilUser.php");
 }
 
 function seeStatistiques() {
+    //require ("Html/Header&Navigation&Footer.php");
     require ("Html/Statistiques.php");
 }
 
 function seeProgrammer() {
+    //require ("Html/Header&Navigation&Footer.php");
     require ("Html/Programmer.php");
 }
 
 function seeLogements() {
+    //require ("Html/Header&Navigation&Footer.php");
     require ("Html/Logements.php");
 }
 
 function seeSav() {
+    //require ("Html/Header&Navigation&Footer.php");
     require ("Html/Sav.php");
 }
 
 function seeAccueilDomisep() {
-    require ("Html/Header&Navigation&Footer.php");
-    require ("Html/Accueil.php");
+    require ("Html/HeFoNaDomisep.php");
+    require ("Html/AccueilDomisep.php");
+}
+
+function seeStatistiquesDomisep() {
+    require ("Html/HeFoNaDomisep.php");
+    require ("Html/StatistiquesDomisep.php");
+}
+
+function seeConfigurationDomisep() {
+    require ("Html/HeFoNaDomisep.php");
+    require ("Html/ConfigurationDomisep.php");
+}
+
+function seeGestionnairesDomisep() {
+    require ("Html/HeFoNaDomisep.php");
+    require ("Html/GestionnairesDomisep.php");
+}
+
+function seeFaqDomisep() {
+    require ("Html/HeFoNaDomisep.php");
+    require ("Html/FAQ.php");
+}
+
+function seeCguDomisep() {
+    require ("Html/HeFoNaDomisep.php");
+    require ("Html/CGU.php");
 }

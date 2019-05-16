@@ -1,7 +1,9 @@
 <?php
 
+//require ("Html/Header&Navigation&Footer.php");
+
 if (isset($_GET["action"])) {
-    $action = htmlspecialchars($_GET["action"]); // Petite fonction de sécurité
+    $action = htmlspecialchars($_GET["action"]);
 
     switch($action) {
     case "see_Accueil_User":

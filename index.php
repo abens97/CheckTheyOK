@@ -26,6 +26,9 @@ if ($isConnected==false) {
 require ("controleurs/fonctions.php");
 // Appel des fonctions liées à l'affichage
 require ("vues/fonctions.php");
+// Appel des fonctions liées à la BDD
+
+
 
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET

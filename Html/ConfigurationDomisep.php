@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	require ("Html/Header&Navigation&Footer.php");
+	
 ?>
 
 <style type="text/css">
@@ -18,6 +17,11 @@ height :60%;
 </style>
 
 <html>
+<div>
+    Configuration par Domisep
+    <p>-> Modifier les CGU</p>
+    <p>-> Modifier l'adresse mail de contact</p>
+</div>
 <div id="Construction">
 	<img src="Images/pageConstruction.png">
 </div>

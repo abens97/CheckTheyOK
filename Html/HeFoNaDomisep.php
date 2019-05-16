@@ -119,7 +119,7 @@ margin-left: 5%;
 
 	<header>
 		<div id ="Head1">
-			<a href="index.php?cible=ct_user&action=see_Accueil_User"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
+			<a href="index.php?cible=ct_domisep"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
@@ -132,7 +132,7 @@ margin-left: 5%;
 		        <a href="#">&#8635 Téléphone</a>
 		        <a href="#">&#8635 Photo de profil</a>
 		        <a href="#">&#8635 Langue</a>
-						<form method='POST' action='index.php?cible=ct_user&action=deconnexion'>
+						<form method='POST' action='index.php?cible=ct_domisep&action=deconnexion'>
 						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
 						</form>
 		    
@@ -140,53 +140,19 @@ margin-left: 5%;
 		    </div>
 			
         </div>
+        
         <div id="Head2"> <br />
-			<?php if (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Accueil_User'):?>
-			<p> Bonjour
-      <?php 
-      require ("modele/connexion.php"); 
-      require ("modele/requetes.utilisateurs.php");
-			recupereCivilite($bdd, $_SESSION["email"]);
-			echo(" ");
-			recupereNom($bdd, $_SESSION["email"]);?></p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user'):?>
-			<p> Bonjour
-      <?php 
-      require ("modele/connexion.php");
-      require ("modele/requetes.utilisateurs.php");
-			recupereCivilite($bdd, $_SESSION["email"]); 
-			echo(" ");
-			recupereNom($bdd, $_SESSION["email"]);?></p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Programmer'):?>
-			<p> Programmer sa maison </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Logements'):?>
-			<p> Configurer ses logements</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Statistiques'):?>
-			<p> Vos informations M. <?php
-			require ("modele/connexion.php");
-			require ("modele/requetes.utilisateurs.php");
-			recupereNom($bdd, $_SESSION["email"]);
-			?>
-			</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='PageType.php'):?>
-			<p> PageType </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='Contact.php'):?>
-			<p> Contact </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='Profil.php'):?>
-			<p> Mon Profil </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Faq_User'):?>
-			<p> FAQ </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Cgu_User'):?>
-			<p> Conditions Générales d'Utilisation </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='lumiere.php'):?>
-			<p> Configurer l'éclairage </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='temperature.php'):?>
-			<p> Configurer le chauffage </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='ventilateur.php'):?>
-			<p> Configurer le ventilateur </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='volets.php'):?>
-			<p> Configurer les volets </p>
-			<?php endif ?>
+            <?php if (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Accueil_Domisep'):?>
+			<p> Bonjour Domisep</p>
+            <?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep'):?>
+			<p> Bonjour Domisep </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Statistiques_Domisep'):?>
+			<p> Statistiques Globales</p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Configuration_Domisep'):?>
+			<p> Configuration</p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Gestionnaires_Domisep'):?>
+			<p> Gestionnaires</p>
+            <?php endif ?>
 		</div>
         
 
@@ -198,11 +164,10 @@ margin-left: 5%;
 			<i>Menu</i>
 		</div>
 
-				<button><a href="index.php?cible=ct_user&action=see_Accueil_User">Accueil</a></button><br />
-				<button><a href="index.php?cible=ct_user&action=see_Statistiques">Journal</a></button><br />
-		    <button><a href="index.php?cible=ct_user&action=see_Programmer">Programmer</a></button><br />
-		    <button><a href="index.php?cible=ct_user&action=see_Logements">Logements</a></button><br />
-		    <button><a href="index.php?cible=ct_user&action=see_Sav">S.A.V.</a></button><br />
+			<button><a href="index.php?cible=ct_domisep&action=see_Accueil_Domisep">Accueil</a></button><br />
+			<button><a href="index.php?cible=ct_domisep&action=see_Statistiques_Domisep">Statistiques</a></button><br />
+		    <button><a href="index.php?cible=ct_domisep&action=see_Configuration_Domisep">Configuration</a></button><br />
+		    <button><a href="index.php?cible=ct_domisep&action=see_Gestionnaires_Domisep">Gestionnaires</a></button><br />
 		
 	</div>
 
@@ -218,9 +183,9 @@ margin-left: 5%;
         	<HR align=center>
         	<div id = "Footer3">
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
-	            <a href = "index.php?cible=ct_user&action=see_Faq_User"><u> FAQ </u></a> -
+	            <a href = "index.php?cible=ct_domisep&action=see_Faq_Domisep"><u> FAQ </u></a> -
 	            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-	            <a href = "index.php?cible=ct_user&action=see_Cgu_User"><u> Conditions générales d'utilisation </u></a> -
+	            <a href = "index.php?cible=ct_domisep&action=see_Cgu_Domisep"><u> Conditions générales d'utilisation </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 
 	                        <a href = "http://www.twitter.com" target="_blank"><img src = "Images/twitter.png" width=70"></a> <br />

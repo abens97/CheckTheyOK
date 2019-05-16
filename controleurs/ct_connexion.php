@@ -3,13 +3,13 @@
 
     require ("modele/connexion.php");
     require ("modele/requetes.utilisateurs.php");
+    
 
     $messages = array();
     $ok = true;
 
     if (isset($_GET["action"])) {
-        $action = htmlspecialchars($_GET["action"]); // Petite fonction de sécurité
-    
+        $action = htmlspecialchars($_GET["action"]);
         switch($action) {
         case "see_Accueil":
             seeAccueil();
@@ -49,7 +49,7 @@
                         $_SESSION['email']= $Email;
                         $_SESSION['typeUser']= $Type_user;
                         $ok = true;
-                        seeAccueilUser();
+                        header ("Location:index.php?cible=ct_domisep");
                         
                     }
                     else if($Type_user=="3"){

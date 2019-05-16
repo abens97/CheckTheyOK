@@ -1,13 +1,7 @@
 
 <?php
 	session_start();
-	
-	if(isset($_SESSION['email'])){
-		  include 'Header&Navigation&Footer.php';
-	  }
-	else {
-		  header('Location:index.php?cible=ct_connexion');
-	  }	
+	require ("Html/Header&Navigation&Footer.php");
 ?>
 <!DOCTYPE html>
 

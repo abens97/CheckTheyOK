@@ -13,10 +13,17 @@ function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephon
 }
 
 function recupereNom(PDO $bdd, String $Email){
-    $req = $bdd->prepare("SELECT prenom FROM utilisateur WHERE email = ?");
+    $req = $bdd->prepare("SELECT nom FROM utilisateur WHERE email = ?");
     $req->execute(array($Email));
     $row=$req->fetch();
-    echo $row["prenom"];
+    echo $row["nom"];
+}
+
+function recupereCivilite(PDO $bdd, String $Email){
+    $req = $bdd->prepare("SELECT civilite FROM utilisateur WHERE email = ?");
+    $req->execute(array($Email));
+    $row=$req->fetch();
+    echo $row["civilite"];
 }
 
 function avatar(PDO $bdd, String $extensionsUpload) {

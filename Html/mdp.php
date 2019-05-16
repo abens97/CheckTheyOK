@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<?php include "Header&FooterHorsConnexion.php";?>
+<?php 
+?>
 
 <style type="text/css">
 

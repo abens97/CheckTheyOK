@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	require ("Html/Header&Navigation&Footer.php");
+	
 ?>
 
 <style type="text/css">
@@ -18,6 +17,11 @@ height :60%;
 </style>
 
 <html>
+<div>
+    Accueil Domisep
+    <p>-> Réflechir à ce qu'on pourrait mettre</p>
+    <p>-> Peut-être des stats</p>
+</div>
 <div id="Construction">
 	<img src="Images/pageConstruction.png">
 </div>
