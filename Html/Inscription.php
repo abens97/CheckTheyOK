@@ -72,25 +72,24 @@
 
                                 <div id="ligne">
                                     <div id="form2_demi">
-                                        <label for="prenom">Prénom :</label>
-                                        <input type="text" id="prenom" placeholder="Jean" name="prenom" maxlength="15"><br>
+                                        <label for="form_prenom">Prénom :</label>
+                                        <input type="text" id="form_prenom" placeholder="" name="form_prenom" maxlength="15"><br>
+                                        <span class="error_form" id="prenom_error_message"></span>
                                     </div>
                                      <div id="form2_demi">
-                                        <label for="nom">Nom :</label>
-                                        <input type="text" id="nom" placeholder="Émarre" name="nom" maxlength="25"><br>
+                                        <label for="form_nom">Nom :</label>
+                                        <input type="text" id="form_nom" placeholder="" name="form_nom" maxlength="25"><br>
+                                        <span class="error_form" id="nom_error_message"></span>
+
                                     </div>
                                 </div>
 
                                 <div id="ligne">
                                     <div id="form2_demi">
                                         <label for="tel">Numéro de téléphone :</label>
-                                        <input type="text" placeholder="XX.XX.XX.XX.XX" id="tel" name="tel" maxlength="10"><br>
-                                    </div>
-                                    <div id="form2_demi">
-                                        <label for="form-username">Pseudo :</label>
-                                        <input type="text" id="form_username" placeholder="Utilisateur" name="form_username" maxlength="15"><br>
-                                        <span class="error_form" id="username_error_message"></span>
-                                    </div>                                
+                                        <input type="tel" placeholder="0611223344" id="form_tel" name="form_tel" maxlength="10"><br>
+                                        <span class="error_form" id="tel_error_message"></span>
+                                    </div>                               
                                 </div>
 
                                 <div id="ligne">
@@ -121,9 +120,9 @@
 
                                 <div id="ligne">            
                                     <div id="form2_bas">
-                                         
-                                             <input type="checkbox" name="accepterCGU" id="accepterCGU" value="y">
+                                             <input type="checkbox" name="CGU" id="CGU" value="y">
                                              <label>J'accepte les <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a>
+                                             <span class="error_form" id="CGU_error_message"></span>
                                          </label><br>
                                     </div> 
                                     <div id="form2_bas">

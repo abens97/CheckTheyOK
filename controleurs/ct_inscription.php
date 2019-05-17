@@ -2,9 +2,9 @@
     require ("../modele/connexion.php");
     require ("../modele/requetes.utilisateurs.php");
 
-    $nom = $_POST['nom'];
-    $prenom =$_POST['prenom'];
-    $numero_telephone =$_POST['tel'];
+    $nom = $_POST['form_nom'];
+    $prenom =$_POST['form_prenom'];
+    $numero_telephone =$_POST['form_tel'];
     $Email =$_POST['form_email'];
     $Email2 =$_POST['form_retype_email'];
     $MotdePasse =$_POST['form_password'];

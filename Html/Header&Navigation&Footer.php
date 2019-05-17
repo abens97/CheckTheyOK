@@ -127,7 +127,7 @@ margin-left: 5%;
 			<button id="dropprofil"><i>Gérer son profil</i></a></button>
 		      <div id="descente-content">
 		        <a href="#">&#8635 Adresse email</a>
-		        <a href="#">&#8635 Mot de passe</a>
+		        <a href="ChangementMdp">&#8635 Mot de passe</a>
 		        <a href="#">&#8635 Téléphone</a>
 		        <a href="#">&#8635 Photo de profil</a>
 		        <a href="#">&#8635 Langue</a>

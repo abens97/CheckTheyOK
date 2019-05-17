@@ -19,6 +19,11 @@ function recupereNom(PDO $bdd, String $Email) {
     echo $row["prenom"];
 }
 
+function replaceMdp($Email, $new_mdp){
+    $req = $db->prepare("UPDATE Utilisateur SET mot_de_passe = ? WHERE email = ?");
+    $req->execute(array($Email));
+}
+
 function avatar(PDO $bdd, String $extensionsUpload) {
     $updateavatar = $bdd->prepare('UPDATE utilisateur SET avatar = :avatar WHERE email = :email');
     $updateavatar->execute(array('avatar' => $_SESSION['email'].'.'.$extensionsUpload,'email' => $_SESSION['email']));

@@ -60,7 +60,7 @@
 			<p> Conditions Générales d'Utilisations </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Accueil.php'):?>
 			<p> Accueil </p>
-			<?php elseif (basename($_SERVER['PHP_SELF'])=='ContactHC.php'):?>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Contact.php'):?>
 			<p> Contact </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='FAQ.php'):?>
 			<p> FAQ </p>
