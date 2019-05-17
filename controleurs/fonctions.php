@@ -135,7 +135,7 @@ function seeCguDomisep() {
 }
 
 function seeAccueilGestionnaire() {
-    require ("Html/HeFoNaGestionnaire.php");
+    //require ("Html/HeFoNaGestionnaire.php");
     require ("Html/AccueilGestionnaire.php");
 }
 

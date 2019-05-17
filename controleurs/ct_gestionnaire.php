@@ -2,7 +2,7 @@
 
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
-
+    
     switch($action) {
     case "see_Accueil_Gestionnaire":
         seeAccueilGestionnaire();

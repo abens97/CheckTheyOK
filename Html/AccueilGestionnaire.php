@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-	
+    session_start();
+    require ("Html/HeFoNaGestionnaire.php");
 ?>
 
 <style type="text/css">
