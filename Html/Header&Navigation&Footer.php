@@ -162,9 +162,11 @@ margin-left: 5%;
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Logements'):?>
 			<p> Configurer ses logements</p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Statistiques'):?>
-			<p> Vos informations M. <?php
+			<p> Vos informations <?php
 			require ("modele/connexion.php");
 			require ("modele/requetes.utilisateurs.php");
+			recupereCivilite($bdd, $_SESSION["email"]); 
+			echo(" ");
 			recupereNom($bdd, $_SESSION["email"]);
 			?>
 			</p>

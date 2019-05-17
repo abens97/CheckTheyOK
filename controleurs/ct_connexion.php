@@ -50,9 +50,13 @@
                         $_SESSION['typeUser']= $Type_user;
                         $ok = true;
                         header ("Location:index.php?cible=ct_domisep");
-                        
                     }
                     else if($Type_user=="3"){
+                        session_start();
+                        $_SESSION['email']= $Email;
+                        $_SESSION['typeUser']= $Type_user;
+                        $ok = true;
+                        header ("Location:index.php?cible=ct_gestionnaire");
                     }
                     else if($Type_user=="2"){
                     }
@@ -71,6 +75,46 @@
                 }
             }
             break;
+
+        case "inscription":
+            $nom = $_POST['form_nom'];
+            $prenom =$_POST['form_prenom'];
+            $numero_telephone =$_POST['form_tel'];
+            $Email =$_POST['form_email'];
+            $Email2 =$_POST['form_retype_email'];
+            $MotdePasse =$_POST['form_password'];                
+            $MotdePasse2 =$_POST['form_retype_password'];
+            $ok = true;
+            $messages = array();
+            echo "SUCETAMERE";
+                
+                
+            if (empty($nom) OR empty($prenom) OR empty($numero_telephone) OR empty($Email) OR empty($MotdePasse) OR empty($MotdePasse2)) 
+            {
+                echo "tamere";
+                $messages[] = 'Veuillez remplir tous les champs obligatoires !';                    
+                seeInscription();
+            }
+            elseif ($MotdePasse != $MotdePasse2) {
+                echo "tagrossemere"; 
+                $messages[] = 'Vos mots de passe ne correspondent pas !';
+            }
+            elseif ($Email != $Email2) {
+                echo "tonenormegrossemere"; 
+                $message[] = 'Vos adresses e-mails ne correspondent pas !';
+            } else {
+                echo "tagrossemeresucedesbites"; 
+                $mdp = sha1($MotdePasse);
+                Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $mdp);
+                header("Location:index.php?cible=ct_connexion");
+            }
+
+            echo json_encode(
+                array(
+                    'messages' => $messages,
+                )
+            );
+            break;
     
         default:
             echo "Erreur 404";
@@ -82,21 +126,21 @@
 
     
     
-
+    /*
     //A réintégrer quand tout marchera
-    /*if ( !isset($Email) || empty($Email) ) {
+    if ( !isset($Email) || empty($Email) ) {
         $ok = false;
         $messages[] = 'Veuillez écrire votre E-mail ! ';
     }
-    if ( empty($MotdePasse) ) {     Probleme ici à modifier 
+    if ( empty($MotdePasse) ) {    
         $ok = false;
         $messages[] = 'Veuillez écrire votre mot de passe !';
-    } */
+    } 
 
     
 
     //Faire en sorte que ça s'affiche pas sur la page direct
-    /*
+    
     echo json_encode(
         array(
             'ok' => $ok,
@@ -104,5 +148,6 @@
         )
     );
     */
+    
 ?>
 

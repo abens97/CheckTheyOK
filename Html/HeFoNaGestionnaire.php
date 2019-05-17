@@ -119,7 +119,7 @@ margin-left: 5%;
 
 	<header>
 		<div id ="Head1">
-			<a href="index.php?cible=ct_domisep"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
+			<a href="index.php?cible=ct_gestionnaire"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
@@ -132,31 +132,43 @@ margin-left: 5%;
 		        <a href="#">&#8635 Téléphone</a>
 		        <a href="#">&#8635 Photo de profil</a>
 		        <a href="#">&#8635 Langue</a>
-						<form method='POST' action='index.php?cible=ct_domisep&action=deconnexion'>
+						<form method='POST' action='index.php?cible=ct_gestionnaire&action=deconnexion'>
 						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
 						</form>
 		    
 		      </div>
-		    </div>
+		  </div>
 			
-        </div>
+      </div>
         
-        <div id="Head2"> <br />
-            <?php if (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Accueil_Domisep'):?>
-			<p> Bonjour Domisep</p>
-            <?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep'):?>
-			<p> Bonjour Domisep </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Statistiques_Domisep'):?>
+      <div id="Head2"> <br />
+      <?php if (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire&action=see_Accueil_Gestionnaire'):?>
+			<p> Bonjour
+			<?php 
+			require ("modele/connexion.php");
+			require ("modele/requetes.utilisateurs.php");
+			recupereCivilite($bdd, $_SESSION["email"]); 
+			echo(" ");
+			recupereNom($bdd, $_SESSION["email"]);?></p>
+     	<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire'):?>
+		 	<p> Bonjour
+			<?php 
+			require ("modele/connexion.php");
+			require ("modele/requetes.utilisateurs.php");
+			recupereCivilite($bdd, $_SESSION["email"]); 
+			echo(" ");
+			recupereNom($bdd, $_SESSION["email"]);?></p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire&action=see_Statistiques_Gestionnaire'):?>
 			<p> Statistiques Globales</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Configuration_Domisep'):?>
-			<p> Configuration</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Gestionnaires_Domisep'):?>
-			<p> Gestionnaires</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Faq_Domisep'):?>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire&action=see_Tdb_Gestionnaire'):?>
+			<p> Tableau de Bord</p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire&action=see_Sav_Gestionnaire'):?>
+			<p> SAV</p>
+            <?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire&action=see_Faq_Gestionnaire'):?>
 			<p> FAQ</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_domisep&action=see_Cgu_Domisep'):?>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire&action=see_Cgu_Gestionnaire'):?>
 			<p> Conditions Générales d'Utilisation</p>
-      <?php endif ?>
+            <?php endif ?>
 		</div>
         
 
@@ -168,10 +180,10 @@ margin-left: 5%;
 			<i>Menu</i>
 		</div>
 
-			<button><a href="index.php?cible=ct_domisep&action=see_Accueil_Domisep">Accueil</a></button><br />
-			<button><a href="index.php?cible=ct_domisep&action=see_Statistiques_Domisep">Statistiques</a></button><br />
-		    <button><a href="index.php?cible=ct_domisep&action=see_Configuration_Domisep">Configuration</a></button><br />
-		    <button><a href="index.php?cible=ct_domisep&action=see_Gestionnaires_Domisep">Gestionnaires</a></button><br />
+			<button><a href="index.php?cible=ct_gestionnaire&action=see_Accueil_Gestionnaire">Accueil</a></button><br />
+            <button><a href="index.php?cible=ct_gestionnaire&action=see_Tdb_Gestionnaire">Tableau de Bord</a></button><br />
+			<button><a href="index.php?cible=ct_gestionnaire&action=see_Statistiques_Gestionnaire">Statistiques</a></button><br />
+		    <button><a href="index.php?cible=ct_gestionnaire&action=see_Sav_Gestionnaire">SAV</a></button><br />
 		
 	</div>
 

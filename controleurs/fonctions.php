@@ -133,3 +133,33 @@ function seeCguDomisep() {
     require ("Html/HeFoNaDomisep.php");
     require ("Html/CGU.php");
 }
+
+function seeAccueilGestionnaire() {
+    require ("Html/HeFoNaGestionnaire.php");
+    require ("Html/AccueilGestionnaire.php");
+}
+
+function seeTdbGestionnaire() {
+    require ("Html/HeFoNaGestionnaire.php");
+    require ("Html/TdbGestionnaire.php");
+}
+
+function seeStatistiquesGestionnaire() {
+    require ("Html/HeFoNaGestionnaire.php");
+    require ("Html/StatistiquesGestionnaire.php");
+}
+
+function seeSavGestionnaire() {
+    require ("Html/HeFoNaGestionnaire.php");
+    require ("Html/SavGestionnaire.php");
+}
+
+function seeFaqGestionnaire() {
+    require ("Html/HeFoNaGestionnaire.php");
+    require ("Html/FAQ.php");
+}
+
+function seeCguGestionnaire() {
+    require ("Html/HeFoNaGestionnaire.php");
+    require ("Html/CGU.php");
+}
