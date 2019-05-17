@@ -144,12 +144,13 @@
 			<br />
 			<div id="ZoneDeTexte">
 				<div>
-					Les volets sont actuellement ouverts/fermés
+					Le ventilateur est actuellement en marche/arrêt.
 				</div>
 				<hr width="75%" color=#82A898>
 				<div id="ligne">
-				<input type="checkbox" name="Lumieres" value="i">
-				Activer/Désactiver les volets
+					<label for="ActiverVentilateur"> Ventilateur </label>
+					<input type="checkbox" name="Lumieres" id="ActiverVentilateur">
+					en marche/arrêt
 				</div>
 				<div id="ligne">
 				<input type="checkbox" name="AutoLumieres" value="i">
