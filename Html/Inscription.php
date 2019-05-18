@@ -57,17 +57,6 @@
                                         <input type="radio" id="civilite" name="civilite" value="M." checked>M.
                                         <input type="radio" name="civilite" value="Mme">Mme<br>
                                     </div>
-                                    <div id="form2_demi">
-                                        <label for="type">Type de compte :</label>
-                                         <div class="dropdown">
-                                            <select name="one" class="dropdown-select" id='type'>
-                                              <option value=""><i>-- Selectionner --<i></option>
-                                              <option value="1">Résident</option>
-                                              <option value="2">Référent</option>
-                                              <option value="3">Administrateur</option>
-                                            </select>
-                                          </div>
-                                    </div>
                                 </div>
 
                                 <div id="ligne">
@@ -86,7 +75,7 @@
 
                                 <div id="ligne">
                                     <div id="form2_demi">
-                                        <label for="tel">Numéro de téléphone :</label>
+                                        <label for="form_tel">Numéro de téléphone :</label>
                                         <input type="tel" placeholder="0611223344" id="form_tel" name="form_tel" maxlength="10"><br>
                                         <span class="error_form" id="tel_error_message"></span>
                                     </div>                               
@@ -120,8 +109,9 @@
 
                                 <div id="ligne">            
                                     <div id="form2_bas">
-                                             <input type="checkbox" name="CGU" id="CGU" value="y">
+                                             <input type="checkbox" name="form_CGU" id="form_CGU">
                                              <label>J'accepte les <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a>
+                                             <br>
                                              <span class="error_form" id="CGU_error_message"></span>
                                          </label><br>
                                     </div> 

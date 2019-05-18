@@ -19,7 +19,7 @@ function recupereNom(PDO $bdd, String $Email) {
     echo $row["prenom"];
 }
 
-function replaceMdp($Email, $new_mdp){
+function changementMdp(PDO $bdd, $Email, $new_mdp){
     $req = $db->prepare("UPDATE Utilisateur SET mot_de_passe = ? WHERE email = ?");
     $req->execute(array($Email));
 }
