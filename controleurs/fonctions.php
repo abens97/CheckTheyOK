@@ -121,6 +121,7 @@ function seeConfigurationDomisep() {
 
 function seeGestionnairesDomisep() {
     require ("Html/HeFoNaDomisep.php");
+    //require ("Html/TableauData.php");
     require ("Html/GestionnairesDomisep.php");
 }
 

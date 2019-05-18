@@ -7,6 +7,7 @@ $(function() {
 	$("#retype_password_error_message").hide();
 	$("#email_error_message").hide();
 	$("#retype_email_error_message").hide();
+	$("#CGU_error_message").hide();
 
 
 	var error_prenom = false;
@@ -16,6 +17,7 @@ $(function() {
 	var error_retype_password = false;
 	var error_email = false;
 	var error_retype_email = false;
+	var error_CGU = false;
 
 	$("#prenom_error_message").focusout(function() {
 
@@ -58,6 +60,12 @@ $(function() {
 		check_retype_email();
 		
 	});
+
+	$("#CGU_error_message").focusout(function() {
+
+		check_CGU();
+		
+	});
 	
 	function check_prenom() {
 	
@@ -91,27 +99,28 @@ $(function() {
 	
 		var tel_length = $("#form_tel").val().length;
 		
-		if(0> tel_length < 10) {
-			$("#tel_error_message").html("Veuillez écrire votre numéro de téléphone en entier!");
-			$("#tel_error_message").show();
-			error_tel = true;
-		}
 		if(tel_length == 0) {
 			$("#tel_error_message").html("Veuillez écrire votre numéro de téléphone !");
 			$("#tel_error_message").show();
 			error_tel = true;
 		}
 		else {
-			$("#tel_error_message").hide();
+			if(tel_length < 10) {
+				$("#tel_error_message").html("Veuillez écrire 10 chiffres !");
+				$("#tel_error_message").show();
+				error_tel = true;
+			}
+			else {
+				$("#tel_error_message").hide();
+			}
 		}
-	
 	}
 
 	function check_password() {
 	
 		var password_length = $("#form_password").val().length;
 		
-		if(password_length < 8) {
+		if(password_length < 😎 {
 			$("#password_error_message").html("Au moins 8 caractères !");
 			$("#password_error_message").show();
 			error_password = true;
@@ -143,7 +152,7 @@ $(function() {
 		if(pattern.test($("#form_email").val())) {
 			$("#email_error_message").hide();
 		} else {
-			$("#email_error_message").html("Adresse E-mail invalide !");
+			$("#email_error_message").html("Adresse e-mail invalide !");
 			$("#email_error_message").show();
 			error_email = true;
 		}
@@ -156,13 +165,26 @@ $(function() {
 		var retype_email = $("#form_retype_email").val();
 
 		if(email != retype_email) {
-			$("#retype_email_error_message").html("Les E-mails ne correspondent pas !");
+			$("#retype_email_error_message").html("Les e-mails ne correspondent pas !");
 			$("#retype_email_error_message").show();
 			error_retype_password = true;
 		} else {
 			$("#retype_email_error_message").hide();
 		}	
 		
+	}
+
+	function check_CGU() {
+
+		var CGU = $("#form_CGU").is(":checked");
+
+		if(CGU != true) {
+			$("#CGU_error_message").html("Veuillez accepter les Conditions Générales d'Utilisations !");
+			$("#CGU_error_message").show();
+			error_CGU = true;
+		} else {
+			$("#CGU_error_message").hide();
+		}	
 	}
 
 	$("#registration_form").submit(function() {
@@ -174,6 +196,7 @@ $(function() {
 		error_retype_password = false;
 		error_email = false;
 		error_retype_email = false;
+		error_CGU = false;
 						
 		check_prenom();
 		check_nom();
@@ -182,8 +205,9 @@ $(function() {
 		check_retype_password();
 		check_email();
 		check_retype_email();
+		check_CGU();
 		
-		if(error_prenom == false && error_nom == false && error_tel == false && error_password == false && error_retype_password == false && error_email == false && error_retype_email == false) {
+		if(error_prenom == false && error_nom == false && error_tel == false && error_password == false && error_retype_password == false && error_email == false && error_retype_email == false && error_CGU) {
 			return true;
 		} else {
 			return false;	

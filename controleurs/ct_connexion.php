@@ -85,35 +85,38 @@
             $MotdePasse =$_POST['form_password'];                
             $MotdePasse2 =$_POST['form_retype_password'];
             $ok = true;
-            $messages = array();
-            echo "SUCETAMERE";
+            //$messages = array();
+            //echo "inscription";
                 
                 
             if (empty($nom) OR empty($prenom) OR empty($numero_telephone) OR empty($Email) OR empty($MotdePasse) OR empty($MotdePasse2)) 
             {
-                echo "tamere";
-                $messages[] = 'Veuillez remplir tous les champs obligatoires !';                    
+                //echo " + un champ manquant";
+                //$messages[] = 'Veuillez remplir tous les champs obligatoires !';                    
                 seeInscription();
             }
             elseif ($MotdePasse != $MotdePasse2) {
-                echo "tagrossemere"; 
-                $messages[] = 'Vos mots de passe ne correspondent pas !';
+                //echo " + mot de passe correspondent pas"; 
+                //$messages[] = 'Vos mots de passe ne correspondent pas !';
+                seeInscription();
             }
             elseif ($Email != $Email2) {
-                echo "tonenormegrossemere"; 
-                $message[] = 'Vos adresses e-mails ne correspondent pas !';
+                //echo " + email correspondent pas"; 
+                //$message[] = 'Vos adresses e-mails ne correspondent pas !';
+                seeInscription();
             } else {
-                echo "tagrossemeresucedesbites"; 
+                //echo " + tout va bien"; 
                 $mdp = sha1($MotdePasse);
                 Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $mdp);
                 header("Location:index.php?cible=ct_connexion");
             }
-
+            /*
             echo json_encode(
                 array(
                     'messages' => $messages,
                 )
             );
+            */
             break;
     
         default:

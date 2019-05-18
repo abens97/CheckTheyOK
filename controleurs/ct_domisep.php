@@ -1,5 +1,8 @@
 <?php
 
+require ("modele/connexion.php");
+require ("modele/requetes.utilisateurs.php");
+
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
 
@@ -13,7 +16,9 @@ if (isset($_GET["action"])) {
         break;
 
     case "see_Gestionnaires_Domisep":
-        seeGestionnairesDomisep();
+        $gestionnaires = getGestionnaires($bdd)->fetchAll();
+        require ("Html/HeFoNaDomisep.php");
+        require ("Html/GestionnairesDomisep.php");
         break;
 
     case "see_Configuration_Domisep":
@@ -33,6 +38,17 @@ if (isset($_GET["action"])) {
         header ("Location:index.php?cible=ct_connexion");
         break;
 
+    case "ajouter_Gestionnaire":
+        $nom = $_POST['form_nom'];
+        $email =$_POST['form_email'];
+        $mdp =sha1($_POST['form_password']);
+        $logement_debut =ceil($_POST['form_debut']);
+        $logement_fin =ceil($_POST['form_fin']);
+        InscrireGestionnaire($bdd,$nom,$email,$mdp,$logement_debut,$logement_fin);
+        $gestionnaires = getGestionnaires($bdd)->fetchAll();
+        header ("Location:index.php?cible=ct_domisep&action=see_Gestionnaires_Domisep");
+        break;
+        
     default:
         echo "Erreur 404";
         break;
