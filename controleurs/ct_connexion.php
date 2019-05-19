@@ -39,7 +39,7 @@
             if ($ok) {
                 $mdpCrypte = sha1($MotdePasse);
                 if(estInscrit($bdd,$Email,$mdpCrypte)) {
-                    
+                    addConnexion($bdd, $Email, $Type_user);
                     if($Type_user=="4"){
                         session_start();
                         $_SESSION['email']= $Email;

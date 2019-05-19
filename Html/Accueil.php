@@ -84,7 +84,7 @@
 	<br>
 	<br>
 	<h3>
- 		 Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est sans doute la solution que <em>Vous</em> attendiez
+		Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est sans doute la solution que <em>Vous</em> attendiez
 	</h3>
 
 </body>

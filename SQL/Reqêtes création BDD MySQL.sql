@@ -42,6 +42,8 @@ CREATE TABLE Activite (
     date_connexion date,
     PRIMARY KEY (id_connexion)
 );
+ALTER TABLE activite CHANGE date_connexion date_connexion VARCHAR(255) NULL DEFAULT NULL;
+ALTER TABLE activite ADD type_utilisateur CHAR(1) NOT NULL AFTER email_utilisateur;
 CREATE TABLE Consommation (
     id_consommation  mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
     numero_logement smallint unsigned NOT NULL,
