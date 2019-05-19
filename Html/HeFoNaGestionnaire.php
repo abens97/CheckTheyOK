@@ -199,9 +199,9 @@ margin-left: 5%;
         	<HR align=center>
         	<div id = "Footer3">
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
-	            <a href = "index.php?cible=ct_domisep&action=see_Faq_Domisep"><u> FAQ </u></a> -
+	            <a href = "index.php?cible=ct_gestionnaire&action=see_Faq_Gestionnaire"><u> FAQ </u></a> -
 	            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-	            <a href = "index.php?cible=ct_domisep&action=see_Cgu_Domisep"><u> Conditions générales d'utilisation </u></a> -
+	            <a href = "index.php?cible=ct_gestionnaire&action=see_Cgu_Gestionnaire"><u> Conditions générales d'utilisation </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 
 	                        <a href = "http://www.twitter.com" target="_blank"><img src = "Images/twitter.png" width=70"></a> <br />

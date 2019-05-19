@@ -3,6 +3,7 @@
 
     require ("modele/connexion.php");
     require ("modele/requetes.utilisateurs.php");
+    require ("modele/requetes.admin.php");
     
 
     $messages = array();
@@ -28,7 +29,8 @@
             break;
 
         case "see_Cgu":
-            seeCgu();
+            $cgu = getCgu($bdd);
+            seeCgu($cgu);
             break;
 
         case "connexion":

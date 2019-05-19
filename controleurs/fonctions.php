@@ -64,7 +64,7 @@ function seeFaq() {
     require ("Html/FAQ.php");
 }
 
-function seeCgu() {
+function seeCgu(String $cgu) {
     require ("Html/Header&FooterHorsConnexion.php");
     require ("Html/CGU.php");
 }
@@ -74,7 +74,7 @@ function seeFaqUser() {
     require ("Html/FAQ.php");
 }
 
-function seeCguUser() {
+function seeCguUser(String $cgu) {
     require ("Html/Header&Navigation&Footer.php");
     require ("Html/CGU.php");
 }
@@ -114,14 +114,13 @@ function seeStatistiquesDomisep() {
     require ("Html/StatistiquesDomisep.php");
 }
 
-function seeConfigurationDomisep() {
+function seeConfigurationDomisep(String $cgu) {
     require ("Html/HeFoNaDomisep.php");
     require ("Html/ConfigurationDomisep.php");
 }
 
-function seeGestionnairesDomisep() {
+function seeGestionnairesDomisep($gestionnaires) {
     require ("Html/HeFoNaDomisep.php");
-    //require ("Html/TableauData.php");
     require ("Html/GestionnairesDomisep.php");
 }
 
@@ -130,7 +129,7 @@ function seeFaqDomisep() {
     require ("Html/FAQ.php");
 }
 
-function seeCguDomisep() {
+function seeCguDomisep(String $cgu) {
     require ("Html/HeFoNaDomisep.php");
     require ("Html/CGU.php");
 }
@@ -160,7 +159,7 @@ function seeFaqGestionnaire() {
     require ("Html/FAQ.php");
 }
 
-function seeCguGestionnaire() {
+function seeCguGestionnaire(String $cgu) {
     require ("Html/HeFoNaGestionnaire.php");
     require ("Html/CGU.php");
 }

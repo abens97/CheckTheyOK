@@ -1,5 +1,8 @@
 <?php
 
+require ("modele/connexion.php");
+require ("modele/requetes.admin.php");
+
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
     
@@ -25,7 +28,8 @@ if (isset($_GET["action"])) {
         break;
 
     case "see_Cgu_Gestionnaire":
-        seeCguGestionnaire();
+        $cgu = getCgu($bdd);
+        seeCguGestionnaire($cgu);
         break;
 
     case "deconnexion":

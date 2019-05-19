@@ -2,6 +2,7 @@
 
 require ("modele/connexion.php");
 require ("modele/requetes.utilisateurs.php");
+require ("modele/requetes.admin.php");
 
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
@@ -17,12 +18,12 @@ if (isset($_GET["action"])) {
 
     case "see_Gestionnaires_Domisep":
         $gestionnaires = getGestionnaires($bdd)->fetchAll();
-        require ("Html/HeFoNaDomisep.php");
-        require ("Html/GestionnairesDomisep.php");
+        seeGestionnairesDomisep($gestionnaires);
         break;
 
     case "see_Configuration_Domisep":
-        seeConfigurationDomisep();
+        $cgu = getCgu($bdd);
+        seeConfigurationDomisep($cgu);
         break;
     
     case "see_Faq_Domisep":
@@ -30,13 +31,20 @@ if (isset($_GET["action"])) {
         break;
 
     case "see_Cgu_Domisep":
-        seeCguDomisep();
+        $cgu = getCgu($bdd);
+        seeCguDomisep($cgu);
         break;
 
     case "deconnexion":
         session_destroy();
         header ("Location:index.php?cible=ct_connexion");
         break;
+
+    case "modifier_Cgu":
+        $newcgu = $_POST['cgu'];
+        setCgu($bdd, $newcgu);
+        //$cgu = getCgu($bdd);
+        header ("Location:index.php?cible=ct_domisep&action=see_Configuration_Domisep");
 
     case "ajouter_Gestionnaire":
         $nom = $_POST['form_nom'];

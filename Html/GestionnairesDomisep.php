@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <?php
-    $gestionnaires = getGestionnaires($bdd)->fetchAll();
 ?>
 
 <head>
