@@ -30,17 +30,15 @@
 		#Navigation:hover {width:12%;}
 		#Navigation img {display: none;transition:0.4s;}
 		#Navigation:hover img {display: block;float:right;transition:1s;}
-		
 		#Navigation:hover #titre {margin:0;text-align:center;margin-left:29%;transition:0.2s;position: relative}
-		
-		footer {text-align: center;opacity: 0.7; width: 100%; background-color: white;  bottom:0;left: 0; right: 0; position:absolute; color:black;display : table-row;}
-
-		#Footer2 {margin:0 auto;height: 100%;}
-		#Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
-		#Footer3 {display : flex; align-items:center;}
-		#Footer3 p {margin-left: 1%;float: left; padding-right: 20%;}
+		footer {opacity: 0.7; width: 100%;height: 11%; background-color: white;  bottom:0;left: 0; right: 0; position:absolute; color:black;display : table;padding-top: 1%;text-align: center;}
+		#Footer2 {margin:0 auto;text-align: center;}
+		#Footer1 {margin-left: 15%; }
+		#Footer1 p{text-align: left}
+		#Footer2 img{display:table-cell; align-items:center; float: left; padding-left: 20px;vertical-align: center;}
+		#Footer3 {display:table-cell;width: 28%;}
 		#Footer3 a {padding-right:1%;padding-left:1%;}
-		#FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
+		#FooterReseaux {display : table-cell;align-content: center;align-items:center; margin:auto; }
 		#FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
 		#descente #dropprofil {margin:0 auto;font-size: 16px;border: none;outline: none;color: black;padding: 16px 35px;background-color: inherit;font-family: inherit; background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.26));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.26));-webkit-box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.48);box-shadow: -2px -3px 3px rgba(0, 0, 0, 0.48);border: 3px solid;border-color: lightgrey grey lightgrey; border-radius: 7px;}
 		#descente a:hover, #descente:hover #dropprofil, #descente-content input:hover {background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));background-image: -moz-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));background-image: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.66));background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.66));}
@@ -62,20 +60,16 @@
         <div id="Head3">
 			<img src="../Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
 			<div id="descente">
-			<button id="dropprofil"><i>Gérer son profil</i></a></button>
-		      <div id="descente-content">
-		        <a href="ProfilAdresse.php">&#8635 Coordonnées</a>
-		        <a href="ProfilMdp.php">&#8635 Mot de passe</a>
-		        <a href="ProfilPhoto.php">&#8635 Photo de profil</a>
-		        <a href="ProfilLangues.php">&#8635 Langue</a>
-		        <a href="ProfilNotif.php">&#8635 Notifications</a>
-						<form method='POST' action="Accueil.php">
-						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
-						</form>
-		    
-		      </div>
-		    </div>
-			
+				<button id="dropprofil"><i>Gérer son profil</i></a></button>
+			    <div id="descente-content">
+			        <a href="ProfilAdresse.php">&#8635 Coordonnées</a>
+			        <a href="ProfilMdp.php">&#8635 Mot de passe</a>
+			        <a href="ProfilPhoto.php">&#8635 Photo de profil</a>
+			        <a href="ProfilLangues.php">&#8635 Langue</a>
+			        <a href="ProfilNotif.php">&#8635 Notifications</a>
+					<form method='POST' action="Accueil.php"><input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'></form>
+			    </div>
+			</div>			
 
 			<?php
 				if(isset($_POST["deconnexion"])){
@@ -124,45 +118,51 @@
 			<i>Menu</i>
 		</div>
 		
-			<button><a href="Statistiques.php">Journal</a></button><br />
-		    <button><a href="Programmer.php">Programmer</a></button><br />
-		    <button><a href="Logements.php">Logements</a></button><br />
-		    <button><a href="SAV.php">S.A.V</a></button> <br />
+			<button><a href="Statistiques.php">Journal</a></button><br/>
+		    <button><a href="Programmer.php">Programmer</a></button><br/>
+		    <button><a href="Logements.php">Logements</a></button><br/>
+		    <button><a href="SAV.php">S.A.V.</a></button> <br/>
 		    <div> ..... </div>
 		
 	</div>
 
 	<footer>
-			<br />
             <div id="Footer2">
             <a href = "https://www.isep.fr" target="_blank"><img src = "../Images/Isep.png" alt="Isep" width="90"></a> 
             <img src = "../Images/LogoDomisep.png" alt="Domisep" width="100" > 
-
-            <i>Équipe de techniciens : Sarah DA COSTA - Pauline MILLOT - Leny BELAMICH - Romain POLO - Arthur GORGE BERNAT - Amine BENSOUDA<i>
+            <i>Équipe de techniciens : Sarah DA COSTA - Pauline MILLOT - Leny BELAMICH - Romain POLO - Arthur GORGE BERNAT - Amine BENSOUDA</i>
         	</div>
         	<br />
-        	<HR align=center>
-        	<div id = "Footer3">
-        		<p><i>CheckThey'OK© 2018-2019</i></p>	-
-	            <a href = "FAQ.php"><u> FAQ </u></a> -
-	            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
-	            <a href = "CGU.php"><u> Conditions générales d'utilisation </u></a> -
-	            <div id = "FooterReseaux">
-	                <div> 
-	                        <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />
-	                        Twitter
-	                </div>
-	                <div>
-	                        <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"></a> <br />
-	                        Instagram
-	                </div>
-	                <div>
-	                        <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="70"></a> <br />
-	                        Facebook
-	                </div>
-                	<br />
-            	</div>
-        	</div>
+        	
+        	<div id="Footer1">
+        		<div id = "Footer3">
+	        	<p><i>CheckThey'OK© 2018-2019</i></p>
+	        	</div>
+        		<div id = "Footer3">
+		            <div id = "FooterReseaux"> 
+		                        <a href = "http://www.twitter.com" target="_blank"><img src = "../Images/twitter.png" width=70"></a> <br />
+		                        Twitter
+		            </div>
+		            <div id = "FooterReseaux">
+		                        <a href = "http://www.instagram.com" target="_blank"><img src = "../Images/instagram.png" width="70"></a> <br />
+		                        Instagram
+		            </div>
+		            <div id = "FooterReseaux">
+		                        <a href = "http://www.facebook.com" target="_blank"><img src = "../Images/facebook.png" width="70"></a> <br />
+		                        Facebook
+		            </div>
+	            </div>
+	        	
+	        	<div id = "Footer3">
+		            <a href = "FAQ.php"><u> FAQ </u></a> -
+		            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
+		            <a href = "CGU.php"><u> Conditions générales d'utilisation </u></a> 
+		        </div>
+
+		        
+            </div>
+	
+        	
     </footer>
 </body>
 </html>

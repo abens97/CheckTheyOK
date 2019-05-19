@@ -29,7 +29,7 @@
 		#carre3:hover {transform: perspective(500px) scaleZ(1.6) rotateX(35deg);}
 		#carre4:hover {transform: perspective(500px) scaleZ(1.6) rotateX(35deg);}
 
-		#MaisonChgmnt {margin-left: 10%; align-content: all;}
+		#MaisonChgmnt {margin-left: 10%; align-content: all;vertical-align: center;}
 		
 		#Tableau{border-style: groove;margin:0 auto;border-color:white;display: table;table-layout: auto;font-size: 25px;}
 		#Chambre, #Salon, #Douche, #Escalier {display: none;width: 70%;margin: 0 auto;}
@@ -40,7 +40,6 @@
 
 		#infotemp{margin:0 auto;display : block;width: 100%;}
 
-		
 		[type="number"] {width: 20%;}
 		#test {background-color: white;color:black;display: table-cell;margin:0 auto;width: 100%;}
 
