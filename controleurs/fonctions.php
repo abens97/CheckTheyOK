@@ -114,7 +114,7 @@ function seeStatistiquesDomisep() {
     require ("Html/StatistiquesDomisep.php");
 }
 
-function seeConfigurationDomisep(String $cgu) {
+function seeConfigurationDomisep(String $cgu, String $emailcontact) {
     require ("Html/HeFoNaDomisep.php");
     require ("Html/ConfigurationDomisep.php");
 }

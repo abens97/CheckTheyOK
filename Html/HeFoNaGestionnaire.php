@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
 <?php 
-	
-	//Inutile avec ce code
-	/*
-	if(isset($_POST["deconnexion"])){
-			session_destroy();
-			header("Location:Accueil.php");
-	}
-	*/
+	include "modele/connexion.php";
 ?>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
@@ -144,17 +138,13 @@ margin-left: 5%;
       <div id="Head2"> <br />
       <?php if (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire&action=see_Accueil_Gestionnaire'):?>
 			<p> Bonjour
-			<?php 
-			require ("modele/connexion.php");
-			require ("modele/requetes.utilisateurs.php");
+			<?php
 			recupereCivilite($bdd, $_SESSION["email"]); 
 			echo(" ");
 			recupereNom($bdd, $_SESSION["email"]);?></p>
      	<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_gestionnaire'):?>
 		 	<p> Bonjour
-			<?php 
-			require ("modele/connexion.php");
-			require ("modele/requetes.utilisateurs.php");
+			<?php
 			recupereCivilite($bdd, $_SESSION["email"]); 
 			echo(" ");
 			recupereNom($bdd, $_SESSION["email"]);?></p>
@@ -200,7 +190,7 @@ margin-left: 5%;
         	<div id = "Footer3">
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
 	            <a href = "index.php?cible=ct_gestionnaire&action=see_Faq_Gestionnaire"><u> FAQ </u></a> -
-	            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
+	            <a href = "mailto:<?php echo getEmailContact($bdd)?>"><u>Nous contacter</u></a> -
 	            <a href = "index.php?cible=ct_gestionnaire&action=see_Cgu_Gestionnaire"><u> Conditions générales d'utilisation </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 

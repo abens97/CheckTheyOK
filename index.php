@@ -27,7 +27,9 @@ require ("controleurs/fonctions.php");
 // Appel des fonctions liées à l'affichage
 require ("vues/fonctions.php");
 // Appel des fonctions liées à la BDD
-
+require ("modele/connexion.php");
+require ("modele/requetes.utilisateurs.php");
+require ("modele/requetes.admin.php");
 
 
 

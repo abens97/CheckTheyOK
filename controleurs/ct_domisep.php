@@ -1,9 +1,5 @@
 <?php
 
-require ("modele/connexion.php");
-require ("modele/requetes.utilisateurs.php");
-require ("modele/requetes.admin.php");
-
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
 
@@ -23,7 +19,8 @@ if (isset($_GET["action"])) {
 
     case "see_Configuration_Domisep":
         $cgu = getCgu($bdd);
-        seeConfigurationDomisep($cgu);
+        $emailcontact = getEmailContact($bdd);
+        seeConfigurationDomisep($cgu,$emailcontact);
         break;
     
     case "see_Faq_Domisep":
@@ -43,7 +40,11 @@ if (isset($_GET["action"])) {
     case "modifier_Cgu":
         $newcgu = $_POST['cgu'];
         setCgu($bdd, $newcgu);
-        //$cgu = getCgu($bdd);
+        header ("Location:index.php?cible=ct_domisep&action=see_Configuration_Domisep");
+
+    case "modifier_Email_Contact":
+        $newemailcontact = $_POST['emailcontact'];
+        setEmailContact($bdd, $newemailcontact);
         header ("Location:index.php?cible=ct_domisep&action=see_Configuration_Domisep");
 
     case "ajouter_Gestionnaire":

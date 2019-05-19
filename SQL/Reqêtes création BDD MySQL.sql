@@ -166,3 +166,4 @@ INSERT INTO fichier VALUES (1,'&lt;div id=&quot;article&quot;&gt;ARTICLE 1 : Obj
                 &lt;div id=&quot;article&quot;&gt;ARTICLE 11 : Droit applicable et juridiction compétente&lt;/div&gt;
                     &lt;p&gt;Le présent contrat dépend de la législation française. &lt;/p&gt;
                     &lt;p&gt;En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux de [nom de ville] sont compétents pour régler le contentieux.&lt;/p&gt;');
+    INSERT INTO `fichier` (`id_fichier`, `contenu`) VALUES ('2', 'groupeapp8a@gmail.com');

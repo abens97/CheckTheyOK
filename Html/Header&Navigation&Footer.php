@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php 
-	
-	//Inutile avec ce code
-	/*
-	if(isset($_POST["deconnexion"])){
-			session_destroy();
-			header("Location:Accueil.php");
-	}
-	*/
+	include "modele/connexion.php";
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -144,16 +137,12 @@ margin-left: 5%;
 			<?php if (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Accueil_User'):?>
 			<p> Bonjour
       <?php 
-      require ("modele/connexion.php"); 
-      require ("modele/requetes.utilisateurs.php");
 			recupereCivilite($bdd, $_SESSION["email"]);
 			echo(" ");
 			recupereNom($bdd, $_SESSION["email"]);?></p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user'):?>
 			<p> Bonjour
       <?php 
-      require ("modele/connexion.php");
-      require ("modele/requetes.utilisateurs.php");
 			recupereCivilite($bdd, $_SESSION["email"]); 
 			echo(" ");
 			recupereNom($bdd, $_SESSION["email"]);?></p>
@@ -163,8 +152,6 @@ margin-left: 5%;
 			<p> Configurer ses logements</p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=ct_user&action=see_Statistiques'):?>
 			<p> Vos informations <?php
-			require ("modele/connexion.php");
-			require ("modele/requetes.utilisateurs.php");
 			recupereCivilite($bdd, $_SESSION["email"]); 
 			echo(" ");
 			recupereNom($bdd, $_SESSION["email"]);
@@ -221,7 +208,7 @@ margin-left: 5%;
         	<div id = "Footer3">
         		<p><i>CheckThey'OK© 2018-2019</i></p>	-
 	            <a href = "index.php?cible=ct_user&action=see_Faq_User"><u> FAQ </u></a> -
-	            <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
+	            <a href = "mailto:<?php echo getEmailContact($bdd)?>"><u>Nous contacter</u></a> -
 	            <a href = "index.php?cible=ct_user&action=see_Cgu_User"><u> Conditions générales d'utilisation </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 

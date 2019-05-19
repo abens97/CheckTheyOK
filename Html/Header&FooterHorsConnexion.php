@@ -89,7 +89,7 @@
             <div id = "Footer3">
                 <p><i>CheckThey'reOK© 2018-2019</i></p>   
                 <a href = "index.php?cible=ct_connexion&action=see_Faq"><u> FAQ </u></a> -
-                <a href = "mailto:groupeapp8a@gmail.com"><u>Nous contacter</u></a> -
+                <a href = "mailto:<?php echo getEmailContact($bdd)?>"><u>Nous contacter</u></a> -
                 <a href = "index.php?cible=ct_connexion&action=see_Cgu"><u> Conditions générales d'utilisation </u></a> -
                 <div id = "FooterReseaux">
                     <div> 

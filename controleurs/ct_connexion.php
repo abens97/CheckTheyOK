@@ -1,10 +1,4 @@
-
 <?php
-
-    require ("modele/connexion.php");
-    require ("modele/requetes.utilisateurs.php");
-    require ("modele/requetes.admin.php");
-    
 
     $messages = array();
     $ok = true;

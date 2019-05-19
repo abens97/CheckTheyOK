@@ -1,8 +1,5 @@
 <?php
 
-require ("modele/connexion.php");
-require ("modele/requetes.admin.php");
-
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
     
