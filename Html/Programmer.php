@@ -32,9 +32,9 @@
 		#MaisonChgmnt {margin-left: 10%; align-content: all;}
 		
 		#Tableau{border-style: groove;margin:0 auto;border-color:white;display: table;table-layout: auto;font-size: 25px;}
-		#Chambre, #Salon, #Douche, #Escalier {display: none;width: 65%;margin: 0 auto;}
+		#Chambre, #Salon, #Douche, #Escalier {display: none;width: 70%;margin: 0 auto;}
 
-		#ZoneDeTexte {background-color: white; opacity: 0.7;  border-radius: 18px;  text-align: center;display: row; margin-top: 6%; color: grey;width: 100%;margin:0 auto;font-size: 22px;}
+		#ZoneDeTexte {background-color: white; opacity: 0.7;  border-radius: 18px;  text-align: center;display: table-cell; margin-top: 6%; color: grey;width: 47%;margin:0 auto;font-size: 22px;margin-left: 15px;margin-right: 15px;}
 		#ZoneDeTexte:hover {transform: scale(1.03);}
 		#ligne {display: row;margin: auto;align-content: center;padding-bottom: 1%;}
 
@@ -121,168 +121,51 @@
 				</div>
 				<hr width="75%" color=#82A898>
 				<div id="ligne">
-					<label for="ActiverVolets"> Volets</label>
-					<input type="checkbox" name="Lumieres" id="ActiverVolets">
-					ouverts/fermés
+					<button>Ouvrir les volets</button>
+					<button>Fermer les volets</button>
 				</div>
 				<div>
-					Ouvrir les volets à : <input type="number" name="Lumieres" id="ActiverVolets">
+					Ouvrir les volets à : <input type="number" name="Lumieres" id="OuvrirVolets">
 				</div>
 				<div>
-					Fermer les volets à : <input type="number" name="Lumieres" id="ActiverVolets">
-				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoLumieres" value="i">
-				Activer/Désactiver l'automatisation de la lumière
-				</div>
-				<div id="ligne">
-				Je veux que les lumières s'allument quand il est
-				<input type="number" id="heurelimite" placeholder="__:__" name="heurelimite" maxlength="5"> 
+					Fermer les volets à : <input type="number" name="Lumieres" id="FermerrVolets">
 				</div>
 				<button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Enregistrer</button>
 			</div>
+
 			<br />
+			
 			<div id="ZoneDeTexte">
 				<div>
 					Le ventilateur est actuellement en marche/arrêt.
 				</div>
 				<hr width="75%" color=#82A898>
 				<div id="ligne">
-					<label for="ActiverVentilateur"> Ventilateur </label>
-					<input type="checkbox" name="Lumieres" id="ActiverVentilateur">
-					en marche/arrêt
+					<button>Allumer le ventilateur</button>
+					<button>Éteindre le ventilateur</button>
 				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoLumieres" value="i">
-				Activer/Désactiver l'automatisation de la lumière
+				<div>
+					Allumer le ventilateur à : <input type="number" name="Lumieres" id="OnVentilateur">
 				</div>
-				<div id="ligne">
-				Je veux que les lumières s'allument quand il est
-				<input type="number" id="heurelimite" placeholder="__:__" name="heurelimite" maxlength="5"> 
+				<div>
+					Éteindre le ventilateur à : <input type="number" name="Lumieres" id="OffVentilateur">
 				</div>
+				<button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Enregistrer</button>
 			</div>
 
 					
 		</div>
 
 		<div id="Douche">
-			<div id="ZoneDeTexte">
-				<div>
-					Les volets sont actuellement ouverts/fermés
-				</div>
-				<hr width="75%" color=#82A898>
-				<div id="ligne">
-				<input type="checkbox" name="Lumieres" value="i">
-				Activer/Désactiver les volets
-				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoLumieres" value="i">
-				Activer/Désactiver l'automatisation de la lumière
-				</div>
-				<div id="ligne">
-				Je veux que les lumières s'allument quand il est
-				<input type="number" id="heurelimite" placeholder="__:__" name="heurelimite" maxlength="5"> 
-				</div>
-			</div>
-			<br />
-			<div id="ZoneDeTexte">
-				<div>
-					La température actuelle est de __°C
-				</div>
-				<hr width="75%" color=#82A898>
-				<div id="ligne">
-				<input type="checkbox" name="Ventilateur" value="i">
-				Activer/Désactiver le ventilateur
-				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoVentilateur" value="i">
-				Activer/Désactiver l'automatisation du ventilateur
-				</div>
-				<div id="ligne">
-				Je veux que le ventilatur s'allume quand il fait
-				<input type="number" id="templimite" placeholder="__°C" name="templimite" maxlength="3"> °C
-				</div>
-			</div>
+			
 		</div>
 
 		<div id="Salon">
-			<div id="ZoneDeTexte">
-				<div>
-					Les volets sont actuellement ouverts/fermés
-				</div>
-				<hr width="75%" color=#82A898>
-				<div id="ligne">
-				<input type="checkbox" name="Lumieres" value="i">
-				Activer/Désactiver les volets
-				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoLumieres" value="i">
-				Activer/Désactiver l'automatisation de la lumière
-				</div>
-				<div id="ligne">
-				Je veux que les lumières s'allument quand il est
-				<input type="number" id="heurelimite" placeholder="__:__" name="heurelimite" maxlength="5"> 
-				</div>
-			</div>
-			<br />
-			<div id="ZoneDeTexte">
-				<div>
-					La température actuelle est de __°C
-				</div>
-				<hr width="75%" color=#82A898>
-				<div id="ligne">
-				<input type="checkbox" name="Ventilateur" value="i">
-				Activer/Désactiver le ventilateur
-				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoVentilateur" value="i">
-				Activer/Désactiver l'automatisation du ventilateur
-				</div>
-				<div id="ligne">
-				Je veux que le ventilatur s'allume quand il fait
-				<input type="number" id="templimite" placeholder="__°C" name="templimite" maxlength="3"> °C
-				</div>
-			</div>
+			
 		</div>
 
 		<div id="Escalier">
-			<div id="ZoneDeTexte">
-				<div>
-					Les volets sont actuellement ouverts/fermés
-				</div>
-				<hr width="75%" color=#82A898>
-				<div id="ligne">
-				<input type="checkbox" name="Lumieres" value="i">
-				Activer/Désactiver les volets
-				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoLumieres" value="i">
-				Activer/Désactiver l'automatisation de la lumière
-				</div>
-				<div id="ligne">
-				Je veux que les lumières s'allument quand il est
-				<input type="number" id="heurelimite" placeholder="__:__" name="heurelimite" maxlength="5"> 
-				</div>
-			</div>
-			<br />
-			<div id="ZoneDeTexte">
-				<div>
-					La température actuelle est de __°C
-				</div>
-				<hr width="75%" color=#82A898>
-				<div id="ligne">
-				<input type="checkbox" name="Ventilateur" value="i">
-				Activer/Désactiver le ventilateur
-				</div>
-				<div id="ligne">
-				<input type="checkbox" name="AutoVentilateur" value="i">
-				Activer/Désactiver l'automatisation du ventilateur
-				</div>
-				<div id="ligne">
-				Je veux que le ventilatur s'allume quand il fait
-				<input type="number" id="templimite" placeholder="__°C" name="templimite" maxlength="3"> °C
-				</div>
-			</div>
+			
 		</div>
 
 </html> 
