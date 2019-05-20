@@ -34,7 +34,7 @@ CREATE TABLE Gestionnaire (
     email_gestionnaire  VARCHAR(40) NOT NULL,
     debut_plage_logement SMALLINT UNSIGNED,
     fin_plage_logement SMALLINT UNSIGNED,
-    PRIMARY KEY (id_gestionnaire)
+    PRIMARY KEY (email_gestionnaire)
 );
 CREATE TABLE Activite (
     id_connexion  SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
