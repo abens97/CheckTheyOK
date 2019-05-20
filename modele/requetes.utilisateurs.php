@@ -29,4 +29,11 @@ function avatar(PDO $bdd, String $extensionsUpload) {
     $updateavatar->execute(array('avatar' => $_SESSION['email'].'.'.$extensionsUpload,'email' => $_SESSION['email']));
 }
 
+function emailUtilise(PDO $bdd, String $Email) : bool {
+    $req = $bdd->prepare("SELECT * FROM utilisateur WHERE email = ?");
+    $req->execute(array($Email));
+    $n=$req->rowCount();
+    return ($n==1);
+}
+
 ?>
