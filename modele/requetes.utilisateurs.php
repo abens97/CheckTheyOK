@@ -8,8 +8,9 @@ function estInscrit(PDO $bdd, String $Email, String $MotdePasse) : bool {
 }
 
 function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephone, String $email, String $mot_de_passe) {
-    $req = $bdd->prepare("INSERT INTO utilisateur(nom,prenom,numero_telephone,email,mot_de_passe)VALUES(?,?,?,?,?)");
-    $req->execute(array($nom,$prenom,$numero_telephone,$Email,$MotdePasse));
+    $req = $bdd->prepare("INSERT INTO utilisateur(nom,prenom,numero_telephone,email,mot_de_passe,type_utilisateur)VALUES(?,?,?,?,?,?)");
+    $typeutilisateur = 1;
+    $req->execute(array($nom,$prenom,$numero_telephone,$email,$mot_de_passe,$typeutilisateur));
 }
 
 function InscrireGestionnaire(PDO $bdd, String $nom, String $email, String $mot_de_passe, Int $logement_debut, Int $logement_fin) {

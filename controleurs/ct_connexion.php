@@ -87,21 +87,21 @@
                 
             if (empty($nom) OR empty($prenom) OR empty($numero_telephone) OR empty($Email) OR empty($MotdePasse) OR empty($MotdePasse2)) 
             {
-                //echo " + un champ manquant";
+                echo " + un champ manquant";
                 //$messages[] = 'Veuillez remplir tous les champs obligatoires !';                    
-                seeInscription();
+                //seeInscription();
             }
             elseif ($MotdePasse != $MotdePasse2) {
-                //echo " + mot de passe correspondent pas"; 
+                echo " + mot de passe correspondent pas"; 
                 //$messages[] = 'Vos mots de passe ne correspondent pas !';
-                seeInscription();
+                //seeInscription();
             }
             elseif ($Email != $Email2) {
-                //echo " + email correspondent pas"; 
+                echo " + email correspondent pas"; 
                 //$message[] = 'Vos adresses e-mails ne correspondent pas !';
-                seeInscription();
+                //seeInscription();
             } else {
-                //echo " + tout va bien"; 
+                echo " + tout va bien"; 
                 $mdp = sha1($MotdePasse);
                 Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $mdp);
                 header("Location:index.php?cible=ct_connexion");
