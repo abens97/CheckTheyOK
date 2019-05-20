@@ -120,7 +120,7 @@ $(function() {
 	
 		var password_length = $("#form_password").val().length;
 		
-		if(password_length < 😎 {
+		if(password_length < 8) {
 			$("#password_error_message").html("Au moins 8 caractères !");
 			$("#password_error_message").show();
 			error_password = true;
@@ -156,7 +156,7 @@ $(function() {
 			$("#email_error_message").show();
 			error_email = true;
 		}
-	
+
 	}
 
 	function check_retype_email() {
@@ -171,14 +171,13 @@ $(function() {
 		} else {
 			$("#retype_email_error_message").hide();
 		}	
-		
 	}
 
 	function check_CGU() {
 
 		var CGU = $("#form_CGU").is(":checked");
-
-		if(CGU != true) {
+		
+		if(CGU == false) {
 			$("#CGU_error_message").html("Veuillez accepter les Conditions Générales d'Utilisations !");
 			$("#CGU_error_message").show();
 			error_CGU = true;
@@ -207,7 +206,7 @@ $(function() {
 		check_retype_email();
 		check_CGU();
 		
-		if(error_prenom == false && error_nom == false && error_tel == false && error_password == false && error_retype_password == false && error_email == false && error_retype_email == false && error_CGU) {
+		if(error_prenom == false && error_nom == false && error_tel == false && error_password == false && error_retype_password == false && error_email == false && error_retype_email == false && error_CGU == false) {
 			return true;
 		} else {
 			return false;	

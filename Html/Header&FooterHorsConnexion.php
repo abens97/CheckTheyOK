@@ -29,7 +29,6 @@
         #Footer3 a {padding-right:1%;padding-left:1%;}
         #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
         #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
-        #erreur {color:red;font-style: italic;font-size: 130%;}
 
     </style>
 </head>
@@ -63,7 +62,7 @@
 			<p> Conditions Générales d'Utilisations </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='Accueil.php'):?>
 			<p> Accueil </p>
-			<?php elseif (basename($_SERVER['PHP_SELF'])=='ContactHC.php'):?>
+			<?php elseif (basename($_SERVER['PHP_SELF'])=='Contact.php'):?>
 			<p> Contact </p>
 			<?php elseif (basename($_SERVER['PHP_SELF'])=='FAQ.php'):?>
 			<p> FAQ </p>
