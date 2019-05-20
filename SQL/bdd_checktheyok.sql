@@ -185,3 +185,50 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+--
+-- Structure de la table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE IF NOT EXISTS `message` (
+  `messageNB` int(8) NOT NULL AUTO_INCREMENT,
+  `adresseMail` varchar(255) NOT NULL,
+  `numTicket` int(11) DEFAULT NULL,
+  `texte` text NOT NULL,
+  PRIMARY KEY (`messageNB`),
+  KEY `numTicket` (`numTicket`)
+) ENGINE=MyISAM AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `message`
+--
+
+INSERT INTO `message` (`messageNB`, `adresseMail`, `numTicket`, `texte`) VALUES
+(83, 'groupeapp8a@gmail.com', 13, 'hey'),
+(84, 'groupeapp8a@gmail.com', 14, 'ss');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ticket`
+--
+
+DROP TABLE IF EXISTS `ticket`;
+CREATE TABLE IF NOT EXISTS `ticket` (
+  `numTicket` int(8) NOT NULL AUTO_INCREMENT,
+  `mailUser` varchar(255) NOT NULL,
+  `mailAdmin` varchar(255) NOT NULL,
+  PRIMARY KEY (`numTicket`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `ticket`
+--
+
+INSERT INTO `ticket` (`numTicket`, `mailUser`, `mailAdmin`) VALUES
+(13, 'groupeapp8a@gmail.com', 'admin@admin.com'),
+(14, 'groupeapp8a@gmail.com', 'admin@admin.com');
+
+-- --------------------------------------------------------
