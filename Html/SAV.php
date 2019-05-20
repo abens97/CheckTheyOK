@@ -8,6 +8,6 @@
 
 <html>
 
-<!--Mettre ici le contenu de nos pages-->
+
 
 </html>
