@@ -5,9 +5,9 @@
 
 <head>
 
-    <script type="text/javascript" language="javascript" src="javascripts/jquery.js"></script>
-    <script type="text/javascript" language="javascript" src="javascripts/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="Combo.css">
+    <script type="text/javascript" language="javascript" src="view/javascripts/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="view/javascripts/scriptAjoutGestionnaire.js"></script>
+    <link rel="stylesheet" type="text/css" href="view/Combo.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Domisep</title>
 
@@ -17,7 +17,8 @@
         #contenu{ margin:0 auto;display:table;align-items: center;text-align: center;}
         [type="number"] {padding: 0;}
         .form2 {width:40%;margin-left:65%; auto;display:table;padding-top: 6%;}
-        
+        .error_form {font-size: 15px; font-family: Arial; color: #FF0052;}
+
         
     </style>
 </head>
@@ -35,21 +36,62 @@
 
                 <ul>
                     <?php foreach ($gestionnaires as $gestionnaire) { ?>
-                        <li>Le gestionnaire possédant l'adresse email <?= $gestionnaire["email_gestionnaire"]; ?> est en charge du logement n°<?= $gestionnaire["debut_plage_logement"]; ?> à <?= $gestionnaire["fin_plage_logement"]; ?></li>
+                        <li>Le gestionnaire possédant l'adresse email <?= $gestionnaire["email"]; ?> est en charge du logement n°<?= $gestionnaire["debut_plage_logement"]; ?> à <?= $gestionnaire["fin_plage_logement"]; ?></li>
                     <?php } ?>
                 </ul>
             </div>
 
             <div class='form2'>
-		        <form id=registration_form action ="index.php?cible=domisep&action=ajouter_Gestionnaire" method="post">
+		        <form id=registrationGestionnaire_form action ="index.php?cible=domisep&action=ajouter_Gestionnaire" method="post">
                 <table>
+                <div id="ligne">
+
                                 <div id="ligne">
+                                    <div id="form2_demi">
+                                        <label for="form_prenom">Prénom :</label>
+                                        <input type="text" id="form_prenom" placeholder="" name="form_prenom" maxlength="15"><br>
+                                        <span class="error_form" id="prenom_error_message"></span>
+                                    </div>
                                     <div id="form2_demi">
                                         <label for="form_nom">Nom :</label>
                                         <input type="text" id="form_nom" placeholder="" name="form_nom" maxlength="25"><br>
                                         <span class="error_form" id="nom_error_message"></span>
                                     </div>
                                 </div>
+
+                                <div id="ligne">
+                                    <div id="form2_demi">
+                                        <label for="form_tel">Numéro de téléphone :</label>
+                                        <input type="tel" placeholder="0611223344" id="form_tel" name="form_tel" maxlength="10"><br>
+                                        <span class="error_form" id="tel_error_message"></span>
+                                    </div>                               
+                                </div>
+
+                                <div id="ligne">
+                                    <div id="form2_demi">
+                                        <label for="form_email">Adresse e-mail :</label>
+                                        <input type="email" id="form_email" placeholder="Adresse@email.com" name="form_email" maxlength="30"><br>
+                                        <span class="error_form" id="email_error_message"></span>
+                                    </div>
+                                    <div id="form2_demi">
+                                        <label for="form_retype_email">Confirmation de votre e-mail :</label>
+                                        <input type="email" id="form_retype_email" placeholder="Adresse@email.com" name="form_retype_email" maxlength="30"><br>
+                                        <span class="error_form" id="retype_email_error_message"></span>
+                                    </div>                                
+                                </div>
+
+                                <div id="ligne">
+                                    <div id="form2_demi">
+                                        <label for="form_password">Mot de passe :</label>
+                                        <input type="password"  id="form_password" placeholder="******" name="form_password" maxlength="25"><br>
+                                        <span class="error_form" id="password_error_message"></span>
+                                    </div>
+                                    <div id="form2_demi">
+                                        <label for="form_retype_password">Confirmation du mot de passe :</label>
+                                        <input type="password" id="form_retype_password" placeholder="******"name="form_retype_password" maxlength="25"><br>
+                                        <span class="error_form" id="retype_password_error_message"></span>
+                                    </div>
+                                </div> 
 
                                 <div id="ligne">
                                     <div id="form2_demi">
@@ -89,21 +131,6 @@
                                     </div>
                                 </div>
 
-                                <div id="ligne">
-                                    <div id="form2_demi">
-                                        <label for="form_email">Adresse e-mail :</label>
-                                        <input type="email" id="form_email" placeholder="Adresse@email.com" name="form_email" maxlength="30"><br>
-                                        <span class="error_form" id="email_error_message"></span>
-                                    </div>
-                                </div>
-
-                                <div id="ligne">
-                                    <div id="form2_demi">
-                                        <label for="form_password">Mot de passe :</label>
-                                        <input type="password"  id="form_password" placeholder="****" name="form_password" maxlength="25"><br>
-                                        <span class="error_form" id="password_error_message"></span>
-                                    </div>
-                                </div> 
 
                                 <div id="ligne">            
                                     <div id="form2_bas">

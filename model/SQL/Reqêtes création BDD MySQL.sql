@@ -6,7 +6,7 @@ CREATE TABLE Utilisateur (
     email  VARCHAR(40) NOT NULL,
     type_utilisateur CHAR(1),
     civilite CHAR(3),
-    prenom VARCHAR(10),
+    prenom VARCHAR(20),
     nom VARCHAR(30) NOT NULL,
     numero_telephone CHAR(13),
     mot_de_passe VARCHAR(255) NOT NULL,
@@ -31,10 +31,14 @@ CREATE TABLE Logement (
 );
 
 CREATE TABLE Gestionnaire (
-    email_gestionnaire  VARCHAR(40) NOT NULL,
+    prenom VARCHAR(20),
+    nom VARCHAR(30) NOT NULL,
+    numero_telephone CHAR(13),
+    email  VARCHAR(40) NOT NULL,
+    mot_de_passe VARCHAR(255) NOT NULL,
     debut_plage_logement SMALLINT UNSIGNED,
     fin_plage_logement SMALLINT UNSIGNED,
-    PRIMARY KEY (email_gestionnaire)
+    PRIMARY KEY (email)
 );
 CREATE TABLE Activite (
     id_connexion  SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,

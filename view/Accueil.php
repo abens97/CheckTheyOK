@@ -17,7 +17,6 @@
 <head>
 		
 	
-<title>Domisep</title>
 <style type="text/css">
 	h1 {text-shadow: 2px 14px 6px rgba(30, 64, 0, 0.5);margin-right: center; width:52%;margin:auto;font-size: 25px;text-align: center;font-style: normal;}
 	.slider{margin: 25px 25%;overflow: hidden;height: 350px;width: 50%;border: 4px solid white;border-radius: 10px;box-shadow: -2px 30px 40px rgba(30, 64, 0, 0.5);}
@@ -35,31 +34,29 @@
 	<div class="slider">
 			<figure>
 				<div class="slide">
-					<img src="Images/d.jpg">
+					<img src="view/Images/Vieux.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="Images/fd.jpg">
+					<img src="view/Images/Telecom.pdf">
 				</div>
 		
 				<div class="slide">
-					<img src="Images/s.jpg">
+					<img src="view/Images/Telecom2.png">
 				</div>
 
 				<div class="slide">
-					<img src="Images/l.jpg">
+					<img src="view/Images/HomeFond.jpg">
 				</div>
 				
 				<div class="slide">
-					<img src="Images/M.jpg">
+					<img src="view/Images/Vieux.pdf">
 				</div>
 			</figure>
 		</div>
-	<br>
-	<br>
-	<h3>
-		Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est sans doute la solution que <em>Vous</em> attendiez
-	</h3>
-
+	<br><br>
+	<h1>
+ 		 Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est La solution que vous attendiez.
+	</h1>
 </body>
 </html>
