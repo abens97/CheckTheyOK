@@ -25,7 +25,21 @@ function setEmailContact(PDO $bdd, String $emailcontact){
 function addConnexion(PDO $bdd, String $emailuser ,$typeuser){
     $req = $bdd->prepare("INSERT INTO Activite (email_utilisateur, type_utilisateur, date_connexion) VALUES(?,?,?)");
     date_default_timezone_set('Europe/Paris');
-    $dateconnexion = date("H:i d/m/Y");
+    $dateconnexion = date("d/m/Y");
     $req->execute(array($emailuser,$typeuser,$dateconnexion));
+}
+
+function comptConnexion(PDO $bdd, String $day){
+    $req = $bdd->prepare("SELECT * FROM Activite WHERE date_connexion = ?");
+    $req->execute(array($day));
+    $n=$req->rowCount();
+    return $n;
+}
+
+function comptConnexionTypeUser(PDO $bdd, String $day, $typeuser){
+    $req = $bdd->prepare("SELECT * FROM Activite WHERE date_connexion = ? AND type_utilisateur = ?");
+    $req->execute(array($day, $typeuser));
+    $n=$req->rowCount();
+    return $n;
 }
 ?>
