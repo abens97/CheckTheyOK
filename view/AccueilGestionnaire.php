@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-    session_start();
-    require ("View/hefonaGestionnaire.php");
+    //session_start();
+    require ("view/hefonaGestionnaire.php");
 ?>
 
 <style type="text/css">
@@ -24,7 +24,7 @@ height :60%;
     <p>-> Peut-être des stats</p>
 </div>
 <div id="Construction">
-	<img src="Images/pageConstruction.png">
+	<img src="view/Images/pageConstruction.png">
 </div>
 
 <!--Mettre ici le contenu de nos pages-->

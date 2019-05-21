@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-  session_start();
-  require ("View/hefonaUser.php");
+  //session_start();
+  require ("view/hefonaUser.php");
 ?>
 <head>
 <link rel="stylesheet" type="text/css" href="Combo.css">
@@ -35,7 +35,7 @@
 <html>
   
   <div id="ajouter" onclick="document.getElementById('zone').style.display = 'table'">
-    <a href="#"><img src = "Images/Add.png" alt="Logo" width="70"></a>
+    <a href="#"><img src = "view/Images/Add.png" alt="Logo" width="70"></a>
   </div>
 
   <div id="zone" class="Nettoyer">

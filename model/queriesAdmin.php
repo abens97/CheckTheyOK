@@ -23,7 +23,7 @@ function setEmailContact(PDO $bdd, String $emailcontact){
 }
 
 function addConnexion(PDO $bdd, String $emailuser ,$typeuser){
-    $req = $bdd->prepare("INSERT INTO activite (email_utilisateur, type_utilisateur, date_connexion) VALUES(?,?,?)");
+    $req = $bdd->prepare("INSERT INTO Activite (email_utilisateur, type_utilisateur, date_connexion) VALUES(?,?,?)");
     date_default_timezone_set('Europe/Paris');
     $dateconnexion = date("H:i d/m/Y");
     $req->execute(array($emailuser,$typeuser,$dateconnexion));

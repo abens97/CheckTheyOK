@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
     
@@ -30,8 +30,8 @@ if (isset($_GET["action"])) {
         break;
 
     case "deconnexion":
-        session_destroy();
         header ("Location:index.php?cible=offline");
+        session_destroy();
         break;
 
     default:

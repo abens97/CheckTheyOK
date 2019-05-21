@@ -33,12 +33,12 @@
                 $MotdePasse = $_POST['modp'];
             }
             $Type_user = recupereTypeUser($bdd,$Email);
-            $messages = array(); 
+            //$messages = array(); 
 
             //Fonction de vérification des id
-            if ($ok) {
-                $mdpCrypte = sha1($MotdePasse);
-                if(estInscrit($bdd,$Email,$mdpCrypte)) {
+            if($ok){
+                $mdpCrypte=sha1($MotdePasse);
+                if(estInscrit($bdd,$Email,$mdpCrypte)){
                     addConnexion($bdd, $Email, $Type_user);
                     if($Type_user=="4"){
                         session_start();

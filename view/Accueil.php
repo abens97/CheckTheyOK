@@ -35,23 +35,23 @@
 	<div class="slider">
 			<figure>
 				<div class="slide">
-					<img src="Images/d.jpg">
+					<img src="view/Images/d.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="Images/fd.jpg">
+					<img src="view/Images/fd.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="Images/s.jpg">
+					<img src="view/Images/s.jpg">
 				</div>
 
 				<div class="slide">
-					<img src="Images/l.jpg">
+					<img src="view/Images/l.jpg">
 				</div>
 				
 				<div class="slide">
-					<img src="Images/M.jpg">
+					<img src="view/Images/M.jpg">
 				</div>
 			</figure>
 		</div>

@@ -3,7 +3,7 @@
 <head>
 	
 <?php
-	session_start();
+	//session_start();
 	require ("view/hefonaUser.php");
 ?>
 <meta charset="utf-8">
@@ -22,8 +22,8 @@ height :60%;
 
 <html>
 <div id="Escalier">
-	<img src="Images/pageConstruction.png">
-<script src="../Html/Chart.bundle.js"></script>
+	<img src="view/Images/pageConstruction.png">
+<script src="view/Images/Chart.bundle.js"></script>
 
 </head>
 

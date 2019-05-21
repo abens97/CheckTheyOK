@@ -163,3 +163,7 @@ function seeCguGestionnaire(String $cgu) {
     require ("view/hefonaGestionnaire.php");
     require ("view/CGU.php");
 }
+
+function seeVide() {
+    require ("view/vide.php");
+}

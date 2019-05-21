@@ -1,8 +1,7 @@
 <?php
-
+session_start();
 if (isset($_GET["action"])) {
     $action = htmlspecialchars($_GET["action"]);
-
     switch($action) {
     case "see_Accueil_User":
         seeAccueilUser();
@@ -34,8 +33,8 @@ if (isset($_GET["action"])) {
         break;
 
     case "deconnexion":
-        session_destroy();
         header ("Location:index.php?cible=offline");
+        session_destroy();
         break;
 
     default:

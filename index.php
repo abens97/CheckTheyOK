@@ -1,6 +1,6 @@
-
 <?php
 
+//error_reporting(E_ERROR | E_PARSE);
 // Appel des fonctions du contrôleur
 require ("controller/functions.php");
 // Appel des fonctions liées à l'affichage

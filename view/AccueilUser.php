@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-  	require ("View/hefonaUser.php");
+	//session_start();
+  	require ("view/hefonaUser.php");
 ?>
 
 <style type="text/css">

@@ -23,7 +23,7 @@ height :60%;
     <p>-> Changer l'état d'un incident</p>
 </div>
 <div id="Construction">
-	<img src="Images/pageConstruction.png">
+	<img src="view/Images/pageConstruction.png">
 </div>
 
 <!--Mettre ici le contenu de nos pages-->

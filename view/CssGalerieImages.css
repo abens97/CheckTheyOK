@@ -41,7 +41,7 @@ h2 {
 
 .interieur-diaporama{
     height:320px;
-    width:500%; /*car 5 images*/
+    width:500%; /*car 5 view/Images*/
     transition:.6s ease;
 }
 

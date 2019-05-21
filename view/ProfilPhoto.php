@@ -27,7 +27,7 @@
 <body>
 	<div id="contenu">
 		<div class="Ligne">
-			<img src="../Images/profil.jpg">
+			<img src="../view/Images/profil.jpg">
 		</div>
 		<div class="Ligne">
 			<label for="avatar"> Changer sa photo de profil : </label><br/>

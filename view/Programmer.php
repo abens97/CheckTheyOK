@@ -91,7 +91,7 @@
 </head>
 <html>	
 		<div id="MaisonChgmnt">
-			<img src = "Images/home.png" alt="Changer de maison" width="30">
+			<img src = "view/Images/home.png" alt="Changer de maison" width="30">
 			<div class="dropdown">
 	        	<select name="one" class="dropdown-select">
 		        	<option value=""><i>-- Logement --</i></option>
@@ -102,10 +102,10 @@
 	        </div>     
         </div>                             
 		<div id = "section">
-			<a onclick="ChangerContenu(1)"><div id = "carre1"><br /><img src="Images/lumiere.png"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
-			<a onclick="ChangerContenu(2)"><div id = "carre2"><br /><img src="Images/temperature.png"  alt="Température" width="80"> <br /><h3>Température</h3></div></a>
-			<a onclick="ChangerContenu(3)"><div id = "carre3"><br /><img src="Images/volets.png"  alt="Volets" width="80"> <br /><h3>Volets</h3></div></a>
-			<a onclick="ChangerContenu(4)"><div id = "carre4"><br /><img src="Images/ventilateur.png"  alt="Ventilateur" width="80"> <br /><h3>Ventilateur</h3></div></a>
+			<a onclick="ChangerContenu(1)"><div id = "carre1"><br /><img src="view/Images/lumiere.png"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
+			<a onclick="ChangerContenu(2)"><div id = "carre2"><br /><img src="view/Images/temperature.png"  alt="Température" width="80"> <br /><h3>Température</h3></div></a>
+			<a onclick="ChangerContenu(3)"><div id = "carre3"><br /><img src="view/Images/volets.png"  alt="Volets" width="80"> <br /><h3>Volets</h3></div></a>
+			<a onclick="ChangerContenu(4)"><div id = "carre4"><br /><img src="view/Images/ventilateur.png"  alt="Ventilateur" width="80"> <br /><h3>Ventilateur</h3></div></a>
 		</div>
 		
 		<div id="Chambre">

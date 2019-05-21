@@ -33,8 +33,8 @@ if (isset($_GET["action"])) {
         break;
 
     case "deconnexion":
-        session_destroy();
         header ("Location:index.php?cible=offline");
+        session_destroy();
         break;
 
     case "modifier_Cgu":

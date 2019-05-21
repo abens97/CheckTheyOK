@@ -23,7 +23,7 @@ height :60%;
     <p>-> Filter la visualisation (par période/gestionnaire)</p>
 </div>
 <div id="Construction">
-	<img src="Images/pageConstruction.png">
+	<img src="view/Images/pageConstruction.png">
 </div>
 
 <!--Mettre ici le contenu de nos pages-->
