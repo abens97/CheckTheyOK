@@ -1,6 +1,6 @@
 
 <?php
-	session_start();
+	//session_start();
 	require ("view/hefonaUser.php");
 ?>
 <!DOCTYPE html>
