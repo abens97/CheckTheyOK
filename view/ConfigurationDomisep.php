@@ -4,6 +4,9 @@
 	
 ?>
 
+    <script type="text/javascript" language="javascript" src="view/javascripts/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="view/javascripts/scriptConfigurationDomisep.js"></script>
+
 <style type="text/css">
         #zonetexte1 {
         box-shadow: 1px 1px green, -0.6em 0 .9em grey;
@@ -45,18 +48,21 @@
         opacity: 0.9;
         }
         #article {font-weight: bold;text-decoration: underline;}
+        .error_form {font-size: 15px; font-family: Arial; color: #FF0052;}
+
 </style>
 <html>
     <div id=zonetexte1>    
-        <form method="post" action="index.php?cible=domisep&action=modifier_Email_Contact">
+        <form method="post" action="index.php?cible=domisep&action=modifier_Email_Contact" id='registrationEmail'>
             <br>Adresse de contact actuelle :
             <?php
                 echo $emailcontact;
             ?>
             <br>
-            <br>Nouvelle adresse de contact :
-            <input type="text" name="emailcontact">
-            
+            <br>
+            <label for="form_email">Nouvelle adresse de contact :</label> 
+            <input type="email" id="form_email" placeholder="Adresse@email.com" name="form_email" maxlength="30"><br>
+            <span class="error_form" id="email_error_message"></span>
             <br>
             </textarea>
             <br>

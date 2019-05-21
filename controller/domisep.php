@@ -43,7 +43,7 @@ if (isset($_GET["action"])) {
         header ("Location:index.php?cible=domisep&action=see_Configuration_Domisep");
 
     case "modifier_Email_Contact":
-        $newemailcontact = $_POST['emailcontact'];
+        $newemailcontact = $_POST['form_email'];
         setEmailContact($bdd, $newemailcontact);
         header ("Location:index.php?cible=domisep&action=see_Configuration_Domisep");
 
