@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	
-    if(isset($_SESSION['email'])){
-		include 'Header&Navigation&Footer.php';
-	}
-    else {
-		header('Location:Accueil.php');
-	}
+
+require ("view/hefonaUser.php");
+
 ?>
 
 <style type="text/css">

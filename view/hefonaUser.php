@@ -121,11 +121,11 @@ margin-left: 5%;
 			<div id="descente">
 			<button id="dropprofil"><i>Gérer son profil</i></a></button>
 		      <div id="descente-content">
-		        <a href="#">&#8635 Adresse email</a>
-		        <a href="ChangementMdp">&#8635 Mot de passe</a>
-		        <a href="#">&#8635 Téléphone</a>
-		        <a href="#">&#8635 Photo de profil</a>
-		        <a href="#">&#8635 Langue</a>
+		        <a href="index.php?cible=user&action=see_Changer_Tel">&#8635 Téléphone</a>
+		        <a href="index.php?cible=user&action=see_Changer_Mdp">&#8635 Mot de passe</a>
+		        <a href="index.php?cible=user&action=see_Changer_Photo">&#8635 Photo de Profil</a>
+		        <a href="index.php?cible=user&action=see_Changer_Langues">&#8635 Langue</a>
+		        <a href="index.php?cible=user&action=see_Changer_Notif">&#8635 Notification</a>
 						<form method='POST' action='index.php?cible=user&action=deconnexion'>
 						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
 						</form>
@@ -158,16 +158,20 @@ margin-left: 5%;
 			recupereNom($bdd, $_SESSION["email"]);
 			?>
 			</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='PageType.php'):?>
-			<p> PageType </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='Contact.php'):?>
-			<p> Contact </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='Profil.php'):?>
-			<p> Mon Profil </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Faq_User'):?>
 			<p> FAQ </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Cgu_User'):?>
 			<p> Conditions Générales d'Utilisation </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Tel'):?>
+			<p> Changement du Numéro de Téléphone  </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Langues'):?>
+			<p> Langue </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Mdp'):?>
+			<p> Changement de Mot de Passe </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Notif'):?>
+			<p> Notifications </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Photo'):?>
+			<p> Changement de Photo de Profil </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='lumiere.php'):?>
 			<p> Configurer l'éclairage </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='temperature.php'):?>

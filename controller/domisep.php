@@ -113,17 +113,19 @@ if (isset($_GET["action"])) {
         header ("Location:index.php?cible=domisep&action=see_Configuration_Domisep");
 
     case "modifier_Email_Contact":
-        $newemailcontact = $_POST['emailcontact'];
+        $newemailcontact = $_POST['form_email'];
         setEmailContact($bdd, $newemailcontact);
         header ("Location:index.php?cible=domisep&action=see_Configuration_Domisep");
 
     case "ajouter_Gestionnaire":
+        $prenom = $_POST['form_prenom'];
         $nom = $_POST['form_nom'];
+        $numero_telephone = $_POST['form_tel'];
         $email =$_POST['form_email'];
         $mdp =sha1($_POST['form_password']);
         $logement_debut =ceil($_POST['form_debut']);
         $logement_fin =ceil($_POST['form_fin']);
-        InscrireGestionnaire($bdd,$nom,$email,$mdp,$logement_debut,$logement_fin);
+        InscrireGestionnaire($bdd,$prenom,$nom,$numero_telephone,$email,$mdp,$logement_debut,$logement_fin);
         $gestionnaires = getGestionnaires($bdd)->fetchAll();
         header ("Location:index.php?cible=domisep&action=see_Gestionnaires_Domisep");
         break;

@@ -104,6 +104,27 @@ function seeSav() {
     require ("view/Sav.php");
 }
 
+function seeChangerTel(){
+    //require ("view/hefonaUser.php");
+    require ("view/ProfilTel.php");
+}
+function seeChangerLangues(){
+    //require ("view/hefonaUser.php");
+    require ("view/ProfilLangues.php");
+}
+function seeChangerMdp(){
+    //require ("view/hefonaUser.php");
+    require ("view/ProfilMdp.php");
+}
+function seeChangerNotif(){
+    //require ("view/hefonaUser.php");
+    require ("view/ProfilNotif.php");
+}
+function seeChangerPhoto(){
+    //require ("view/hefonaUser.php");
+    require ("view/ProfilPhoto.php");
+}
+
 function seeAccueilDomisep() {
     require ("view/hefonaDomisep.php");
     require ("view/AccueilDomisep.php");

@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
-<?php
-
+<?php 
 ?>
 
 <head>
 
-    <script type="text/javascript" language="javascript" src="javascripts/jquery.js"></script>
-    <script type="text/javascript" language="javascript" src="javascripts/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="Combo.css">
+    <script type="text/javascript" language="javascript" src="view/javascripts/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="view/javascripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="view/Combo.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Domisep</title>
 
     <style type="text/css">
         h1{font-size: 200%;font-style: normal;}
         h2{font-size: 120%;}
-        .form2 {width:70%;margin:0 auto;display:table;margin-top: 8%;background-color: white;padding: 9px; border-radius: 8px;background-color:rgb(255, 255, 255,0.7);transition:0.5s;}
-        .form2:hover {padding: 2%;transition:0.5s;margin-top: 6%;}
+        .form2 {width:70%;margin:0 auto;display:table;padding-top: 6%;}
         #ligne {padding-left:6%;width: 100%; font-size: 140%;text-shadow:0px 2px 5px grey, 0px -2px 5px grey, 2px 0px 3px grey, -2px 0px 4px grey;}
         
         
@@ -26,7 +24,7 @@
 
         #form2_bas {padding-top: 6%;font-style: normal;}
         #form2_bas a {color:white;font-style: italic;font-size-adjust: 80%; }
-        #form2_bas [type="submit"] {margin-left: 25%; font-size: 80%; border-radius: 4px;border: 2px solid white; background-color: unset; color:white;}
+        #form2_bas [type="submit"] {margin-left: 25%; font-size: 80%; border-radius: 4px;border: 2px solid white; background-color: unset;}
         #form2_bas [type="submit"]:hover {opacity: 0.8;background-color: white;color:black;}
         #form2_bas [type="submit"]:active {background-color: green; color:white;}
 
@@ -37,23 +35,24 @@
         #form2_demi, #form2_bas  {float: left;width:50%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: table-cell;padding-top: 1%;}input, button {opacity: 0.8;font-family: normal;}
         input, button {opacity: 0.8;font-family: normal;}
         @media only screen and (min-width: 48em) { #form2_demi {width: 50%;}}
-        #form2-messages{background-color : rgb(255,232,232);border: 1px solid red;color:red;display:none;font: size 12px;font-weight: bold;margin-bottom: 10px;padding: 10px 25px;max-width: 250px;}      
+        #form2-messages{background-color : rgb(255,232,232);border: 1px solid red;color:red;display:none;font: size 12px;font-weight: bold;margin-bottom: 10px;padding: 10px 25px;max-width: 250px;}
         .error_form {font-size: 15px; font-family: Arial; color: #FF0052;}
+        
     </style>
-    
 </head>
 
 <body>
 
+        
             <div id="contenu">
                 <h1>Bienvenue sur la création de compte </h1>
                 <h2>Veuillez remplir le formulaire d'inscription</h2>
             </div>     
 
             <div class='form2'>
-		        <form id=registration_form action ="index.php?cible=offline&action=inscription" method="post">
+		        <form id=registration_form action = "index.php?cible=offline&action=inscription" method="post">
                 <table>
-                <div id="ligne">
+                                <div id="ligne">
                                     <div id="form2_demi">
                                         <label for="civilite">Civilité :</label>
                                         <input type="radio" id="civilite" name="civilite" value="M." checked>M.
@@ -99,19 +98,19 @@
                                 <div id="ligne">
                                     <div id="form2_demi">
                                         <label for="form_password">Mot de passe :</label>
-                                        <input type="password"  id="form_password" placeholder="****" name="form_password" maxlength="25"><br>
+                                        <input type="password"  id="form_password" placeholder="******" name="form_password" maxlength="25"><br>
                                         <span class="error_form" id="password_error_message"></span>
                                     </div>
                                     <div id="form2_demi">
                                         <label for="form_retype_password">Confirmation du mot de passe :</label>
-                                        <input type="password" id="form_retype_password" placeholder="****"name="form_retype_password" maxlength="25"><br>
+                                        <input type="password" id="form_retype_password" placeholder="******"name="form_retype_password" maxlength="25"><br>
                                         <span class="error_form" id="retype_password_error_message"></span>
                                     </div>
                                 </div> 
 
                                 <div id="ligne">            
                                     <div id="form2_bas">
-                                             <input type="checkbox" name="form_CGU" id="form_CGU" value="y">
+                                             <input type="checkbox" name="form_CGU" id="form_CGU">
                                              <label>J'accepte les <a href = "CGU.php"><u> Conditions générales d'utilisations </u></a>
                                              <br>
                                              <span class="error_form" id="CGU_error_message"></span>
@@ -126,7 +125,6 @@
                             </div>
                 </table>
                 </form>
-
 </body>
 
 </html>

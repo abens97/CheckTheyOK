@@ -13,11 +13,11 @@ function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephon
     $req->execute(array($nom,$prenom,$numero_telephone,$email,$mot_de_passe,$typeutilisateur));
 }
 
-function InscrireGestionnaire(PDO $bdd, String $nom, String $email, String $mot_de_passe, Int $logement_debut, Int $logement_fin) {
-    $req1 = $bdd->prepare("INSERT INTO Utilisateur(nom,email,mot_de_passe,type_utilisateur)VALUES(?,?,?,?)");
-    $req1->execute(array($nom,$email,$mot_de_passe,'3'));
-    $req2 = $bdd->prepare("INSERT INTO Gestionnaire(email_gestionnaire,debut_plage_logement,fin_plage_logement)VALUES(?,?,?)");
-    $req2->execute(array($email,$logement_debut,$logement_fin));
+function InscrireGestionnaire(PDO $bdd, String $prenom, String $nom, String $numero_telephone, String $email, String $mot_de_passe, Int $logement_debut, Int $logement_fin) {
+    $req1 = $bdd->prepare("INSERT INTO utilisateur(prenom,nom,numero_telephone,email,mot_de_passe,type_utilisateur)VALUES(?,?,?,?,?,?)");
+    $req1->execute(array($prenom,$nom,$numero_telephone,$email,$mot_de_passe,'3'));
+    $req2 = $bdd->prepare("INSERT INTO gestionnaire(prenom,nom,numero_telephone,email,mot_de_passe,debut_plage_logement,fin_plage_logement)VALUES(?,?,?,?,?,?,?)");
+    $req2->execute(array($prenom,$nom,$numero_telephone,$email,$mot_de_passe,$logement_debut,$logement_fin));
 }
 
 function getGestionnaires(PDO $bdd){
@@ -32,6 +32,13 @@ function recupereNom(PDO $bdd, String $Email){
     echo $row["nom"];
 }
 
+function getUserlog(PDO $bdd, String $Email){
+    $req = $bdd->prepare("SELECT mot_de_passe FROM utilisateur WHERE email = ?");
+    $req->execute(array($Email));
+    $row=$req->fetch();
+    return $row;
+}
+
 function recupereCivilite(PDO $bdd, String $Email){
     $req = $bdd->prepare("SELECT civilite FROM Utilisateur WHERE email = ?");
     $req->execute(array($Email));
@@ -39,10 +46,20 @@ function recupereCivilite(PDO $bdd, String $Email){
     echo $row["civilite"];
 }
 
-function changementMdp(PDO $bdd, $Email, $new_mdp){
-    $req = $db->prepare("UPDATE Utilisateur SET mot_de_passe = ? WHERE email = ?");
-    $req->execute(array($Email));
+function replaceMdp(PDO $bdd, $email, $new_mdp){
+    $req = $bdd->prepare("UPDATE utilisateur SET mot_de_passe = :new_mdp WHERE email = :email");
+    $req->bindParam(":new_mdp", $new_mdp);
+    $req->bindParam(":email", $email);
+    return $req->execute();
 }
+
+function replaceTel(PDO $bdd, $email, $tel){
+    $req = $bdd->prepare("UPDATE utilisateur SET numero_telephone = :tel WHERE email = :email");
+    $req->bindParam(":tel", $tel);
+    $req->bindParam(":email", $email);
+    return $req->execute();
+}
+
 
 function avatar(PDO $bdd, String $extensionsUpload) {
     $updateavatar = $bdd->prepare('UPDATE Utilisateur SET avatar = :avatar WHERE email = :email');

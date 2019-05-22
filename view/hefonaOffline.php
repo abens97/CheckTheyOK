@@ -45,7 +45,7 @@
     <form method='post' action='index.php?cible=offline&action=connexion'>
 		<ul id='form-messages'></ul>
 		<label for="Email">Email</label>
-		<input type="text" id='E-mail' name='email' spellcheck="false">
+		<input type="text" id='E-mail' name='E-mail' spellcheck="false">
 
 		<label for="mdp">Mot de passe</label>
 		<input type="password" id='modp' name='modp'>
@@ -110,7 +110,7 @@
     <script>
 
 	
-	/*
+	
 		const form ={
 			Email: document.getElementById('E-mail'),
 			Motdepasse: document.getElementById('modp'),
@@ -133,12 +133,11 @@
 				}
 			}
 			const requestData =`E-mail=${form.Email.value}&modp=${form.Motdepasse.value}`;
-			request.open('post',"../controleurs/offline.php");
+			request.open('post',"index.php?cible=offline&action=connexion");
 			request.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 			request.send(requestData);
 		
 		});
-		$Type_user = recupereTypeUser($bdd,$Email);
 		function handleResponse (responseObject) {
 			if(responseObject.ok){
 				if(true) {
@@ -159,7 +158,7 @@
 				form.messages.style.display ='block';
 			}
 		}
-	*/
+	
 	
 	</script>
 	</body>
