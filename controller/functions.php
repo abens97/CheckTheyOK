@@ -99,6 +99,10 @@ function seeLogements() {
     require ("view/Logements.php");
 }
 
+function seeLogementsConnect() {
+    require ("view/LogementsConnect.php");
+}
+
 function seeSav() {
     //require ("view/hefonaUser.php");
     require ("view/Sav.php");

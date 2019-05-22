@@ -13,9 +13,28 @@ function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephon
     $req->execute(array($nom,$prenom,$numero_telephone,$email,$mot_de_passe,$typeutilisateur));
 }
 
-function addLogement(PDO $bdd,Int $nombre_resident,String $type_logement,String $adresse, String $complement_adresse, String $code_postal, String $ville, String $presence_escalier, String $etat_personne_agee) {
-    $req = $bdd->prepare("INSERT INTO Logement(nombre_resident,type_logement,adresse,complement_adresse,code_postal,ville,presence_escalier,etat_personne_agee)VALUES(?,?,?,?,?,?,?,?)");
-    $req->execute(array($nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee));
+function addLogement(PDO $bdd,$email,$nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee) {
+    $req = $bdd->prepare("INSERT INTO Logement(email_utilisateur,nombre_resident,type_logement,adresse,complement_adresse,code_postal,ville,presence_escalier,etat_personne_agee)VALUES(?,?,?,?,?,?,?,?,?)");
+    $req->execute(array($email,$nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee));
+}
+
+function hadLogement(PDO $bdd, String $Email) : bool {
+    $req = $bdd->prepare("SELECT * FROM Logement WHERE email_utilisateur = ?");
+    $req->execute(array($Email));
+    $n=$req->rowCount();
+    return ($n==1);
+}
+
+function getLogement(PDO $bdd, String $Email){
+    $req = $bdd->prepare("SELECT numero_logement FROM Logement WHERE email = ?");
+    $req->execute(array($Email));
+    $row=$req->fetch();
+    return $row["numero_logement"];
+}
+
+function addPiece(PDO $bdd,$numero_logement,$nom,$surface) {
+    $req = $bdd->prepare("INSERT INTO Logement(email_utilisateur,nombre_resident,type_logement,adresse,complement_adresse,code_postal,ville,presence_escalier,etat_personne_agee)VALUES(?,?,?,?,?,?,?,?,?)");
+    $req->execute(array($email,$nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee));
 }
 
 function InscrireGestionnaire(PDO $bdd, String $nom, String $email, String $mot_de_passe, Int $logement_debut, Int $logement_fin) {

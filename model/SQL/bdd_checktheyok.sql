@@ -235,6 +235,8 @@ ALTER TABLE `logement` ADD `nombre_resident` INT NOT NULL AFTER `numero_logement
 ALTER TABLE `logement` CHANGE `nombre_resident` `nombre_resident` INT(11) NULL;
 ALTER TABLE `logement` ADD `type_logement` VARCHAR(40) NULL AFTER `nombre_resident`;
 ALTER TABLE `logement` CHANGE `ville` `ville` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
+ALTER TABLE `logement` ADD `email_utilisateur` VARCHAR(255) NULL AFTER `numero_logement`;
+
 -- --------------------------------------------------------
 
 --
