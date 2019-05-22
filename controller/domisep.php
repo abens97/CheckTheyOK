@@ -10,13 +10,13 @@ if (isset($_GET["action"])) {
     
     case "see_Statistiques_Domisep":
         error_reporting(E_ERROR | E_PARSE);
-         if (isset($_GET["mois"])) {
-            $mois = htmlspecialchars($_GET["mois"]);
+         if (isset($_POST["mois"])) {
+            $mois = htmlspecialchars($_POST["mois"]);
          } else {
             $mois = date('m');
          }
-         if (isset($_GET["annee"])) {
-            $annee = htmlspecialchars($_GET["annee"]);
+         if (isset($_POST["annee"])) {
+            $annee = htmlspecialchars($_POST["annee"]);
          } else {
             $annee = date('Y');
          }
@@ -34,7 +34,7 @@ if (isset($_GET["action"])) {
         
         $graph->SetTheme($theme_class);
         $graph->img->SetAntiAliasing(false);
-        $graph->title->Set('Activité sur le site Domisep');
+        $graph->title->Set("Activité sur le site Domisep au mois $mois de l'année $annee");
         
         $graph->SetMargin(40,20,36,63);
         

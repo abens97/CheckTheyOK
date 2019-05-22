@@ -18,7 +18,6 @@ height :60%;
 
 <html>
 <div>
- 
     <p> </p>
     <p> </p>
 </div>
