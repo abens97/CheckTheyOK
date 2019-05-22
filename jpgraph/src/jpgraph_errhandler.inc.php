@@ -167,6 +167,7 @@ class JpGraphException extends Exception {
             }
             throw $exception;
         }
+        
     }
 }
 

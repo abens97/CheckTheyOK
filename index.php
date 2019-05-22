@@ -10,8 +10,6 @@ require_once ("jpgraph/src/jpgraph.php");
 require_once ("jpgraph/src/jpgraph_bar.php");
 require_once ('jpgraph/src/jpgraph_line.php');
 
-
-
 // Appel des fonctions liées à la BDD
 require_once ("model/connection.php");
 require_once ("model/queriesUser.php");

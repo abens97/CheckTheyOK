@@ -13,6 +13,11 @@ function Inscrire(PDO $bdd, String $nom, String $prenom, String $numero_telephon
     $req->execute(array($nom,$prenom,$numero_telephone,$email,$mot_de_passe,$typeutilisateur));
 }
 
+function addLogement(PDO $bdd,Int $nombre_resident,String $type_logement,String $adresse, String $complement_adresse, String $code_postal, String $ville, String $presence_escalier, String $etat_personne_agee) {
+    $req = $bdd->prepare("INSERT INTO Logement(nombre_resident,type_logement,adresse,complement_adresse,code_postal,ville,presence_escalier,etat_personne_agee)VALUES(?,?,?,?,?,?,?,?)");
+    $req->execute(array($nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee));
+}
+
 function InscrireGestionnaire(PDO $bdd, String $nom, String $email, String $mot_de_passe, Int $logement_debut, Int $logement_fin) {
     $req1 = $bdd->prepare("INSERT INTO Utilisateur(nom,email,mot_de_passe,type_utilisateur)VALUES(?,?,?,?)");
     $req1->execute(array($nom,$email,$mot_de_passe,'3'));
