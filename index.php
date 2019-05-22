@@ -1,14 +1,21 @@
 <?php
 
 //error_reporting(E_ERROR | E_PARSE);
+
 // Appel des fonctions du contrôleur
-require ("controller/functions.php");
-// Appel des fonctions liées à l'affichage
+require_once ("controller/functions.php");
+
+// Appel des classes liées aux graphiques
+require_once ("jpgraph/src/jpgraph.php");
+require_once ("jpgraph/src/jpgraph_bar.php");
+require_once ('jpgraph/src/jpgraph_line.php');
+
+
 
 // Appel des fonctions liées à la BDD
-require ("model/connection.php");
-require ("model/queriesUser.php");
-require ("model/queriesAdmin.php");
+require_once ("model/connection.php");
+require_once ("model/queriesUser.php");
+require_once ("model/queriesAdmin.php");
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET
 if(isset($_GET['cible']) && !empty($_GET['cible'])) {
@@ -20,6 +27,6 @@ if(isset($_GET['cible']) && !empty($_GET['cible'])) {
 }
     
 // On appelle le contrôleur
-include('controller/' . $url . '.php');
+require ('controller/' . $url . '.php');
 
 ?>

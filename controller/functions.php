@@ -167,3 +167,78 @@ function seeCguGestionnaire(String $cgu) {
 function seeVide() {
     require ("view/vide.php");
 }
+function calculActivite($bdd,$typeUser,$mois,$annee){
+    $activite = array();
+    if ($mois==1||$mois==3||$mois==5||$mois==7||$mois==8||$mois==10||$mois==12){
+        $taille = 33;
+        for($i=1;$i<$taille;$i++) 
+        { 
+            $day="$i/$mois/$annee";
+            $activite[$i] = comptConnexionTypeUser($bdd,$day,$typeUser);
+        } 
+    }
+    else if ($mois==4||$mois==6||$mois==9||$mois==11){
+        $taille = 32;
+        for($i=1;$i<$taille;$i++) 
+        { 
+            $day="$i/$mois/$annee";
+            $activite[$i] = comptConnexionTypeUser($bdd,$day,$typeUser);
+        } 
+    }
+    else if ($mois==2){
+        if((is_int($annee/4)&&!is_int($annee/100))||is_int($annee/400)){
+            $taille = 31;
+            for($i=1;$i<$taille;$i++) 
+            { 
+                $day="$i/$mois/$annee";
+                $activite[$i] = comptConnexionTypeUser($bdd,$day,$typeUser);
+            } 
+        } else {
+            $taille = 30;
+            for($i=1;$i<$taille;$i++) 
+            { 
+                $day="$i/$mois/$annee";
+                $activite[$i] = comptConnexionTypeUser($bdd,$day,$typeUser);
+            } 
+        }
+    }
+    return $activite;
+}
+
+function calculActiviteTotale($bdd,$mois,$annee){
+    $activite = array();
+    if ($mois==1||$mois==3||$mois==5||$mois==7||$mois==8||$mois==10||$mois==12){
+        $taille = 33;
+        for($i=1;$i<$taille;$i++) 
+        { 
+            $day="$i/$mois/$annee";
+            $activite[$i] = comptConnexion($bdd,$day);
+        } 
+    }
+    else if ($mois==4||$mois==6||$mois==9||$mois==11){
+        $taille = 32;
+        for($i=1;$i<$taille;$i++) 
+        { 
+            $day="$i/$mois/$annee";
+            $activite[$i] = comptConnexion($bdd,$day);
+        } 
+    }
+    else if ($mois==2){
+        if((is_int($annee/4)&&!is_int($annee/100))||is_int($annee/400)){
+            $taille = 31;
+            for($i=1;$i<$taille;$i++) 
+            { 
+                $day="$i/$mois/$annee";
+                $activite[$i] = comptConnexion($bdd,$day);
+            } 
+        } else {
+            $taille = 30;
+            for($i=1;$i<$taille;$i++) 
+            { 
+                $day="$i/$mois/$annee";
+                $activite[$i] = comptConnexion($bdd,$dayr);
+            } 
+        }
+    }
+    return $activite;
+}
