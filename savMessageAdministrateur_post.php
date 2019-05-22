@@ -10,12 +10,12 @@ catch(Exception $e)
 }
 
 // Insertion du message à l'aide d'une requête préparée
-$ticketfinal = $bdd->query('SELECT numTicket FROM ticket ORDER BY numTicket DESC');
+$ticketfinal = $bdd->query('SELECT numTicket FROM Ticket ORDER BY numTicket DESC');
 $req = $bdd->prepare('INSERT INTO message (adresseMail, numTicket, texte) VALUES(?, ?, ?)');
 
 while ($dernierticket = $ticketfinal->fetch()){
         if ($dernierticket['numTicket'] == $_POST['numTicketURL']){
-                $req->execute(array($_SESSION, $dernierticket['numTicket'], $_POST['texte'])); //mail a remplacer par la session de l'individu
+                $req->execute(array('administrateur', $dernierticket['numTicket'], $_POST['texte'])); //mail a remplacer par la session de l'individu
         }
 }
 
@@ -25,5 +25,5 @@ $req->closeCursor();
 $ticketfinal->closeCursor();
 // Redirection du visiteur vers la page du minichat
 $fticket = $_POST['numTicketURL'];
-header("Location: minichat.php?ticket=".$fticket);
+header("Location: savMessageAdministrateur.php?ticket=".$fticket);
 ?>

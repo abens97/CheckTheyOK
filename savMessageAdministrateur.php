@@ -11,8 +11,9 @@
     }
     </style>
     <body>
+
     
-    <form action="minichat_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
+    <form action="savMessageAdministrateur_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
         <p>
         <!-- <label for="pseudo">Pseudo</label> : <input type="text" name="adresseMail" id="pseudo" /><br /> -->
         <label for="message">Message</label> :  <input type="text" name="texte" id="message" /><br />
@@ -34,28 +35,23 @@ catch(Exception $e)
 
 // Récupération des derniers messages
 $reponse = $bdd->query('SELECT adresseMail, texte, numTicket FROM message ORDER BY messageNB ASC');
-//$reponse = $bdd->query('SELECT * FROM message');
+//$reponse = $bdd->query('SELECT * FROM messgae');
 //$ticket = $bdd->query('SELECT mailUser FROM ticket ORDER BY numTicket ASC');
 
-
-
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
-
 while ($donnees = $reponse->fetch()){
     if ($donnees['numTicket'] == $_GET["ticket"])
 {
-        if ($donnees['adresseMail'] == 'Administrateur'){
-        echo '<p style="color:#FF0000";><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
+	if ($donnees['adresseMail'] == 'administrateur'){
+	    echo '<p style="color:#FF0000";><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
         }
-        else{
+    else{
             echo '<p><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
         }
 }
 }
-
 $reponse->closeCursor();
 
 ?>
     </body>
 </html>
-
