@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	
-    if(isset($_SESSION['email'])){
-		include 'Header&Navigation&Footer.php';
-	}
-    else {
-		header('Location:Accueil.php');
-	}
+
+require ("view/hefonaUser.php");
+
 ?>
 
 <style type="text/css">
@@ -19,7 +14,7 @@
 <html>
 
 <div id="contenu">
-<label for="langue"> Réception de notification : </label> <br/><br/>
+<label for="langue"> Réception de notifications : </label> <br/><br/>
 <input type="radio" id="Notif" name="Notif" value="Sms" checked>SMS<br/>
 <input type="radio" id="Notif" name="Notif" value="Email_notif">E-mail<br>
 <input type="radio" id="Notif" name="Notif" value="Appel" >Appel téléphonique<br/>

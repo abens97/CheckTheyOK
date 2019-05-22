@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	
-    if(isset($_SESSION['email'])){
-		include 'Header&Navigation&Footer.php';
-	}
-    else {
-		header('Location:Accueil.php');
-	}
+
+require ("view/hefonaUser.php");
+
 ?>
 
+<html>
 <style type="text/css">
 
         #contenu {margin-top: 12%;}
@@ -22,32 +18,28 @@
 
 </style>
 
-<html>
-
 <body>
-	<div id="contenu">
-        <div class="Ligne">
-            <form method="post">
-                <label for="id">Saisissez votre mot de passe actuel :</label>
-                <input type="text" id="MotDePasse" name="MotDePasse">                
-            </form> 
+
+    <form method="post" class="formulaire" action="index.php?cible=user&action=changer_Mdp">
+
+        <div id="contenu">
+            <div class="Ligne">
+                    <label for="id">Saisissez votre mot de passe actuel :</label>
+                    <input type="text" id="ancien_mdp" name="ancien_mdp">                
+            </div>
+            <div class="Ligne">
+                    <label for="e-mail">Saisissez votre nouveau mot de passe :</label>                 
+                    <input type="text" id="nouveau_mdp" name="nouveau_mdp">
+            </div>
+            <div class="Ligne">
+                    <label for="e-mail">Confirmez votre nouveau mot de passe :</label>                 
+                    <input type="text" id="confirm_mdp" name="confirm_mdp">
+            </div>
+            <div class="Ligne">
+                <button type="submit" id= "submit" name="submit">&#10143 Réinitialiser son mot de passe</button>
+            </div>
         </div>
-        <div class="Ligne">
-            <form method="post">
-                <label for="e-mail">Saisissez votre nouveau mot de passe :</label>                 
-                <input type="text" id="NouveauMotDePasse" name="NouveauMotDePasse">
-            </form> 
-        </div>
-        <div class="Ligne">
-            <form method="post">
-                <label for="e-mail">Confirmez votre nouveau mot de passe :</label>                 
-                <input type="text" id="ConfirmerMotDePasse" name="ConfirmerMotDePasse">
-            </form> 
-        </div>
-        <div class="Ligne">
-            <button type="submit" id= "Submit_ReinitMdp" name="Submit_ReinitMdp">&#10143 Réinitialiser son mot de passe</button>
-        </div>
-    </div>
+
 </body>
 
 </html>

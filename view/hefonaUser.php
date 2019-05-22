@@ -9,7 +9,7 @@
 		<style type="text/css">
 	@import url('https://fonts.googleapis.com/css?family=Asap');
 	* {-moz-box-sizing: border-box; box-sizing: border-box;}
-		body {background-color: #000000; color: white; height:100%;width:100%;background: url(Images/H.jpg);background-size:cover;display : table; background-position: fixed;overflow-x: hidden;overflow-y: hidden }
+		body {background-color: #000000; color: white; height:100%;width:100%;background: url(view/Images./H.jpg);background-size:cover;display : table; background-position: fixed;overflow-x: hidden;overflow-y: hidden }
 		header { text-align: center;background-color: white; opacity: 0.7; display :table-header-group;}
 		@keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
 		#Head1{float : left;margin-left: 0.5%; margin-top: 0.85%; color: black;transform:translateX(-100rem);animation: slideIn 0.5s forwards;}
@@ -112,19 +112,19 @@ margin-left: 5%;
 
 	<header>
 		<div id ="Head1">
-			<a href="index.php?cible=user&action=see_Accueil_User"><img src = "Images/logobase.png" alt="Logo" width="70"></a>
+			<a href="index.php?cible=user&action=see_Accueil_User"><img src = "view/Images./logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
       </div>
         <div id="Head3">
-			<img src="Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
+			<img src="view/Images./profil.jpg"  alt="Photo de profil" width="80"> <br />
 			<div id="descente">
 			<button id="dropprofil"><i>Gérer son profil</i></a></button>
 		      <div id="descente-content">
-		        <a href="#">&#8635 Adresse email</a>
-		        <a href="ChangementMdp">&#8635 Mot de passe</a>
-		        <a href="#">&#8635 Téléphone</a>
-		        <a href="#">&#8635 Photo de profil</a>
-		        <a href="#">&#8635 Langue</a>
+		        <a href="index.php?cible=user&action=see_Changer_Tel">&#8635 Téléphone</a>
+		        <a href="index.php?cible=user&action=see_Changer_Mdp">&#8635 Mot de passe</a>
+		        <a href="index.php?cible=user&action=see_Changer_Photo">&#8635 Photo de Profil</a>
+		        <a href="index.php?cible=user&action=see_Changer_Langues">&#8635 Langue</a>
+		        <a href="index.php?cible=user&action=see_Changer_Notif">&#8635 Notification</a>
 						<form method='POST' action='index.php?cible=user&action=deconnexion'>
 						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
 						</form>
@@ -157,16 +157,20 @@ margin-left: 5%;
 			recupereNom($bdd, $_SESSION["email"]);
 			?>
 			</p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='PageType.php'):?>
-			<p> PageType </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='Contact.php'):?>
-			<p> Contact </p>
-			<?php elseif (basename($_SERVER['REQUEST_URI'])=='Profil.php'):?>
-			<p> Mon Profil </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Faq_User'):?>
 			<p> FAQ </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Cgu_User'):?>
 			<p> Conditions Générales d'Utilisation </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Tel'):?>
+			<p> Changement du Numéro de Téléphone  </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Langues'):?>
+			<p> Langue </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Mdp'):?>
+			<p> Changement de Mot de Passe </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Notif'):?>
+			<p> Notifications </p>
+			<?php elseif (basename($_SERVER['REQUEST_URI'])=='index.php?cible=user&action=see_Changer_Photo'):?>
+			<p> Changement de Photo de Profil </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='lumiere.php'):?>
 			<p> Configurer l'éclairage </p>
 			<?php elseif (basename($_SERVER['REQUEST_URI'])=='temperature.php'):?>
@@ -184,7 +188,7 @@ margin-left: 5%;
 	</header> <br />
 
 	<div id="Navigation">
-		<img src = "Images/loupe.png" alt="Logo" width="35"> 
+		<img src = "view/Images./loupe.png" alt="Logo" width="35"> 
 		<div id="titre">
 			<i>Menu</i>
 		</div>
@@ -199,8 +203,8 @@ margin-left: 5%;
 
 	<footer>
             <div id="Footer2">
-            <a href = "https://www.isep.fr" target="_blank"><img src = "Images/Isep.png" alt="Isep" width="90"></a> 
-            <img src = "Images/LogoDomisep.png" alt="Domisep" width="100" > 
+            <a href = "https://www.isep.fr" target="_blank"><img src = "view/Images./Isep.png" alt="Isep" width="90"></a> 
+            <img src = "view/Images./LogoDomisep.png" alt="Domisep" width="100" > 
 
             <i>Équipe de techniciens : Sarah DA COSTA - Pauline MILLOT - Leny BELAMICH - Romain POLO - Arthur GORGE BERNAT - Amine BENSOUDA<i>
         	</div>
@@ -213,15 +217,15 @@ margin-left: 5%;
 	            <a href = "index.php?cible=user&action=see_Cgu_User"><u> Conditions générales d'utilisation </u></a> -
 	            <div id = "FooterReseaux">
 	                <div> 
-	                        <a href = "http://www.twitter.com" target="_blank"><img src = "Images/twitter.png" width=70"></a> <br />
+	                        <a href = "http://www.twitter.com" target="_blank"><img src = "view/Images./twitter.png" width=70"></a> <br />
 	                        Twitter
 	                </div>
 	                <div>
-	                        <a href = "http://www.instagram.com" target="_blank"><img src = "Images/instagram.png" width="70"></a> <br />
+	                        <a href = "http://www.instagram.com" target="_blank"><img src = "view/Images./instagram.png" width="70"></a> <br />
 	                        Instagram
 	                </div>
 	                <div>
-	                        <a href = "http://www.facebook.com" target="_blank"><img src = "Images/facebook.png" width="70"></a> <br />
+	                        <a href = "http://www.facebook.com" target="_blank"><img src = "view/Images./facebook.png" width="70"></a> <br />
 	                        Facebook
 	                </div>
                 	<br />

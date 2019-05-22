@@ -32,6 +32,13 @@ function recupereNom(PDO $bdd, String $Email){
     echo $row["nom"];
 }
 
+function getUserlog(PDO $bdd, String $Email){
+    $req = $bdd->prepare("SELECT mot_de_passe FROM utilisateur WHERE email = ?");
+    $req->execute(array($Email));
+    $row=$req->fetch();
+    return $row;
+}
+
 function recupereCivilite(PDO $bdd, String $Email){
     $req = $bdd->prepare("SELECT civilite FROM utilisateur WHERE email = ?");
     $req->execute(array($Email));
@@ -39,10 +46,20 @@ function recupereCivilite(PDO $bdd, String $Email){
     echo $row["civilite"];
 }
 
-function changementMdp(PDO $bdd, $Email, $new_mdp){
-    $req = $db->prepare("UPDATE Utilisateur SET mot_de_passe = ? WHERE email = ?");
-    $req->execute(array($Email));
+function replaceMdp(PDO $bdd, $email, $new_mdp){
+    $req = $bdd->prepare("UPDATE utilisateur SET mot_de_passe = :new_mdp WHERE email = :email");
+    $req->bindParam(":new_mdp", $new_mdp);
+    $req->bindParam(":email", $email);
+    return $req->execute();
 }
+
+function replaceTel(PDO $bdd, $email, $tel){
+    $req = $bdd->prepare("UPDATE utilisateur SET numero_telephone = :tel WHERE email = :email");
+    $req->bindParam(":tel", $tel);
+    $req->bindParam(":email", $email);
+    return $req->execute();
+}
+
 
 function avatar(PDO $bdd, String $extensionsUpload) {
     $updateavatar = $bdd->prepare('UPDATE utilisateur SET avatar = :avatar WHERE email = :email');

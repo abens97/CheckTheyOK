@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	
-    if(isset($_SESSION['email'])){
-		include 'Header&Navigation&Footer.php';
-	}
-    else {
-		header('Location:Accueil.php');
-	}
+
+require ("view/hefonaUser.php");
+
 ?>
 
 <style type="text/css">
@@ -20,7 +15,8 @@
 
 <div id="contenu">
 <label for="langue"> Choisissez votre langue :</label> <br/><br/>
-<input type="radio" id="langue" name="langue" value="Français" checked>Français
+<input type="radio" id="langue" name="langue" value="Français" checked>Français <br>
+<br>
 <input type="radio" id="langue" name="langue" value="Anglais">Anglais<br>
 <div id="contenu">
 

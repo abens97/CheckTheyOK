@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	session_start();
-	
-    if(isset($_SESSION['email'])){
-		include 'Header&Navigation&Footer.php';
-	}
-    else {
-		header('Location:Accueil.php');
-	}
+    require ("view/hefonaUser.php");
 ?>
 <head>
 
@@ -18,22 +11,22 @@
 
 <body>
 
-<form method="post" class="formulaire" action="Alexistest.php">
+<form method="post" class="formulaire" action="index.php?cible=user&action=changer_Mdp">
 
             <div class="mail">
               <h2>Changement de mot de passe</h2>
               </div>
               <div class="option">
                 <label> ANCIEN MOT DE PASSE </label>
-                <input type="password" id="oldPass" name="oldPass" placeholder="Entrez votre ancien mot de passe...">
+                <input type="password" id="ancien_mdp" name="ancien_mdp" placeholder="Entrez votre ancien mot de passe...">
               </div>
               <div class="option">
                 <label> NOUVEAU MOT DE PASSE </label>
-                <input type="password" id="newPass" name="newPass" placeholder="Entrez votre nouveau mot de passe...">
+                <input type="password" id="nouveau_mdp" name="nouveau_mdp" placeholder="Entrez votre nouveau mot de passe...">
               </div>
               <div class="option">
                 <label> CONFIRMEZ MOT DE PASSE </label>
-                <input type="password" id="confPass" name="confPass" placeholder="Confirmez votre mot de passe...">
+                <input type="password" id="confirm_mdp" name="confirm_mdp" placeholder="Confirmez votre mot de passe...">
               </div>
             <div class="submit">
               <input type="submit" name="valider" placeholder="valider">

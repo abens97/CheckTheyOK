@@ -1,14 +1,8 @@
 <!DOCTYPE html>
-
 <?php
-	session_start();
-	
-    if(isset($_SESSION['email'])){
-		include 'Header&Navigation&Footer.php';
-	}
-    else {
-		header('Location:Accueil.php');
-	}
+
+require ("view/hefonaUser.php");
+
 ?>
 
 <style type="text/css">
@@ -25,28 +19,22 @@
 <html>
 
 <body>
-	<div id="contenu">
-        <div class="Ligne">
-            <form method="post">
-                <label for="id">Saisissez votre adresse e-mail actuelle :</label>
-                <input type="text" id="Email" name="Email">                
-            </form> 
-        </div>
-        <div class="Ligne">
-            <form method="post">
-                <label for="e-mail">Saisissez votre nouvelle adresse e-mail :</label>                 
-                <input type="text" id="NouvelEmail" name="NouvelEmail">
-            </form> 
-        </div>
-        <div class="Ligne">
-            <button type="submit" id= "Submit_ReinitEmail" name="Submit_ReinitEmail">&#10143 Réinitialiser son adresse e-mail</button>
-        </div>
-    </div>
+<br><br><br><br><br><br><br>
     <div id="contenu">
+        <div class="Ligne">
+                    <label for="id">Saisissez votre mot de passe actuel :</label>
+                    <input type="text" id="ancien_mdp" name="ancien_mdp">                
+        </div>
         <div class="Ligne">
             <form method="post">
                 <label for="e-mail">Saisissez votre nouveau numéro de téléphone:</label>                 
-                <input type="text" id="NouveauTel" name="NouveauTel">
+                <input type="text" id="telephone" name="telephone">
+            </form> 
+        </div>
+        <div class="Ligne">
+            <form method="post">
+                <label for="e-mail">Confirmer  votre nouveau numéro de téléphone:</label>                 
+                <input type="text" id="confirmTel" name="confirmTel">
             </form> 
         </div>
         <div class="Ligne">
