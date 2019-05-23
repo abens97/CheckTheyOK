@@ -18,7 +18,44 @@
         [type="number"] {padding: 0;}
         .form2 {width:40%;margin-left:65%; auto;display:table;padding-top: 6%;}
         .error_form {font-size: 15px; font-family: Arial; color: #FF0052;}
-
+        #liste_gestionnaire {
+            box-shadow: 1px 1px green, -0.6em 0 .9em grey;
+            position: absolute;
+            overflow:scroll;
+            width:45%;
+            height:50%;
+            background-color: white;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 20px;
+            margin-top : 2%;
+            margin-left: 12%;
+            border-width:5px;
+            border-style:double;
+            border-color:#82A898;
+            color:black;
+            border-radius : 10px;
+            opacity: 0.9;
+        }
+        #add_gestionnaire {
+            box-shadow: 1px 1px green, -0.6em 0 .9em grey;
+            position: absolute;
+            overflow:scroll;
+            width:26%;
+            height:30%;
+            background-color: white;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 20px;
+            margin-top : 2%;
+            margin-left: 65%;
+            border-width:5px;
+            border-style:double;
+            border-color:#82A898;
+            color:black;
+            border-radius : 10px;
+            opacity: 0.9;
+        }
         
     </style>
 </head>
@@ -36,12 +73,12 @@
 
                 <ul>
                     <?php foreach ($gestionnaires as $gestionnaire) { ?>
-                        <li>Le gestionnaire possédant l'adresse email <?= $gestionnaire["email"]; ?> est en charge du logement n°<?= $gestionnaire["debut_plage_logement"]; ?> à <?= $gestionnaire["fin_plage_logement"]; ?></li>
+                        <li>Le gestionnaire possédant l'adresse email <?= $gestionnaire["email_gestionnaire"]; ?> est en charge du logement n°<?= $gestionnaire["debut_plage_logement"]; ?> à <?= $gestionnaire["fin_plage_logement"]; ?></li>
                     <?php } ?>
                 </ul>
             </div>
 
-            <div class='form2'>
+            <div id="add_gestionnaire">
 		        <form id=registrationGestionnaire_form action ="index.php?cible=domisep&action=ajouter_Gestionnaire" method="post">
                 <table>
                 <div id="ligne">
