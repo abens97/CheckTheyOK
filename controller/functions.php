@@ -99,7 +99,7 @@ function seeLogements() {
     require ("view/Logements.php");
 }
 
-function seeLogementsConnect() {
+function seeLogementsConnect($bdd,$numero_logement) {
     require ("view/LogementsConnect.php");
 }
 
@@ -245,4 +245,40 @@ function calculActiviteTotale($bdd,$mois,$annee){
         }
     }
     return $activite;
+}
+
+function checkPieceAdd($bdd,$numero_logement){
+    if (hadPiece($bdd,$numero_logement,"4")){
+        return "erreur";
+    }
+    else if (hadPiece($bdd,$numero_logement,"3")){
+        return "4";
+    }
+    else if (hadPiece($bdd,$numero_logement,"2")){
+        return "3";
+    }
+    else if (hadPiece($bdd,$numero_logement,"1")){
+        return "2";
+    }
+    else {
+        return "1";
+    }
+}
+
+function checkPiece($bdd,$numero_logement){
+    if (hadPiece($bdd,$numero_logement,"4")){
+        return "4";
+    }
+    else if (hadPiece($bdd,$numero_logement,"3")){
+        return "3";
+    }
+    else if (hadPiece($bdd,$numero_logement,"2")){
+        return "2";
+    }
+    else if (hadPiece($bdd,$numero_logement,"1")){
+        return "1";
+    }
+    else {
+        return "erreur";
+    }
 }

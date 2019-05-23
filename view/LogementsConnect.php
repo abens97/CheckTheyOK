@@ -87,26 +87,108 @@
 </head>
 <html>
 <div id=piece1>    
-    <?php if(true){//Faire 3 switch : pas créé, créé, modifier
+    <?php 
+    if (isset($_GET["modifier"]) == "oui" && $_GET["modifier"] == "oui" && hadPiece($bdd,$numero_logement,"1")) {
+        $nom = getNomPiece($bdd,$numero_logement,"1");
+        $surface = getSurface($bdd,$numero_logement,"1");
+        $lumi = getLumi($bdd,$numero_logement,"1");
+        $temp = getTemp($bdd,$numero_logement,"1");
+        $volets = getVolets($bdd,$numero_logement,"1");
+        $ventilateur = getVentilateur($bdd,$numero_logement,"1");
+        include ("view/pieceModif.php");
+    }
+    else if(hadPiece($bdd,$numero_logement,"1")){
+        $nom = getNomPiece($bdd,$numero_logement,"1");
+        $surface = getSurface($bdd,$numero_logement,"1");
+        $lumi = getLumi($bdd,$numero_logement,"1");
+        $temp = getTemp($bdd,$numero_logement,"1");
+        $volets = getVolets($bdd,$numero_logement,"1");
+        $ventilateur = getVentilateur($bdd,$numero_logement,"1");
+        include ("view/pieceExistante.php");
+    }
+    else {
         include ("view/piece.php");
-    }?>
-        <form method="post" action="index.php?cible=domisep&action=modifier_Email_Contact">
-        
-        </form>
+    }
+    ?>
 </div>
-<div id=piece2>    
-    <form method="post" action="index.php?cible=domisep&action=modifier_Email_Contact">
-        
-    </form>
-</div>
-<div id=piece3>    
-    <form method="post" action="index.php?cible=domisep&action=modifier_Email_Contact">
-        
-    </form>
-</div>
-<div id=piece4>    
-    <form method="post" action="index.php?cible=domisep&action=modifier_Email_Contact">
-        
-    </form>
-</div>
+<?php
+if (hadPiece($bdd,$numero_logement,"1")){
+    echo ("<div id=piece2>");
+            if (isset($_GET['modifier']) == 'oui' && $_GET['modifier'] == 'oui' && hadPiece($bdd,$numero_logement,'2')) {
+                $nom = getNomPiece($bdd,$numero_logement,'2');
+                $surface = getSurface($bdd,$numero_logement,'2');
+                $lumi = getLumi($bdd,$numero_logement,'2');
+                $temp = getTemp($bdd,$numero_logement,'2');
+                $volets = getVolets($bdd,$numero_logement,'2');
+                $ventilateur = getVentilateur($bdd,$numero_logement,'2');
+                include ('view/pieceModif.php');
+            }
+            else if(hadPiece($bdd,$numero_logement,'2')){
+                $nom = getNomPiece($bdd,$numero_logement,'2');
+                $surface = getSurface($bdd,$numero_logement,'2');
+                $lumi = getLumi($bdd,$numero_logement,'2');
+                $temp = getTemp($bdd,$numero_logement,'2');
+                $volets = getVolets($bdd,$numero_logement,'2');
+                $ventilateur = getVentilateur($bdd,$numero_logement,'2');
+                include ('view/pieceExistante.php');
+    }
+    else {
+        include ('view/piece.php');
+    }
+    echo ("</div>");
+
+}
+if (hadPiece($bdd,$numero_logement,"2")){
+    echo ("<div id=piece3>");
+            if (isset($_GET['modifier']) == 'oui' && $_GET['modifier'] == 'oui' && hadPiece($bdd,$numero_logement,'3')) {
+                $nom = getNomPiece($bdd,$numero_logement,'3');
+                $surface = getSurface($bdd,$numero_logement,'3');
+                $lumi = getLumi($bdd,$numero_logement,'3');
+                $temp = getTemp($bdd,$numero_logement,'3');
+                $volets = getVolets($bdd,$numero_logement,'3');
+                $ventilateur = getVentilateur($bdd,$numero_logement,'3');
+                include ('view/pieceModif.php');
+            }
+            else if(hadPiece($bdd,$numero_logement,'3')){
+                $nom = getNomPiece($bdd,$numero_logement,'3');
+                $surface = getSurface($bdd,$numero_logement,'3');
+                $lumi = getLumi($bdd,$numero_logement,'3');
+                $temp = getTemp($bdd,$numero_logement,'3');
+                $volets = getVolets($bdd,$numero_logement,'3');
+                $ventilateur = getVentilateur($bdd,$numero_logement,'3');
+                include ('view/pieceExistante.php');
+    }
+    else {
+        include ('view/piece.php');
+    }
+    echo ("</div>");
+
+}
+if (hadPiece($bdd,$numero_logement,"3")){
+    echo ("<div id=piece4>");
+            if (isset($_GET['modifier']) == 'oui' && $_GET['modifier'] == 'oui' && hadPiece($bdd,$numero_logement,'4')) {
+                $nom = getNomPiece($bdd,$numero_logement,'4');
+                $surface = getSurface($bdd,$numero_logement,'4');
+                $lumi = getLumi($bdd,$numero_logement,'4');
+                $temp = getTemp($bdd,$numero_logement,'4');
+                $volets = getVolets($bdd,$numero_logement,'4');
+                $ventilateur = getVentilateur($bdd,$numero_logement,'4');
+                include ('view/pieceModif.php');
+            }
+            else if(hadPiece($bdd,$numero_logement,'4')){
+                $nom = getNomPiece($bdd,$numero_logement,'4');
+                $surface = getSurface($bdd,$numero_logement,'4');
+                $lumi = getLumi($bdd,$numero_logement,'4');
+                $temp = getTemp($bdd,$numero_logement,'4');
+                $volets = getVolets($bdd,$numero_logement,'4');
+                $ventilateur = getVentilateur($bdd,$numero_logement,'4');
+                include ('view/pieceExistante.php');
+    }
+    else {
+        include ('view/piece.php');
+    }
+    echo ("</div>");
+
+}
+?>
 </html>

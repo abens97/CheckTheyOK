@@ -26,15 +26,69 @@ function hadLogement(PDO $bdd, String $Email) : bool {
 }
 
 function getLogement(PDO $bdd, String $Email){
-    $req = $bdd->prepare("SELECT numero_logement FROM Logement WHERE email = ?");
+    $req = $bdd->prepare("SELECT numero_logement FROM Logement WHERE email_utilisateur = ?");
     $req->execute(array($Email));
     $row=$req->fetch();
     return $row["numero_logement"];
 }
 
-function addPiece(PDO $bdd,$numero_logement,$nom,$surface) {
-    $req = $bdd->prepare("INSERT INTO Logement(email_utilisateur,nombre_resident,type_logement,adresse,complement_adresse,code_postal,ville,presence_escalier,etat_personne_agee)VALUES(?,?,?,?,?,?,?,?,?)");
-    $req->execute(array($email,$nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee));
+function addPiece(PDO $bdd,$numero_logement,$numero_piece_logement,$nom,$surface,$capteur_luminosite,$capteur_temperature,$volets,$ventilateur) {
+    $req = $bdd->prepare("INSERT INTO Piece(numero_logement,numero_piece_logement,nom,surface,capteur_luminosite,capteur_temperature,volets,ventilateur)VALUES(?,?,?,?,?,?,?,?)");
+    $req->execute(array($numero_logement,$numero_piece_logement,$nom,$surface,$capteur_luminosite,$capteur_temperature,$volets,$ventilateur));
+}
+
+function setPiece(PDO $bdd,$numero_logement,$numero_piece_logement,$nom,$surface,$capteur_luminosite,$capteur_temperature,$volets,$ventilateur) {
+    $req = $bdd->prepare("UPDATE Piece SET nom=?, surface=?, capteur_luminosite=?, capteur_temperature=?, volets=?, ventilateur=? WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($nom,$surface,$capteur_luminosite,$capteur_temperature,$volets,$ventilateur,$numero_logement,$numero_piece_logement));
+}
+
+function hadPiece(PDO $bdd, $numero_logement, $numero_piece_logement) : bool {
+    $req = $bdd->prepare("SELECT * FROM Piece WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($numero_logement,$numero_piece_logement));
+    $n=$req->rowCount();
+    return ($n==1);
+}
+
+function getNomPiece(PDO $bdd,$numero_logement,$numero_piece_logement){
+    $req = $bdd->prepare("SELECT nom FROM Piece WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($numero_logement,$numero_piece_logement));
+    $row=$req->fetch();
+    return $row["nom"];
+}
+
+function getSurface(PDO $bdd,$numero_logement,$numero_piece_logement){
+    $req = $bdd->prepare("SELECT surface FROM Piece WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($numero_logement,$numero_piece_logement));
+    $row=$req->fetch();
+    return $row["surface"];
+}
+
+function getLumi(PDO $bdd,$numero_logement,$numero_piece_logement){
+    $req = $bdd->prepare("SELECT capteur_luminosite FROM Piece WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($numero_logement,$numero_piece_logement));
+    $row=$req->fetch();
+    return $row["capteur_luminosite"];
+}
+
+function getTemp(PDO $bdd,$numero_logement,$numero_piece_logement){
+    $req = $bdd->prepare("SELECT capteur_temperature FROM Piece WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($numero_logement,$numero_piece_logement));
+    $row=$req->fetch();
+    return $row["capteur_temperature"];
+}
+
+function getVolets(PDO $bdd,$numero_logement,$numero_piece_logement){
+    $req = $bdd->prepare("SELECT volets FROM Piece WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($numero_logement,$numero_piece_logement));
+    $row=$req->fetch();
+    return $row["volets"];
+}
+
+function getVentilateur(PDO $bdd,$numero_logement,$numero_piece_logement){
+    $req = $bdd->prepare("SELECT ventilateur FROM Piece WHERE numero_logement = ? AND numero_piece_logement = ?");
+    $req->execute(array($numero_logement,$numero_piece_logement));
+    $row=$req->fetch();
+    return $row["ventilateur"];
 }
 
 function InscrireGestionnaire(PDO $bdd, String $nom, String $email, String $mot_de_passe, Int $logement_debut, Int $logement_fin) {

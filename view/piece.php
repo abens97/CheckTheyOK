@@ -1,48 +1,34 @@
 <!DOCTYPE html>
-<form method="post" action="index.php?cible=user&action=addPiece">
+<form method="post" action="index.php?cible=user&action=add_piece">
     <table>
         <div id="ligne">
-            <div id="form2_demi">
-                <label for="mois">Mois :</label>
-                    <select name="mois">
-                        <option value="01">janvier</option>
-                        <option value="02">février</option>
-                        <option value="03">mars</option>
-                        <option value="04">avril</option>
-                        <option value="05" selected>mai</option>
-                        <option value="06">juin</option>
-                        <option value="07">juillet</option>
-                        <option value="08">août</option>
-                        <option value="09">septembre</option>
-                        <option value="10">octobre</option>
-                        <option value="11">novembre</option>
-                        <option value="12">décembre</option>
-                    </select><br>
-            </div>
+            <label for="nom">Nom de la pièce : </label>
+            <input type="text" id="nom" placeholder="Salon, Salle à manger..." name="nom" maxlength="30"><br>
         </div>
         <div id="ligne">
-            <div id="form2_demi">
-                <label for="annee">Année :</label>
-                    <select name="annee">
-                        <option value="2019" selected>2019</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                        <option value="2028">2028</option>
-                    </select><br>
-            </div>
+            <label for="surface">Surface de la pièce (en m²) : </label>
+            <input type="number" id="surface" placeholder=" -- Selectionner --" name="surface" maxlength="3" class="dropdown"><br>
+        </div>
+        <div id="ligne">
+            <label for="capteur_luminosite">Capteur de luminosité </label>
+            <input type="checkbox" id="capteur_luminosite" name="capteur_luminosite" value="1"><br>
+        </div>
+        <div id="ligne">
+            <label for="capteur_temperature">Capteur de température </label>
+            <input type="checkbox" id="capteur_temperature" name="capteur_temperature" value="1"><br>
+        </div>
+        <div id="ligne">
+            <label for="volets">Volets </label>
+            <input type="checkbox" id="volets" name="volets" value="1"><br>
+        </div>
+        <div id="ligne">
+            <label for="ventilateur">Ventilateur </label>
+            <input type="checkbox" id="ventilateur" name="ventilateur" value="1"><br>
         </div>
         <div id="ligne">            
-            <div id="form2_bas">
-                <label>
-                    <button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Valider</button>
-                </label><br>
-            </div>
+            <label>
+                <button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Créer une pièce</button>
+            </label><br>
         </div>
     </table>
 </form>

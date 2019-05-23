@@ -278,6 +278,11 @@ CREATE TABLE IF NOT EXISTS `piece` (
   PRIMARY KEY (`id_piece`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+ALTER TABLE `piece` DROP `nombre_capteur`; 
+ALTER TABLE `piece` DROP `nombre_actionneur`; 
+ALTER TABLE `piece` ADD `capteur_luminosite` CHAR(1) NULL AFTER `surface`, ADD `capteur_temperature` CHAR(1) NULL AFTER `capteur_luminosite`, ADD `volets` CHAR(1) NULL AFTER `capteur_temperature`, ADD `ventilateur` CHAR(1) NULL AFTER `volets`;
+ALTER TABLE `piece` ADD `numero_piece_logement` TINYINT NULL AFTER `numero_logement`;
+
 -- --------------------------------------------------------
 
 --
