@@ -229,6 +229,14 @@ CREATE TABLE IF NOT EXISTS `logement` (
   PRIMARY KEY (`numero_logement`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+ALTER TABLE `logement` CHANGE `presence_escalier` `presence_escalier` CHAR(1) NULL DEFAULT NULL;
+ALTER TABLE `logement` CHANGE `etat_personne_agee` `etat_personne_agee` CHAR(1) NULL DEFAULT NULL;
+ALTER TABLE `logement` ADD `nombre_resident` INT NOT NULL AFTER `numero_logement`;
+ALTER TABLE `logement` CHANGE `nombre_resident` `nombre_resident` INT(11) NULL;
+ALTER TABLE `logement` ADD `type_logement` VARCHAR(40) NULL AFTER `nombre_resident`;
+ALTER TABLE `logement` CHANGE `ville` `ville` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
+ALTER TABLE `logement` ADD `email_utilisateur` VARCHAR(255) NULL AFTER `numero_logement`;
+
 -- --------------------------------------------------------
 
 --
@@ -269,6 +277,11 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `nombre_capteur` tinyint(3) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_piece`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+ALTER TABLE `piece` DROP `nombre_capteur`; 
+ALTER TABLE `piece` DROP `nombre_actionneur`; 
+ALTER TABLE `piece` ADD `capteur_luminosite` CHAR(1) NULL AFTER `surface`, ADD `capteur_temperature` CHAR(1) NULL AFTER `capteur_luminosite`, ADD `volets` CHAR(1) NULL AFTER `capteur_temperature`, ADD `ventilateur` CHAR(1) NULL AFTER `volets`;
+ALTER TABLE `piece` ADD `numero_piece_logement` TINYINT NULL AFTER `numero_logement`;
 
 -- --------------------------------------------------------
 
