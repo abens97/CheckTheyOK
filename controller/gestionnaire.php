@@ -17,7 +17,9 @@ if (isset($_GET["action"])) {
         break;
     
     case "see_Sav_Gestionnaire":
-        seeSavGestionnaire();
+        $debut_plage_logement = 
+        $incidents = getIncidents($bdd)->fetchAll();
+        seeSavGestionnaire($incidents);
         break;
 
     case "see_Faq_Gestionnaire":

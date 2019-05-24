@@ -174,7 +174,7 @@ function seeStatistiquesGestionnaire() {
     require ("view/StatistiquesGestionnaire.php");
 }
 
-function seeSavGestionnaire() {
+function seeSavGestionnaire($incidents) {
     require ("view/hefonaGestionnaire.php");
     require ("view/SavGestionnaire.php");
 }

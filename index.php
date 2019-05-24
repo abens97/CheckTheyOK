@@ -14,6 +14,7 @@ require_once ('jpgraph/src/jpgraph_line.php');
 require_once ("model/connection.php");
 require_once ("model/queriesUser.php");
 require_once ("model/queriesAdmin.php");
+require_once ("model/queriesGestionnaire.php");
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET
 if(isset($_GET['cible']) && !empty($_GET['cible'])) {
