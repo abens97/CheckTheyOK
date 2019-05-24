@@ -91,6 +91,4 @@ if ($incident_choisi['id_incident'] != 0){
 }
 ?>
 
-<!--Mettre ici le contenu de nos pages-->
-
 </html>

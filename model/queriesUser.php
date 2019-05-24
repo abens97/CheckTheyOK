@@ -158,4 +158,19 @@ function emailUtilise(PDO $bdd, String $Email) : bool {
     return ($n==1);
 }
 
+function getIncidentsUser(PDO $bdd, $numero_logement){
+    $req = $bdd->prepare("SELECT * FROM Incident WHERE numero_logement = ?");
+    $req->execute(array($numero_logement));
+    return $req;
+}
+
+function addIncident(PDO $bdd, $numero_logement){
+    $req = $bdd->prepare("INSERT INTO Incident (numero_logement, resolu) VALUES(?,?)");
+    $req->execute(array($numero_logement,"non résolu"));
+    $req2 = $bdd->prepare("SELECT id_incident FROM Incident WHERE numero_logement = ?");
+    $req2->execute(array($numero_logement));
+    $row=$req2->fetch();
+    return $row["id_incident"];
+}
+
 ?>
