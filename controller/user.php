@@ -60,8 +60,20 @@ if (isset($_GET["action"])) {
     case "changer_Tel":
         $mdp = sha1($_POST["form_password"]);
         $tel = $_POST["form_tel"];
-        $retype_tel = $_POST['form_retype_tel'];
-        
+        $resultat = getUserlog($bdd, $_SESSION["email"]);
+        $messages = array();
+        if($mdp == $resultat['mot_de_passe'])
+            { 
+                replaceTel($bdd, $_SESSION["email"],$tel);
+                $messages[] = 'Numéro de Téléphone changé !';
+                seeChangerTel($messages);
+                break;
+            }
+        else {
+            $messages[] ='Mot de passe incorrect';
+            seeChangerTel($messages);
+            break;
+        }
         break;
 
     case "changer_Mdp":
@@ -70,23 +82,16 @@ if (isset($_GET["action"])) {
         $confirmMdp = $_POST["confirm_mdp"];
         $ancienMdpCrypte = sha1($ancienMdp);
         $resultat = getUserlog($bdd, $_SESSION["email"]);
-        if($_POST["ancien_mdp"] && $_POST["nouveau_mdp"] === $_POST["confirm_mdp"]){
-            if($ancienMdpCrypte == $resultat['mot_de_passe'])
-            {
-                $mdp = sha1($nouveauMdp);
-                replaceMdp($bdd, $_SESSION["email"],$mdp);
-                header('index.php?cible=user&action=see_Changer_Mdp&erreur=mot_de_passe_change');
-            }
-            else 
-            {
-                echo 'Mauvais mot de passe !';
-            }
+        if($ancienMdpCrypte == $resultat['mot_de_passe'])
+        {
+            $mdp = sha1($nouveauMdp);
+            replaceMdp($bdd, $_SESSION["email"],$mdp);
+            header('index.php?cible=user&action=see_Changer_Mdp&erreur=mot_de_passe_change');
         }
         else 
         {
-            header('index.php?cible=user&action=see_Changer_Mdp&erreur=RemplisTout');
-            echo 'Remplis tout !';
-        } 
+            echo 'Mauvais mot de passe !';
+        }
 
         break; 
 

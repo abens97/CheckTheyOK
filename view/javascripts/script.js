@@ -134,28 +134,46 @@ $(function() {
 	
 		var password = $("#form_password").val();
 		var retype_password = $("#form_retype_password").val();
+		var retype_password_length = $("#form_retype_password").val().length;
 		
-		if(password !=  retype_password) {
-			$("#retype_password_error_message").html("Les mots de passe ne correspondent pas !");
+		if(retype_password_length < 8) {
+			$("#retype_password_error_message").html("Au moins 8 caractères !");
 			$("#retype_password_error_message").show();
-			error_retype_password = true;
-		} else {
-			$("#retype_password_error_message").hide();
+			error_password = true;
 		}
-	
+		else {
+			if(password !=  retype_password) {
+				$("#retype_password_error_message").html("Les mots de passe ne correspondent pas !");
+				$("#retype_password_error_message").show();
+				error_retype_password = true;
+			}
+			else {
+				$("#retype_password_error_message").hide();
+			}
+		}
 	}
 
 	function check_email() {
 
 		var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+		var email_length = $("#form_email").val().length;
 	
-		if(pattern.test($("#form_email").val())) {
-			$("#email_error_message").hide();
-		} else {
-			$("#email_error_message").html("Adresse e-mail invalide !");
+		if (email_length == 0) 
+		{
+			$("#email_error_message").html("Veuillez écrire un email !");
 			$("#email_error_message").show();
-			error_email = true;
 		}
+		else
+		{
+			if(pattern.test($("#form_email").val())) {
+				$("#email_error_message").hide();
+			} else {
+				$("#email_error_message").html("Adresse e-mail invalide !");
+				$("#email_error_message").show();
+				error_email = true;
+			}
+		}
+
 
 	}
 
@@ -163,13 +181,20 @@ $(function() {
 
 		var email = $("#form_email").val();
 		var retype_email = $("#form_retype_email").val();
+		var retype_email_length = $("#form_retype_email").val().length;
 
-		if(email != retype_email) {
-			$("#retype_email_error_message").html("Les e-mails ne correspondent pas !");
+		if(retype_email_length == 0){
+			$("#retype_email_error_message").html("Veuillez écrire un email !");
 			$("#retype_email_error_message").show();
-			error_retype_password = true;
 		} else {
-			$("#retype_email_error_message").hide();
+			if(email != retype_email) {
+				$("#retype_email_error_message").html("Les e-mails ne correspondent pas !");
+				$("#retype_email_error_message").show();
+				error_retype_password = true;
+			}
+			else {
+				$("#retype_email_error_message").hide();
+			}
 		}	
 	}
 

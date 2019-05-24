@@ -118,59 +118,6 @@
                 </div>
             </div>
     </footer>
-    <script>
 
-	
-	
-/*		const form ={
-			Email: document.getElementById('E-mail'),
-			Motdepasse: document.getElementById('modp'),
-			submit: document.getElementById('btn-submit'),
-			messages: document.getElementById('form-messages'),
-		};
-
-		form.submit.addEventListener('click',() => {
-			const request =new XMLHttpRequest();
-
-			request.onload =() => {
-				let responseObject = null;
-				try{
-					responseObject = JSON.parse(request.responseText);
-				} catch(e) {
-					console.error('Could not parse JSON!');
-				}
-				if (responseObject){
-					handleResponse(responseObject);
-				}
-			}
-			const requestData =`E-mail=${form.Email.value}&modp=${form.Motdepasse.value}`;
-			request.open('post',"index.php?cible=offline&action=connexion");
-			request.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-			request.send(requestData);
-		
-		});
-		function handleResponse (responseObject) {
-			if(responseObject.ok){
-				if(true) {
-					location.href='Logements.php';
-				}
-				else {
-					location.href='Programmer.php';
-				}
-			} else{
-				while (form.messages.firstChild) {
-					form.messages.removeChild(form.messages.firstChild);
-				}
-				responseObject.messages.forEach((message)  => {
-					const li = document.createElement('li');
-					li.textContent = message;
-					form.messages.appendChild(li);
-				});
-				form.messages.style.display ='block';
-			}
-		}*/
-	
-	
-	</script>
 	</body>
 </html>
