@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `incident` (
   `type_actionneur` char(1) DEFAULT NULL,
   PRIMARY KEY (`id_incident`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
+ALTER TABLE `incident` ADD `resolu` VARCHAR(20) NULL AFTER `type_actionneur`;
 -- --------------------------------------------------------
 
 --
@@ -252,6 +252,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   PRIMARY KEY (`messageNB`),
   KEY `numTicket` (`numTicket`)
 ) ENGINE=MyISAM AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
+RENAME TABLE `bdd_checktheyok`.`message` TO `bdd_checktheyok`.`messagesav`;
 
 --
 -- Déchargement des données de la table `message`
