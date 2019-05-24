@@ -77,16 +77,16 @@ if (isset($_GET["action"])) {
         break;
 
     case "changer_Mdp":
-        $ancienMdp = $_POST["ancien_mdp"];
-        $nouveauMdp = $_POST["nouveau_mdp"];
-        $confirmMdp = $_POST["confirm_mdp"];
+        $ancienMdp = $_POST["form_mdp"];
+        $nouveauMdp = $_POST["form_password"];
+        $confirmMdp = $_POST["form_retype_password"];
         $ancienMdpCrypte = sha1($ancienMdp);
         $resultat = getUserlog($bdd, $_SESSION["email"]);
         if($ancienMdpCrypte == $resultat['mot_de_passe'])
         {
             $mdp = sha1($nouveauMdp);
             replaceMdp($bdd, $_SESSION["email"],$mdp);
-            header('index.php?cible=user&action=see_Changer_Mdp&erreur=mot_de_passe_change');
+            echo 'Oui!';
         }
         else 
         {

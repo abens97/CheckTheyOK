@@ -23,7 +23,7 @@ require ("view/hefonaUser.php");
 <html>
 
 <body>
-<br>
+<br>   
 <form id='telChangement_form' action = "index.php?cible=user&action=changer_Tel" method="post">
 <?php 
 			if(isset($messages[0]))
@@ -46,8 +46,8 @@ require ("view/hefonaUser.php");
                 <span class="error_form" id="tel_error_message"></span>
         </div>
         <div class="Ligne">
-                <label for="retype_form_tel">Confirmez votre nouveau numéro de téléphone:</label>                 
-                <input type="tel" id="retype_form_tel" name="retype_form_tel" maxlength='10'>
+                <label for="form_retype_tel">Confirmez votre nouveau numéro de téléphone:</label>                 
+                <input type="tel" id="form_retype_tel" name="form_retype_tel" maxlength='10'>
                 <br>
                 <span class="error_form" id="retype_tel_error_message"></span>
         </div>

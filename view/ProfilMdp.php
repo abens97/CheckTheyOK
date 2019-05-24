@@ -7,6 +7,9 @@ require ("view/hefonaUser.php");
 ?>
 
 <html>
+<head>
+<script type="text/javascript" language="javascript" src="view/javascripts/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="view/javascripts/scriptProfilMdp.js"></script>
 <style type="text/css">
 
         #contenu {margin-top: 12%;}
@@ -15,38 +18,39 @@ require ("view/hefonaUser.php");
         [type="submit"]:hover {opacity: 0.8;background-color: white;color:black;}
         [type="submit"]:active {background-color: green; color:white;}
         input {width: 180px;}
-        .error_form {font-size: 15px; font-family: Arial; color: #FF0052;border: 1px solid red;}
+        .error_form{color:red;}    
+
 
 </style>
 
 <body>
 
-    <form method="post" class="formulaire" action="index.php?cible=user&action=changer_Mdp">
+<form id='mdpChangement_form' action = "index.php?cible=user&action=changer_Mdp" method="post">
 
         <div id="contenu">
-        <?php       if(isset($messages[0]))
-			{
-				
-				echo "<div class='error_form'> $messages[0]; </div>";
-			}	
-			?>
             <div class="Ligne">
-                    <label for="id">Saisissez votre mot de passe actuel :</label>
-                    <input type="text" id="ancien_mdp" name="ancien_mdp">                
+                    <label for="mdp">Saisissez votre mot de passe actuel :</label>
+                    <input type="password" id="form_mdp" name="form_mdp">   
+                    <br>
+                    <span class="error_form" id="mdp_error_message"></span>            
             </div>
             <div class="Ligne">
-                    <label for="e-mail">Saisissez votre nouveau mot de passe :</label>                 
-                    <input type="text" id="nouveau_mdp" name="nouveau_mdp">
+                    <label for="form_password">Saisissez votre nouveau mot de passe :</label>                 
+                    <input type="password" id="form_password" name="form_password">
+                    <br>
+                    <span class="error_form" id="password_error_message"></span>            
             </div>
             <div class="Ligne">
-                    <label for="e-mail">Confirmez votre nouveau mot de passe :</label>                 
-                    <input type="text" id="confirm_mdp" name="confirm_mdp">
+                    <label for="form_retype_password">Confirmez votre nouveau mot de passe :</label>                 
+                    <input type="password" id="form_retype_password" name="form_retype_password">
+                    <br>
+                    <span class="error_form" id="retype_password_error_message"></span>            
             </div>
             <div class="Ligne">
                 <button type="submit" id= "submit" name="submit">&#10143 Réinitialiser son mot de passe</button>
             </div>
         </div>
-
+<form>
 </body>
-
+</head>
 </html>

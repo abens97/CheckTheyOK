@@ -2,7 +2,7 @@ $(function() {
 
 	$("#tel_error_message").hide();
 	$("#password_error_message").hide();
-	$("tel_retype_error_message").hide();
+	$("retype_tel_error_message").hide();
 
 	var error_tel= false;
 	var error_password = false;
@@ -50,16 +50,23 @@ $(function() {
 	function check_retype_tel() {
 	
 		var tel= $("#form_tel").val();
+		var retype_tel_length = $("#form_retype_tel").val().length;
 		var retype_tel = $("#form_retype_tel").val();
 		
-		if(retype_tel =! tel) {
-			$("#retype_tel_error_message").html("Les numéros de téléphone ne correspondent pas !");
+		if(retype_tel_length == 0) {
+			$("#retype_tel_error_message").html("Veuillez écrire votre numéro de téléphone !");
 			$("#retype_tel_error_message").show();
 			error_retype_tel = true;
 		} else {
+			if(retype_tel == tel){
 			$("#retype_tel_error_message").hide();
+			}
+			else {
+				$("#retype_tel_error_message").html("Les numéros de téléphone ne correspondent pas !");
+				$("#retype_tel_error_message").show();
+				error_retype_tel = true;
+			}
 		}
-	
 	}
 
 	function check_password() {
