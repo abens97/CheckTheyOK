@@ -17,11 +17,22 @@ if (isset($_GET["action"])) {
         break;
     
     case "see_Sav_Gestionnaire":
-        $debut_plage_logement = 
-        $incidents = getIncidents($bdd)->fetchAll();
-        seeSavGestionnaire($incidents);
+        $email_gestionnaire = $_SESSION['email'];
+        $debut_plage_logement = getDebutPlage($bdd, $email_gestionnaire);
+        $fin_plage_logement = getFinPlage($bdd, $email_gestionnaire);
+        $incidents = getIncidents($bdd,$debut_plage_logement,$fin_plage_logement)->fetchAll();
+        if (isset($_GET['ticket'])){
+            $numero_incident = $_GET['ticket'];
+            $incident_choisi = getIncident($bdd,$numero_incident)->fetch();
+            $messages = getMessages($bdd,$numero_incident)->fetchAll();
+        } else{
+            $incident_choisi = 0;
+            $messages ="";
+        }
+        
+        seeSavGestionnaire($incidents,$incident_choisi,$messages);
         break;
-
+        
     case "see_Faq_Gestionnaire":
         seeFaqGestionnaire();
         break;

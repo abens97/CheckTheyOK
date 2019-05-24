@@ -11,6 +11,7 @@ function setCgu(PDO $bdd, String $newcgu){
     $req = $bdd->prepare("UPDATE fichier SET contenu = '$cgu'  WHERE id_fichier = 1");
     $req->execute();
 }
+
 function getEmailContact(PDO $bdd){
     $req = $bdd->query("SELECT contenu FROM fichier WHERE id_fichier = 2");
     $row=$req->fetch();
