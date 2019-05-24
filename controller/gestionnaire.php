@@ -29,10 +29,37 @@ if (isset($_GET["action"])) {
             $incident_choisi = 0;
             $messages ="";
         }
-        
         seeSavGestionnaire($incidents,$incident_choisi,$messages);
         break;
-        
+
+    case "incident_resolu":
+        if (isset($_GET['ticket'])){
+            $numero_incident = $_GET['ticket'];
+            resoudreIncident($bdd, $numero_incident);
+        }
+        header ("Location:index.php?cible=gestionnaire&action=see_Sav_Gestionnaire");
+        break;
+        //AJOUTER ADD MESSAGE 
+    case "incident_non_resolu":
+        if (isset($_GET['ticket'])){
+            $numero_incident = $_GET['ticket'];
+            nonResoudreIncident($bdd, $numero_incident);
+        }
+        header ("Location:index.php?cible=gestionnaire&action=see_Sav_Gestionnaire");
+        break;
+
+    case "add_message":
+        $email_gestionnaire = $_SESSION['email'];
+        if (isset($_POST['new_message'])){
+            $new_message = $_POST['new_message'];
+            if (isset($_GET['ticket'])){
+                $numero_incident = $_GET['ticket'];
+            }
+            addMessage($bdd, $email_gestionnaire, $numero_incident,$new_message);
+        }
+        header ("Location:index.php?cible=gestionnaire&action=see_Sav_Gestionnaire&ticket=$numero_incident");
+        break;
+      
     case "see_Faq_Gestionnaire":
         seeFaqGestionnaire();
         break;

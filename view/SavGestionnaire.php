@@ -29,7 +29,7 @@
             box-shadow: 1px 1px green, -0.6em 0 .9em grey;
             position: absolute;
             overflow:scroll;
-            width:30%;
+            width:31%;
             height:50%;
             background-color: white;
             padding-left: 40px;
@@ -60,28 +60,31 @@
 if ($incident_choisi['id_incident'] != 0){
                 echo"<div id='incident'><h1>Incident n°";
                 echo $incident_choisi['id_incident'];
+                $incident_choisi_id = $incident_choisi['id_incident'];
                 echo "</h1><h2>Logement n°";
                 echo $incident_choisi['numero_logement'];
                 echo "</h1><ul>";
                 
                 foreach ($messages as $message) {
-                echo "<li>Auteur : ";
+                echo "<li>";
                 echo $message['adresseMail'];
-                echo " -> ";
+                echo " : ";
                 echo $message['texte'];
-                echo "</li></ul>";
-                echo "<input type";
-                /*
-                <form method="post" action="index.php?cible=domisep&action=modifier_Cgu">
-            <textarea name="cgu" rows="26" cols="170">
-            <?php
-                echo $cgu;
-            ?>
-            </textarea>
-            <input type='submit' id='btn-submit'>Modifier les CGU</input>
-        </form>//METTRE EN FORME */
-                echo "</div>";
+                echo "</li>";
                 }
+                echo "</ul>";
+                echo "<form method='post' action='index.php?cible=gestionnaire&action=add_message&ticket=$incident_choisi_id'>
+                <textarea placeholder='Votre message' name='new_message' rows='5' cols='65'></textarea><br>
+                <input type='submit' id='btn-submit' value='Envoyer le message'></input>
+                </form>
+                <form method='post' action='index.php?cible=gestionnaire&action=incident_resolu&ticket=$incident_choisi_id'>
+                <input type='submit' id='btn-submit' value='Incident résolu'></input>
+                </form>
+                <form method='post' action='index.php?cible=gestionnaire&action=incident_non_resolu&ticket=$incident_choisi_id'>
+                <input type='submit' id='btn-submit' value='Incident non résolu'></input>
+                </form>";
+
+                echo "</div>";
 
 
                 

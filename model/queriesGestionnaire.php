@@ -33,10 +33,18 @@ function getIncident(PDO $bdd, $numero_incident){
 }
 
 function resoudreIncident(PDO $bdd, $numero_incident){
-    $req = $bdd->prepare("UPDATE Incident SET resolu = 'resolu'  WHERE id_incident = ?");
+    $req = $bdd->prepare("UPDATE Incident SET resolu = 'résolu'  WHERE id_incident = ?");
     $req->execute(array($numero_incident));
 }
 
+function nonResoudreIncident(PDO $bdd, $numero_incident){
+    $req = $bdd->prepare("UPDATE Incident SET resolu = 'non résolu'  WHERE id_incident = ?");
+    $req->execute(array($numero_incident));
+}
 
+function addMessage(PDO $bdd, $emailauteur, $numTicket, $texte){
+    $req = $bdd->prepare("INSERT INTO Messagesav (adresseMail, numTicket, texte) VALUES(?,?,?)");
+    $req->execute(array($emailauteur,$numTicket,$texte));
+}
 
 ?>

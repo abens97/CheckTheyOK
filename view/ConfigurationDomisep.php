@@ -66,17 +66,15 @@
             <br>
             </textarea>
             <br>
-            <input type='submit' id='btn-submit'>Modifier l'email de contact</input>
+            <input type='submit' id='btn-submit' value ="Modifier l'email de contact"></input>
         </form>
     </div>
     <div id=zonetexte2>    
         <form method="post" action="index.php?cible=domisep&action=modifier_Cgu">
-            <textarea name="cgu" rows="26" cols="170">
-            <?php
+            <textarea name="cgu" rows="26" cols="170"><?php
                 echo $cgu;
-            ?>
-            </textarea>
-            <input type='submit' id='btn-submit'>Modifier les CGU</input>
+            ?></textarea>
+            <input type='submit' id='btn-submit' value='Modifier les CGU'></input>
         </form>
     </div>
 </html>
