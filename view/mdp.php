@@ -11,6 +11,7 @@
         [type="submit"]:hover {opacity: 0.8;background-color: white;color:black;}
         [type="submit"]:active {background-color: green; color:white;}
         input {width: 180px;}
+        #mdpenvoye {text-align: center; margin:0 auto;font-size: 2.2em;display: none; color: limegreen; width: 65%;}
 
 </style>
 
@@ -19,19 +20,22 @@
 <body>
     <div id="contenu">
         <div class="Ligne">
-            <form method="post" action="mdpenvoye.php">
+            <form method="post">
                 <label for="id">Saisissez votre identifiant :</label>
                 <input type="text" id="ID" name="ID">                
             </form> 
         </div>
         <div class="Ligne">
-            <form method="post" action="mdpenvoye.php">
+            <form method="post" >
                 <label for="e-mail">Saisissez votre adresse e-mail :</label>                 
                 <input type="text" id="emailmdp" name="emailmdp">
             </form> 
         </div>
         <div class="Ligne">
-            <button type="submit" id= "Submit_ReinitMdp" name="Submit_ReinitMdp">&#10143 Réinitialiser son mot de passe</button>
+            <button type="submit" id= "Submit_ReinitMdp" name="Submit_ReinitMdp" onclick="document.getElementById('mdpenvoye').style.display = 'table'">&#10143 Réinitialiser son mot de passe</button>
+        </div>
+        <div id="mdpenvoye">
+                Demande de mot de passe effectuées ! Vous allez bientôt recevoir un e-mail décrivant les démarches à suivre
         </div>
     </div>
 </body>
