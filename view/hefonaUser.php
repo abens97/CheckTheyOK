@@ -208,7 +208,7 @@ margin-left: 5%;
             <img src = "view/Images/LogoDomisep.png" alt="Domisep" width="100" > 
 
             <i>Équipe de techniciens : Sarah DA COSTA - Pauline MILLOT - Leny BELAMICH - Romain POLO - Arthur GORGE BERNAT - Amine BENSOUDA<i>
-        	</div>
+        		</div>
         	<br />
         	<HR align=center>
         	<div id = "Footer3">

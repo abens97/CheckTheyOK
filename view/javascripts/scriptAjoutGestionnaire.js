@@ -31,7 +31,7 @@ $(function() {
 
 	$("#tel_error_message").focusout(function() {
 
-		check_prenom();
+		check_tel();
 		
 	});
 

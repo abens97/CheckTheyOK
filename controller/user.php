@@ -16,13 +16,7 @@ if (isset($_GET["action"])) {
         break;
 
     case "see_Logements":
-        $email = $_SESSION['email'];
-        if(hadLogement($bdd,$email)){
-            $numero_logement = getLogement($bdd, $email);
-            seeLogementsConnect($bdd,$numero_logement); 
-        } else {
-            seeLogements();
-        }
+        seeLogements();
         break;
 
     case "see_Sav":
@@ -43,48 +37,6 @@ if (isset($_GET["action"])) {
         session_destroy();
         break;
 
-    case "add_logement":
-        $email = $_SESSION['email'];
-        $nombre_resident = $_POST['nombre_resident'];
-        $type_logement = $_POST['type_logement'];
-        $adresse = $_POST['adresse'];
-        $complement_adresse = $_POST['complement_adresse'];
-        $code_postal = $_POST['code_postal'];
-        $ville = $_POST['ville'];
-        $presence_escalier = $_POST['presence_escalier'];
-        $etat_personne_agee = "1";
-        addLogement($bdd,$email,$nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee);
-        header ("Location:index.php?cible=user&action=see_Logements");
-        break;
-
-    case "add_piece":
-        $email = $_SESSION['email'];
-        $numero_logement = getLogement($bdd, $email);
-        $nom = $_POST['nom'];
-        $surface = $_POST['surface'];
-        $capteur_luminosite = $_POST['capteur_luminosite'];
-        $capteur_temperature = $_POST['capteur_temperature'];
-        $volets = $_POST['volets'];
-        $ventilateur = $_POST['ventilateur'];
-        $numero_piece_logement = checkPieceAdd($bdd,$numero_logement);
-        addPiece($bdd,$numero_logement,$numero_piece_logement,$nom,$surface,$capteur_luminosite,$capteur_temperature,$volets,$ventilateur);
-        header ("Location:index.php?cible=user&action=see_Logements");
-        break;
-
-    case "set_piece":
-        $email = $_SESSION['email'];
-        $numero_logement = getLogement($bdd, $email);
-        $nom = $_POST['nom'];
-        $surface = $_POST['surface'];
-        $capteur_luminosite = $_POST['capteur_luminosite'];
-        $capteur_temperature = $_POST['capteur_temperature'];
-        $volets = $_POST['volets'];
-        $ventilateur = $_POST['ventilateur'];
-        $numero_piece_logement = checkPiece($bdd,$numero_logement);
-        setPiece($bdd,$numero_logement,$numero_piece_logement,$nom,$surface,$capteur_luminosite,$capteur_temperature,$volets,$ventilateur);
-        header ("Location:index.php?cible=user&action=see_Logements");
-        break;
-    
     case "see_Changer_Tel":
         seeChangerTel();
         break;
@@ -106,7 +58,7 @@ if (isset($_GET["action"])) {
         break;
 
     case "changer_Tel":
-        $mdp = sha1($_POST["motdepasse"]);
+        $mdp = sha1($_POST["form_password"]);
         $tel = $_POST["form_tel"];
         $retype_tel = $_POST['form_retype_tel'];
         
@@ -118,14 +70,12 @@ if (isset($_GET["action"])) {
         $confirmMdp = $_POST["confirm_mdp"];
         $ancienMdpCrypte = sha1($ancienMdp);
         $resultat = getUserlog($bdd, $_SESSION["email"]);
-        echo 'oui';
         if($_POST["ancien_mdp"] && $_POST["nouveau_mdp"] === $_POST["confirm_mdp"]){
             if($ancienMdpCrypte == $resultat['mot_de_passe'])
             {
                 $mdp = sha1($nouveauMdp);
                 replaceMdp($bdd, $_SESSION["email"],$mdp);
-                echo "mot de passe changé";
-                echo '<br>';
+                header('index.php?cible=user&action=see_Changer_Mdp&erreur=mot_de_passe_change');
             }
             else 
             {
@@ -134,6 +84,7 @@ if (isset($_GET["action"])) {
         }
         else 
         {
+            header('index.php?cible=user&action=see_Changer_Mdp&erreur=RemplisTout');
             echo 'Remplis tout !';
         } 
 

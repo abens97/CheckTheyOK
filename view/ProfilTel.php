@@ -4,7 +4,10 @@
 require ("view/hefonaUser.php");
 
 ?>
-
+    <script type="text/javascript" language="javascript" src="view/javascripts/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="view/javascripts/script.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Domisep</title>
 <style type="text/css">
 
         #contenu {margin-top: 8%;}
@@ -19,28 +22,33 @@ require ("view/hefonaUser.php");
 <html>
 
 <body>
-<br><br><br><br><br><br><br>
+<br><br><br><br>
+<form id=telChangement_form action = "index.php?cible=user&action=changer_Tel" method="post">
     <div id="contenu">
         <div class="Ligne">
                     <label for="id">Saisissez votre mot de passe actuel :</label>
-                    <input type="text" id="ancien_mdp" name="ancien_mdp">                
+                    <input type="text" id="form_password" name="form_password">    
+                    <span class="error_form" id="password_error_message"></span>            
         </div>
         <div class="Ligne">
             <form method="post">
                 <label for="e-mail">Saisissez votre nouveau numéro de téléphone:</label>                 
-                <input type="text" id="telephone" name="telephone">
+                <input type="text" id="form_tel" name="form_tel">
+                <span class="error_form" id="tel_error_message"></span>
             </form> 
         </div>
         <div class="Ligne">
             <form method="post">
-                <label for="e-mail">Confirmer  votre nouveau numéro de téléphone:</label>                 
-                <input type="text" id="confirmTel" name="confirmTel">
+                <label for="e-mail">Confirmez votre nouveau numéro de téléphone:</label>                 
+                <input type="text" id="form_retype_tel" name="form_retype_tel">
+                <span class="error_form" id="retype_tel_error_message"></span>
             </form> 
         </div>
         <div class="Ligne">
             <button type="submit" id= "Submit_ReinitTel" name="Submit_ReinitTel">&#10143 Valider le numéro de téléphone</button>
         </div>
     </div>
+</form>
 </body>
 
 

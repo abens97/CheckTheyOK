@@ -7,7 +7,7 @@
         $action = htmlspecialchars($_GET["action"]);
         switch($action) {
         case "see_Accueil":
-            seeAccueil();
+            seeAccueil($messages);
             break;
     
         case "see_Inscription":
@@ -36,13 +36,15 @@
             $messages = array();
             if (empty($Email))
             {
-                $ok = false;
-                $messages[] = 'Veuillez écrire votre E-mail ! ';
+                $messages[] = 'Veuillez écrire votre e-mail !';
+                seeAccueil($messages);
+                break;
             }
             if (empty($MotdePasse)) 
             {   
-                $ok = false;
                 $messages[] = 'Veuillez écrire votre mot de passe !';
+                seeAccueil($messages);
+                break;
             }
 
 
@@ -73,17 +75,12 @@
                     }
                 } 
                 else {
-                    $ok = false;
                     $messages[] = 'E-mail ou mot de passe incorrect !';
+                    seeAccueil($messages);
+                    break;
                 }
             }
             
-            echo json_encode(
-                array(
-                    'ok' => $ok,
-                    'messages' => $messages,
-                )
-            );
 
             break;
 
@@ -105,7 +102,7 @@
             break;
         }
     } else {
-        seeAccueil();
+        seeAccueil($messages);
     }
 
 ?>

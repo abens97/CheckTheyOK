@@ -4,7 +4,7 @@
 	include "model/connection.php";
 ?>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Domisep</title>
     <style type="text/css">
         @keyframes slideIn {from{}to{transform:translateX(0);transform:translateY(0);}}
@@ -16,20 +16,20 @@
         
 		#Head2{ width:40%;margin: 0 auto;color: black;transform:translateY(-100rem);animation: slideIn 0.5s forwards;}
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
-		.form {margin-right:1.3%;float:right;color: black;margin-top:4%;font-size: 0.9em;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
+		.form {margin-right:1.3%;float:right;color: black;margin-top:2%;font-size: 0.9em;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
 		.form button {font-size: 1.1em;}
 		.form img {border-radius: 18px;}
 		.form a{margin-right: 13%;margin-left: 14%;text-decoration: none;text-shadow:2px 6px 3px grey;}
+		.error_form {font-size: 15px; font-family: Arial; color: #FF0052;border: 1px solid red;}
         #form-messages{background-color : rgb(255,232,232);border: 1px solid red;color:red;display:none;font: size 12px;font-weight: bold;margin-bottom: 10px;padding: 10px 25px;max-width: 250px;}
         footer {margin:0 auto;text-align: center;opacity: 0.7; width: 100%; background-color: white; bottom: 0; left: 0; right: 0; position:absolute; color:black;display : table-row;}
-        #Footer2 {margin:0 auto;height: 100%;}
-        #Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
-        #Footer3 {display : flex; align-items:center;}
-        #Footer3 p {margin-left: 1%;float: left; padding-right: 20%;}
-        #Footer3 a {padding-right:1%;padding-left:1%;}
-        #FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
-        #FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
-
+		#Footer2 {margin:0 auto;height: 100%;}
+		#Footer2 img{display : flex; align-items:center; float: left; padding-left: 20px;}
+		#Footer3 {display : flex; align-items:center;}
+		#Footer3 p {margin-left: 1%;float: left; padding-right: 20%;}
+		#Footer3 a {padding-right:1%;padding-left:1%;}
+		#FooterReseaux {display : flex; align-items:center;justify-content : center; padding-left: 15%;}
+		#FooterReseaux img{border-radius : 50%;padding-left: 20px;padding-right: 20px;}
     </style>
 </head>
 
@@ -42,21 +42,32 @@
 			<a href="index.php?cible=offline&action=see_Accueil"><img src = "view/Images/logobase.png" alt="Logo" width="70"></a>
             <p>Check They're Ok !<p>     
     </div>
-    <form method='post' action='index.php?cible=offline&action=connexion'>
-		<ul id='form-messages'></ul>
-		<label for="Email">Email</label>
-		<input type="text" id='E-mail' name='E-mail' spellcheck="false">
 
-		<label for="mdp">Mot de passe</label>
-		<input type="password" id='modp' name='modp'>
-		<b>|</b>
-		<input type='submit' id='btn-submit'>Login</input>
-			
-			<br>
-			<a href = "index.php?cible=offline&action=see_Inscription">  <i>S'inscrire  ?</i></a>	
-            <a href = "index.php?cible=offline&action=see_Mdpoublie">  <i>Mot de passe oublié ?</i></a>
-            <br>
-	</form>
+	<div class = 'form'>
+
+			<?php 
+			if(isset($messages[0]))
+			{
+				
+				echo "<div class='error_form'> $messages[0]; </div>";
+			}	
+			?>
+
+		<br>
+    	<form method='post' action='index.php?cible=offline&action=connexion'>
+			<label for="Email">Email</label>
+			<input type="text" id='E-mail' name='E-mail' spellcheck="false">
+			<label for="mdp">Mot de passe</label>
+			<input type="password" id='modp' name='modp'>
+			<b>|</b>
+			<input type='submit' id='btn-submit'></input>
+				
+				<br>
+				<a href = "index.php?cible=offline&action=see_Inscription">  <i>S'inscrire  ?</i></a>	
+				<a href = "index.php?cible=offline&action=see_Mdpoublie">  <i>Mot de passe oublié ?</i></a>
+				<br>
+		</form>
+	</div>
         <div id="Head2"> <br />
             <?php if (basename($_SERVER['PHP_SELF'])=='CGU.php'):?>
 			<p> Conditions Générales d'Utilisations </p>
@@ -111,7 +122,7 @@
 
 	
 	
-		const form ={
+/*		const form ={
 			Email: document.getElementById('E-mail'),
 			Motdepasse: document.getElementById('modp'),
 			submit: document.getElementById('btn-submit'),
@@ -157,7 +168,7 @@
 				});
 				form.messages.style.display ='block';
 			}
-		}
+		}*/
 	
 	
 	</script>
