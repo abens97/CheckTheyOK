@@ -19,7 +19,7 @@
 		#Head2 p{font-family: "Jazz LET", fantasy; font-size: 1.9em;}
 		#Head3 {text-decoration: none;margin-right:1.3%;margin-top:1%;float:right;color: black;transform:translateX(100rem);animation: slideIn 0.5s forwards;}
 		#Head3 img {border-radius: 18px;padding-bottom: 4%; }
-		#Head3 button:hover{opacity: 0.6;padding: 4px;border-radius: 15%;}
+		#Head3 button:hover{opacity: 0.8;padding: 4px;}
 		#Head3 a {text-decoration: none;}
 		#Navigation{text-align: center; transition:0.8s;background-color: white; opacity: 0.8; float: left; position:fixed;border-radius: 3%;margin-top: 12%; color: black;display: table;font-family: "Jazz LET";font-size: 28px;transform:translateX(-100rem);animation: slideIn 1.2s forwards;}
 		#Navigation button{display: table-cell;margin-left: auto;margin-right: auto; padding :0;width: 100%;transition: 0.3s;}
@@ -74,15 +74,16 @@
   
   text-decoration: none;
 }
-#descente-content {
-margin-left: 5%;
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
+#Head3 button {
+	border-radius: 8px;
+	font-size: 22px;
+  background-color: lightgrey;
+  color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   text-align: center;
+  text-shadow: 2px 10px 7px rgba(0,0,0,0,0.5);
 }
 
 #descente-content a, #descente-content input {
@@ -116,13 +117,12 @@ margin-left: 5%;
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-			<img src="view/Images/Profil.jpg"  alt="Photo de profil" width="80"> <br />
-			<div id="descente">
-			<button id="dropprofil"><i>Gérer son profil</i></a></button>
-		      <div id="descente-content">
+			<img src="view/Images/Profil.jpg"  alt="Photo de profil" width="80"> 
+			
 						<form method='POST' action='index.php?cible=domisep&action=deconnexion'>
-						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
+						<button type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>&#10174 Se déconnecter</button>
 						</form>
+						
 		    
 		      </div>
 		    </div>
