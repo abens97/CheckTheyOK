@@ -6,14 +6,15 @@
 require_once ("controller/functions.php");
 
 // Appel des classes liées aux graphiques
-require_once ("jpgraph/src/jpgraph.php");
-require_once ("jpgraph/src/jpgraph_bar.php");
-require_once ('jpgraph/src/jpgraph_line.php');
+//require_once ("jpgraph/src/jpgraph.php");
+//require_once ("jpgraph/src/jpgraph_bar.php");
+//require_once ('jpgraph/src/jpgraph_line.php');
 
 // Appel des fonctions liées à la BDD
 require_once ("model/connection.php");
 require_once ("model/queriesUser.php");
 require_once ("model/queriesAdmin.php");
+require_once ("model/queriesGestionnaire.php");
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET
 if(isset($_GET['cible']) && !empty($_GET['cible'])) {

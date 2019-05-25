@@ -121,11 +121,6 @@ margin-left: 5%;
 			<div id="descente">
 			<button id="dropprofil"><i>Gérer son profil</i></a></button>
 		      <div id="descente-content">
-		        <a href="#">&#8635 Adresse email</a>
-		        <a href="#">&#8635 Mot de passe</a>
-		        <a href="#">&#8635 Téléphone</a>
-		        <a href="#">&#8635 Photo de profil</a>
-		        <a href="#">&#8635 Langue</a>
 						<form method='POST' action='index.php?cible=gestionnaire&action=deconnexion'>
 						<input type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>
 						</form>

@@ -103,7 +103,7 @@ function seeLogementsConnect($bdd,$numero_logement) {
     require ("view/LogementsConnect.php");
 }
 
-function seeSav() {
+function seeSav($incidents,$incident_choisi,$messages) {
     //require ("view/hefonaUser.php");
     require ("view/Sav.php");
 }
@@ -174,7 +174,7 @@ function seeStatistiquesGestionnaire() {
     require ("view/StatistiquesGestionnaire.php");
 }
 
-function seeSavGestionnaire() {
+function seeSavGestionnaire($incidents,$incident_choisi,$messages) {
     require ("view/hefonaGestionnaire.php");
     require ("view/SavGestionnaire.php");
 }
