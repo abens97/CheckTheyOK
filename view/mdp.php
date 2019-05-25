@@ -29,7 +29,7 @@
             <button type="submit" id= "Submit_ReinitMdp" name="Submit_ReinitMdp" onclick="document.getElementById('mdpenvoye').style.display = 'table'">&#10143 Réinitialiser son mot de passe</button>
         </div>
         <div id="mdpenvoye">
-                Demande de mot de passe effectuées ! Vous allez bientôt recevoir un e-mail décrivant les démarches à suivre
+                Demande de mot de passe effectuée ! Vous allez bientôt recevoir un e-mail décrivant les démarches à suivre
         </div>
     </div>
 </body>

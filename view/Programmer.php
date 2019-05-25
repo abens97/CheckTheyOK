@@ -96,9 +96,9 @@
 			<div class="dropdown">
 	        	<select name="one" class="dropdown-select">
 		        	<option value=""><i>-- Pièce --</i></option>
-		        	<option value="M1"> Cuisine </option>
-		        	<option value="M2"> Salon </option>
-		        	<option value="M3"> Salle à manger </option>
+		        	<option value="M1"> Chambre </option>
+		        	<option value="M2"> Cuisine </option>
+		        	<option value="M3"> Salon </option>
 	            </select>
 	        </div>     
         </div>                             
@@ -110,6 +110,20 @@
 		</div>
 		
 		<div id="Chambre">
+			
+
+			<br />
+			
+			
+
+					
+		</div>
+
+		<div id="Douche">
+			
+		</div>
+
+		<div id="Salon">
 			<div id="ZoneDeTexte">
 				<div>
 					Les volets sont actuellement ouverts/fermés
@@ -127,9 +141,9 @@
 				</div>
 				<button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Enregistrer</button>
 			</div>
+		</div>
 
-			<br />
-			
+		<div id="Escalier">
 			<div id="ZoneDeTexte">
 				<div>
 					Le ventilateur est actuellement en marche/arrêt.
@@ -147,20 +161,6 @@
 				</div>
 				<button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Enregistrer</button>
 			</div>
-
-					
-		</div>
-
-		<div id="Douche">
-			
-		</div>
-
-		<div id="Salon">
-			
-		</div>
-
-		<div id="Escalier">
-			
 		</div>
 
 </html> 

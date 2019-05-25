@@ -43,7 +43,7 @@ var chart = new Chart(ctx, {
         labels: ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '24:00'],
         datasets: [{
             label: 'Passage escaliers',
-            backgroundColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(255, 99, 12)',
             borderColor: 'white',
             data: [0, 10, 5, 2, 20, 30, 45, 2, 5]
         }]
