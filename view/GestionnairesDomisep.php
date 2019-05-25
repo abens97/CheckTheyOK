@@ -39,7 +39,7 @@
             overflow:scroll;
             height:30%;
             background-color: white;
-            margin-left: 23.5%;
+            margin-left: 30%;
             margin-top: 16%;
             padding: 1%;
             align-content: center;

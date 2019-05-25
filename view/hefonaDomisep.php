@@ -117,7 +117,7 @@
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-			<img src="view/Images/Profil.jpg"  alt="Photo de profil" width="80"> 
+			<img src="view/Images/domis.png"  alt="Photo de profil" width="100"> 
 			
 						<form method='POST' action='index.php?cible=domisep&action=deconnexion'>
 						<button type='submit' value = '&#10174 Se déconnecter' id='deconnexion' name='deconnexion'>&#10174 Se déconnecter</button>
