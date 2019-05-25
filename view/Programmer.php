@@ -95,10 +95,10 @@
 			<img src = "view/Images/home.png" alt="Changer de maison" width="30">
 			<div class="dropdown">
 	        	<select name="one" class="dropdown-select">
-		        	<option value=""><i>-- Logement --</i></option>
-		        	<option value="M1"> Maison 1 </option>
-		        	<option value="M2"> Maison 2 </option>
-		        	<option value="M3"> Maison 3 </option>
+		        	<option value=""><i>-- Pièce --</i></option>
+		        	<option value="M1"> Cuisine </option>
+		        	<option value="M2"> Salon </option>
+		        	<option value="M3"> Salle à manger </option>
 	            </select>
 	        </div>     
         </div>                             
