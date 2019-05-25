@@ -8,6 +8,7 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="Combo.css">
+	<link rel="stylesheet" type="text/css" href="Toggle.css">
 <style type="text/css">
 
 		#section {background-color: rgba(255,255,255,0.5);  border-radius: 18%;  text-align: center;display: table; margin: 0 auto;margin-top: 6%;transition:0.5s;padding: 0;}
