@@ -21,9 +21,8 @@ height :60%;
 </style>
 
 <html>
-<div id="Escalier">
-	<img src="view/Images/pageConstruction.png">
-<script src="view/Images/Chart.bundle.js"></script>
+
+<script src="view/Chart.bundle.js"></script>
 
 </head>
 

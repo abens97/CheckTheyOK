@@ -5,14 +5,12 @@
 ?>
 
 <style type="text/css">
-#Construction {
+#Construction img {
 border: 4px solid lightgrey;
 border-radius: 4px;
-width:34%;
-overflow: hidden;
-margin: 0 auto;
-height :60%;
+margin: auto;
 }
+#Construction {margin-left:25%; margin-top:5%; }
 
 </style>
 

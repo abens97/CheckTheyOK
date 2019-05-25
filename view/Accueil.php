@@ -33,19 +33,19 @@
 				</div>
 		
 				<div class="slide">
-					<img src="view/Images/Telecom2.png">
+					<img src="view/Images/Telecom2.pdf">
 				</div>
 
 				<div class="slide">
-					<img src="view/Images/HomeFond.jpg">
+					<img src="view/Images/MaisonC.jpg">
 				</div>
 				
 				<div class="slide">
-					<img src="view/Images/Vieux.pdf">
+					<img src="view/Images/Vieux.jpg">
 				</div>
 			</figure>
 		</div>
-	<br><br>
+	<br>
 	<h1>
  		 Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est La solution que vous attendiez.
 	</h1>

@@ -7,17 +7,16 @@
     width:52%;
     overflow: hidden;
     margin: 0 auto;
-    height :55%;
-}
-}
-
+    height :55%;}
+    #Case{display:table-cell;padding-left: 13px;padding-left: 13px;}
+    #ligne {display :table;margin: auto;font-size: 22px;}
+    #Recap {text-align: center;margin:auto;font-size: 28px;}
+    #Construction {}
+    .Graph {width : 60%;margin: auto;margin-top: 2%;background-color:rgb(255, 255, 255,0.7);border-radius: 10px; padding: 2%;}
 </style>
-
+<script src="view/Chart.bundle.js"></script>
 <html>
 
-<div id="Construction">
-    <img src="view/Images/graphique_test.png">
-</div>
 <div id="Recap">
 <?php
 if (isset($_POST["mois"])) {
@@ -33,11 +32,11 @@ if (isset($_POST["mois"])) {
  echo "Activité du mois n°$mois de l'année $annee";
  ?>
 </div>
-<div id="Formulaire">
+
+<div id="ligne">
     <form id=registration_form action ="index.php?cible=domisep&action=see_Statistiques_Domisep" method="post">
-        <table>
-            <div id="ligne">
-                <div id="form2_demi">
+        
+                <div id="Case">
                     <label for="mois">Mois :</label>
                         <select name="mois">
                             <option value="01">janvier</option>
@@ -54,9 +53,8 @@ if (isset($_POST["mois"])) {
                             <option value="12">décembre</option>
                         </select><br>
                 </div>
-            </div>
-            <div id="ligne">
-                <div id="form2_demi">
+
+                <div id="Case">
                     <label for="annee">Année :</label>
                         <select name="annee">
                             <option value="2019" selected>2019</option>
@@ -71,17 +69,40 @@ if (isset($_POST["mois"])) {
                             <option value="2028">2028</option>
                         </select><br>
                 </div>
-            </div>
-            <div id="ligne">            
-                <div id="form2_bas">
+
+          
+                <div id="Case">
                     <label>
                         <button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Valider</button>
                     </label><br>
                 </div>
-            </div>
-        </table>
     </form>
 </div>
-<!--Mettre ici le contenu de nos pages-->
+
+<div class="Graph">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'line',
+
+    data: {
+        labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'],
+        datasets: [{
+            label: 'Nombre de connexion Gestionnaire',
+            backgroundColor: 'grey',
+            borderColor: 'white',
+            data: [0, 10, 5, 2, 20, 30, 35, 2, 5, 9, 18, 0, 2, 20, 30, 25, 19, 0, 5, 45, 35, 12]
+        }]
+        
+    },
+
+    options: {}
+});
+</script>
+
 
 </html>

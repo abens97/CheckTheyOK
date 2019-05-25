@@ -15,7 +15,7 @@
             h1{font-size: 200%;font-style: normal;}
         h2{font-size: 120%;}
         .form2 {width:70%;margin:0 auto;display:table;margin-top: 8%;background-color: white;padding: 9px; border-radius: 8px;background-color:rgb(255, 255, 255,0.7);transition:0.5s;}
-        .form2:hover {padding: 2%;transition:0.5s;margin-top: 1%;}
+        .form2:hover {padding: 2%;transition:0.5s;margin-top: 4%;}
         #ligne {padding-left:6%;width: 100%; font-size: 140%;text-shadow:0px 2px 5px grey, 0px -2px 5px grey, 2px 0px 3px grey, -2px 0px 4px grey;}
         
         

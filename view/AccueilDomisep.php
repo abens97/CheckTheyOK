@@ -5,14 +5,12 @@
 ?>
 
 <style type="text/css">
-#Construction {
+#Construction img {
 border: 4px solid lightgrey;
 border-radius: 4px;
-width:28%;
-overflow: hidden;
-margin: 0 auto;
-height :60%;
+margin: auto;
 }
+#Construction {margin-left:25%; margin-top:5%; }
 
 </style>
 
@@ -22,7 +20,7 @@ height :60%;
     <p> </p>
 </div>
 <div id="Construction">
-	<img src="view/Images/Bienvenue.jpg">
+	<img src="view/Images/pageConstruction.png">
 </div>
 
 <!--Mettre ici le contenu de nos pages-->
