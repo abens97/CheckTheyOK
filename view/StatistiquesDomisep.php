@@ -12,7 +12,8 @@
     #ligne {display :table;margin: auto;font-size: 22px;}
     #Recap {text-align: center;margin:auto;font-size: 28px;}
     #Construction {}
-    .Graph {height :65%;width : 60%;margin: auto;margin-top: 2%;background-color:rgb(255, 255, 255,0.7);border-radius: 10px; padding: 2%;}
+    .Graph {max-height:550px;width : 60%;margin: auto;margin-top: 2%;background-color:rgb(255, 255, 255,0.7);border-radius: 10px; padding: 2%;}
+    #myChart {max-height:510px;}
 </style>
 <script src="view/Chart.bundle.js"></script>
 <html>

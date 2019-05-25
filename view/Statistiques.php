@@ -17,7 +17,8 @@ margin: 0 auto;
 height :60%;
 }
 
-.Graph {width : 70%;margin: auto;margin-top: 4%;background-color:rgb(255, 255, 255,0.7);border-radius: 10px; padding: 2%;}
+.Graph {max-height:650px;width : 70%;margin: auto;margin-top: 0%;background-color:rgb(255, 255, 255,0.7);border-radius: 10px; padding: 2%;}
+#myChart {max-height:610px;}
 </style>
 
 <html>
