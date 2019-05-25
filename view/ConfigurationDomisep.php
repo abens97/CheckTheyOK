@@ -17,6 +17,7 @@
         [type="number"] {padding: 0;}
         #form2_bas {padding-top: 6%;font-style: normal;}
         #form2_bas a {color:white;font-style: italic; }
+        #bouton-submit {}
         #form2_demi [type="submit"] {font-size: 130%; border-radius: 4px;border: 2px solid white; background-color: unset; color:white;}
         #form2_demi [type="submit"]:hover {opacity: 0.8;background-color: white;color:black;}
         #form2_demi [type="submit"]:active {background-color: green; color:white;}

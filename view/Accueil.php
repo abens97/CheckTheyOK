@@ -10,7 +10,7 @@
 	
 <style type="text/css">
 	h1 {text-shadow: 2px 14px 6px rgba(30, 64, 0, 0.5);margin-right: center; width:52%;margin:auto;font-size: 25px;text-align: center;font-style: normal;}
-	.slider{margin: 25px 25%;overflow: hidden;height: 350px;width: 50%;border: 4px solid white;border-radius: 10px;box-shadow: -2px 30px 40px rgba(30, 64, 0, 0.5);}
+	.slider{margin: 10px 25%;overflow: hidden;height: 475px;width: 50%;border: 4px solid white;border-radius: 10px;box-shadow: -2px 30px 40px rgba(30, 64, 0, 0.5);}
 	.slider figure div{width: 20%;float: left;}
 	.slider figure img{width: 100%;height: 100%;float: left;}
 	.slider figure{position: relative;width: 500%;margin: 0;left: 0;animation: slide 27s linear infinite;}
@@ -29,11 +29,11 @@
 				</div>
 		
 				<div class="slide">
-					<img src="view/Images/Telecom.pdf">
+					<img src="view/Images/main.jpg">
 				</div>
 		
 				<div class="slide">
-					<img src="view/Images/Telecom2.pdf">
+					<img src="view/Images/internetPA.jpg">
 				</div>
 
 				<div class="slide">
@@ -47,7 +47,7 @@
 		</div>
 	<br>
 	<h1>
- 		 Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est La solution que vous attendiez.
+ 		 Faciliter le maintien à domicile des seniors ? C'est possible ! Cette maison sécurisée est la solution que vous attendiez.
 	</h1>
 </body>
 </html>

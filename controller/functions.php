@@ -237,7 +237,7 @@ function calculActiviteTotale($bdd,$mois,$annee){
         for($i=1;$i<$taille;$i++) 
         { 
             $day="$i/$mois/$annee";
-            array_push($activite, comptConnexion($bdd,$day,$typeUser));
+            array_push($activite, comptConnexion($bdd,$day));
         } 
     }
     else if ($mois==4||$mois==6||$mois==9||$mois==11){
@@ -245,7 +245,7 @@ function calculActiviteTotale($bdd,$mois,$annee){
         for($i=1;$i<$taille;$i++) 
         { 
             $day="$i/$mois/$annee";
-            array_push($activite, comptConnexion($bdd,$day,$typeUser));
+            array_push($activite, comptConnexion($bdd,$day));
         } 
     }
     else if ($mois==2){
@@ -254,14 +254,14 @@ function calculActiviteTotale($bdd,$mois,$annee){
             for($i=1;$i<$taille;$i++) 
             { 
                 $day="$i/$mois/$annee";
-                array_push($activite, comptConnexion($bdd,$day,$typeUser));
+                array_push($activite, comptConnexion($bdd,$day));
             } 
         } else {
             $taille = 30;
             for($i=1;$i<$taille;$i++) 
             { 
                 $day="$i/$mois/$annee";
-                array_push($activite, comptConnexion($bdd,$day,$typeUser));
+                array_push($activite, comptConnexion($bdd,$day));
             } 
         }
     }

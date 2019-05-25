@@ -9,10 +9,6 @@ if (isset($_GET["action"])) {
         break;
     
     case "see_Statistiques_Domisep":
-        require_once ("jpgraph/src/jpgraph.php");
-        require_once ("jpgraph/src/jpgraph_bar.php");
-        require_once ('jpgraph/src/jpgraph_line.php');
-        error_reporting(E_ERROR | E_PARSE);
          if (isset($_POST["mois"])) {
             $mois = htmlspecialchars($_POST["mois"]);
          } else {
