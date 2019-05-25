@@ -54,9 +54,9 @@
                 <table>
                                 <div id="ligne">
                                     <div id="form2_demi">
-                                        <label for="civilite">Civilité :</label>
-                                        <input type="radio" id="civilite" name="civilite" value="M." checked>M.
-                                        <input type="radio" name="civilite" value="Mme">Mme<br>
+                                        <label for="form_civilite">Civilité :</label>
+                                        <input type="radio" name="form_civilite" value="M." checked>M.
+                                        <input type="radio" name="form_civilite" value="Mme">Mme<br>
                                     </div>
                                 </div>
 

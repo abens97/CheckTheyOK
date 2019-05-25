@@ -89,10 +89,11 @@
             $prenom =$_POST['form_prenom'];
             $numero_telephone =$_POST['form_tel'];
             $Email =$_POST['form_email'];
-            $MotdePasse =$_POST['form_password'];                
+            $MotdePasse =$_POST['form_password'];
+            $civilite =$_POST['form_civilite'];          
             $mdp = sha1($MotdePasse);
 
-            Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $mdp);
+            Inscrire($bdd, $nom, $prenom, $numero_telephone, $Email, $mdp, $civilite);
             header("Location:index.php?cible=offline");
                         
             break;

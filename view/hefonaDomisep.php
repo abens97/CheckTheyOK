@@ -116,7 +116,7 @@ margin-left: 5%;
             <p>Check They're Ok !<p>     
         </div>
         <div id="Head3">
-			<img src="view/Images/profil.jpg"  alt="Photo de profil" width="80"> <br />
+			<img src="view/Images/Profil.jpg"  alt="Photo de profil" width="80"> <br />
 			<div id="descente">
 			<button id="dropprofil"><i>Gérer son profil</i></a></button>
 		      <div id="descente-content">
