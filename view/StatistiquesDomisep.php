@@ -12,7 +12,7 @@
     #ligne {display :table;margin: auto;font-size: 22px;}
     #Recap {text-align: center;margin:auto;font-size: 28px;}
     #Construction {}
-    .Graph {width : 60%;margin: auto;margin-top: 2%;background-color:rgb(255, 255, 255,0.7);border-radius: 10px; padding: 2%;}
+    .Graph {height :65%;width : 60%;margin: auto;margin-top: 2%;background-color:rgb(255, 255, 255,0.7);border-radius: 10px; padding: 2%;}
 </style>
 <script src="view/Chart.bundle.js"></script>
 <html>
@@ -86,18 +86,18 @@ if (isset($_POST["mois"])) {
 <script>
 
 var ctx = document.getElementById('myChart').getContext('2d');
+<?php $data1 = json_encode($datay5); ?>
 var chart = new Chart(ctx, {
     type: 'line',
-
+    
     data: {
         labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'],
         datasets: [{
-            label: 'Nombre de connexion Gestionnaire',
+            label: 'Nombre de connexion totale sur domisep.site',
             backgroundColor: 'grey',
             borderColor: 'white',
-            data: [0, 10, 5, 2, 20, 30, 35, 2, 5, 9, 18, 0, 2, 20, 30, 25, 19, 0, 5, 45, 35, 12]
-        }]
-        
+            data: <?= $data1 ?>
+        }]  
     },
 
     options: {}
