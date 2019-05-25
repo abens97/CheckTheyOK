@@ -13,14 +13,14 @@ function getMessages(PDO $bdd, $numero_incident){
 }
 
 function getDebutPlage(PDO $bdd, $email_gestionnaire){
-    $req = $bdd->prepare("SELECT debut_plage_logement FROM Gestionnaire WHERE email_gestionnaire = ?");
+    $req = $bdd->prepare("SELECT debut_plage_logement FROM Gestionnaire WHERE email = ?");
     $req->execute(array($email_gestionnaire));
     $row=$req->fetch();
     return $row["debut_plage_logement"];
 }
 
 function getFinPlage(PDO $bdd, $email_gestionnaire){
-    $req = $bdd->prepare("SELECT fin_plage_logement FROM Gestionnaire WHERE email_gestionnaire = ?");
+    $req = $bdd->prepare("SELECT fin_plage_logement FROM Gestionnaire WHERE email = ?");
     $req->execute(array($email_gestionnaire));
     $row=$req->fetch();
     return $row["fin_plage_logement"];

@@ -73,7 +73,7 @@
 
                 <ul>
                     <?php foreach ($gestionnaires as $gestionnaire) { ?>
-                        <li>Le gestionnaire possédant l'adresse email <?= $gestionnaire["email_gestionnaire"]; ?> est en charge du logement n°<?= $gestionnaire["debut_plage_logement"]; ?> à <?= $gestionnaire["fin_plage_logement"]; ?></li>
+                        <li>Le gestionnaire possédant l'adresse email <?= $gestionnaire["email"]; ?> est en charge du logement n°<?= $gestionnaire["debut_plage_logement"]; ?> à <?= $gestionnaire["fin_plage_logement"]; ?></li>
                     <?php } ?>
                 </ul>
             </div>

@@ -58,7 +58,7 @@
                 </ul>
 				<form method='post' action='index.php?cible=user&action=add_incident'>
                 	<input type='submit' id='btn-submit' value='Nouvel incident'></input>
-                </form>"
+                </form>
 </div>
 <?php
 if ($incident_choisi['id_incident'] != 0){
