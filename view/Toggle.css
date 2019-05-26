@@ -1,61 +1,62 @@
-.switch {
-  position: relative;
+HTML  CSS Result
+EDIT ON
+LIVE
+
+1
+/*
+2
+P.S: if you like my content maybe you will become a donator and donate some money? That helps me to create new awesome materials. https://www.paypal.me/melnik909
+3
+*/
+4
+​
+5
+.switch{
+6
+  --uiSwitchSize: var(--switchSize, 64px);
+7
+  --uiSwitchBgColor: var(--switchBgColor, #f1f1f1);
+8
+  --uiSwitchBgColorActive: var(--switchBgColorActive, #4ed164);
+9
+  --uiSwitchBorderColorActive: var(--switchBorderColorActive, #fff);
+10
+  --uiSwitchBorderColorFocus: var(--switchBgColorFocus, #43b556);
+11
+  --uiSwitchButtonBgColor: var(--switchButtonBgColor, #fff);  
+12
+  
+13
   display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
+14
+  position: relative;
+15
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+16
+  -webkit-tap-highlight-color: transparent;
+17
 }
+18
+​
+19
+.switch__label{
+20
+  display: block;
+21
+  width: 100%;
+22
+  height: 100%;
+23
+}
+24
+​
+25
+.switch__toggle{
+26
+  width: 0;
+27
+  height: 0;
+28
+  opacity: 0;
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
+Resources 1×0.5×0.25× Rerun

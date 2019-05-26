@@ -130,8 +130,10 @@
 				</div>
 				<hr width="75%" color=#82A898>
 				<div id="ligne">
-					<button>Ouvrir les volets</button>
-					<button>Fermer les volets</button>
+					<div class="form">
+					<input type="checkbox" id="bubble"/>
+					<label class="bubble" for="bubble">Ouvrir/Fermer les volets</label>
+				</div>
 				</div>
 				<div>
 					Ouvrir les volets à : <input type="number" name="Lumieres" id="OuvrirVolets">
