@@ -303,3 +303,7 @@ function checkPiece($bdd,$numero_logement){
         return "erreur";
     }
 }
+
+function see_Ajout_Logement() {
+    require ("view/Ajout_Logement.php");
+}

@@ -35,69 +35,8 @@
 <html>
   
   <div id="ajouter" onclick="document.getElementById('zone').style.display = 'table'">
-    <a href="#"><img src = "view/Images/Add.png" alt="Logo" width="70"></a>
+    <a href="index.php?cible=user&action=see_Ajout_Logement"><img src = "view/Images/Add.png" alt="Logo" width="70"></a>
   </div>
 
-  <div id="zone" class="Nettoyer">
-    <form id=registration_form action ="index.php?cible=user&action=add_logement" method="post">
-        <table>
-          <div id="infologement">
-            Nouveau logement
-            <hr width="75%" color=#82A898>
-          </div>
-
-          <div id="ligne">
-            <div id="demiligne">
-              <label for="nombre_resident">Nombre de résident(s)* : </label>
-              <input type="number" id="nombre_resident" placeholder=" -- Selectionner --" name="nombre_resident" maxlength="3" class="dropdown"><br>
-            </div>
-            <div id="demiligne">
-              <label for="type_logement">Type de logement* : </label>
-              <div class="dropdown">
-                <select name="type_logement" class="dropdown-select" >
-                  <option value=""><i>-- Selectionner --</i></option>
-                  <option value="Appartement T1">Appartement T1</option>
-                  <option value="Appartement T2">Appartement T2</option>
-                  <option value="Appartement T3">Appartement T3</option>
-                  <option value="Villa">Villa</option>
-                  <option value="Duplex">Duplex</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div id="ligne">
-            <div id="demiligne">
-              <label for="adresse">Adresse postale* : </label>
-              <input type="text" id="adresse" placeholder="__, rue _______" name="adresse" maxlength="30"><br>
-            </div>
-            <div id="demiligne">
-              <label for="complement_adresse">Complément d'adresse : </label>
-              <input type="text" id="complement_adresse" placeholder="Résidence, étage... " name="complement_adresse" maxlength="50"><br>
-            </div>
-          </div>
-          <div id="ligne">
-            <div id="demiligne">
-              <label for="code_postal">Code postal* : </label>
-              <input type="text" id="code_postal" placeholder="2000" name="code_postal" maxlength="5"><br>
-            </div>
-            <div id="demiligne">
-              <label for="ville">Ville* : </label>
-              <input type="text" id="ville" placeholder="" name="ville" maxlength="30"><br>
-            </div>
-            <div id="demiligne">
-              <label for="presence_escalier">Présence d'un escalier* : </label>
-              <input type="checkbox" id="presence_escalier" name="presence_escalier" value="1"><br>
-            </div>
-            <br>
-          </div>
-          <br>
-          <div id="ligne">
-            <button>Confirmer</button>
-          </div><br>
-          <div id="champs">
-          <i>* Champs obligatoires</i>
-          </div>
-        </table>
-    </form> 
-  </div>
+  
 </html>

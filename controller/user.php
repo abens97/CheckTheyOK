@@ -15,7 +15,7 @@ if (isset($_GET["action"])) {
         seeProgrammer();
         break;
 
-        case "see_Logements":
+    case "see_Logements":
         $email = $_SESSION['email'];
         if(hadLogement($bdd,$email)){
             $numero_logement = getLogement($bdd, $email);
@@ -25,7 +25,8 @@ if (isset($_GET["action"])) {
         }
         break;
 
-    case "add_logement":
+    case "see_Ajout_Logement":
+        see_Ajout_Logement();
         $email = $_SESSION['email'];
         $nombre_resident = $_POST['nombre_resident'];
         $type_logement = $_POST['type_logement'];
