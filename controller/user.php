@@ -37,7 +37,7 @@ if (isset($_GET["action"])) {
         $presence_escalier = $_POST['presence_escalier'];
         $etat_personne_agee = "1";
         addLogement($bdd,$email,$nombre_resident,$type_logement,$adresse,$complement_adresse,$code_postal,$ville,$presence_escalier,$etat_personne_agee);
-        header ("Location:index.php?cible=user&action=see_Logements");
+        
         break;
 
     case "add_piece":

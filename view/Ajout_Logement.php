@@ -36,7 +36,7 @@
 
   <div id="zone" class="Nettoyer">
     <form id=registration_form action ="index.php?cible=user&action=see_Logements" method="post">
-        <table>
+        
           <div id="infologement">
             Nouveau logement
             <hr width="75%" color=#82A898>
@@ -115,7 +115,7 @@
           <div id="champs">
           <i>* Champs obligatoires</i>
           </div>
-        </table>
+        
     </form> 
   </div>
 </html>

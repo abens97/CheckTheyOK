@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<div id="zone">
 <form method="post" action="index.php?cible=user&action=add_piece">
     <table>
         <div id="ligne">
@@ -32,4 +33,5 @@
         </div>
     </table>
 </form>
+</div>
 </html>

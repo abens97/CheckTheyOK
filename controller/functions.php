@@ -96,7 +96,7 @@ function seeProgrammer() {
 
 function seeLogements() {
     //require ("view/hefonaUser.php");
-    require ("view/Logements.php");
+    require ("view/LogementsConnect.php");
 }
 
 function seeLogementsConnect($bdd,$numero_logement) {
