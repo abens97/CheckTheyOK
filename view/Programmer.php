@@ -110,13 +110,8 @@
 		</div>
 		
 		<div id="Chambre">
-			
-
-			<br />
-			
-			
-
-					
+			Niveau de luminosité = <?php echo addValue();?>
+			<br />			
 		</div>
 
 		<div id="Douche">
