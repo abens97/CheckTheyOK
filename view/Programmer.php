@@ -40,6 +40,38 @@
 		#test {background-color: white;color:black;display: table-cell;margin:0 auto;width: 100%;}
 
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#carre1").click(function(e){
+				e.preventDefault(); //empeche de recherarger la page
+				$.post('controller/ct_trame.php', //envoie par post
+					{
+						
+					},
+					function(data){ //recupere ce qui est envoye par le code php
+						console.log(data);
+					},
+					"text" //a mettre pour pouvoir recuperer du texte
+				);
+	});
+
+	$("#carre4").click(function(e){
+				e.preventDefault(); //empeche de recherarger la page
+				$.post('controller/ct_trame4.php', //envoie par post
+					{
+						
+					},
+					function(data){ //recupere ce qui est envoye par le code php
+						console.log(data);
+					},
+					"text" //a mettre pour pouvoir recuperer du texte
+				);
+	});
+
+});
+
+</script>
 <script type="text/javascript">            
 
             function ChangerContenu(s)
@@ -101,7 +133,20 @@
 		        	<option value="M3"> Salon </option>
 	            </select>
 	        </div>     
-        </div>                             
+        </div> 
+		<?php 
+
+			$req = $bdd->prepare("SELECT etat FROM actionneur WHERE id_actionneur = ?");
+			$req->execute(array("1"));
+			$etatLampe = $req->fetch(); 
+
+			$req = $bdd->prepare("SELECT etat FROM actionneur WHERE id_actionneur = ?");
+			$req->execute(array("2"));
+			$etatVentilateur = $req->fetch();
+
+			echo $etatLampe['etat'];
+			echo $etatVentilateur['etat'];
+		?>                            
 		<div id = "section">
 			<a onclick="ChangerContenu(1)"><div id = "carre1"><br /><img src="view/Images/lumiere.png"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
 			<a onclick="ChangerContenu(2)"><div id = "carre2"><br /><img src="view/Images/temperature.png"  alt="Température" width="80"> <br /><h3>Température</h3></div></a>
