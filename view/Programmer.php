@@ -145,22 +145,24 @@ $(document).ready(function(){
 			$req->execute(array("2"));
 			$etatVentilateur = $req->fetch();
 
-			echo $etatLampe['etat'];
-			echo $etatVentilateur['etat'];
+			$Lampestate = "LampeEteint";
+			$ExtensionL = "png";
+			$Ventilateurstate = "VentiEteint";
+			$ExtensionV = "png";
 
-			if ($etatLampe['etat']==on)
+			if ($etatLampe['etat']=="on") {
 				$Lampestate = "LampeAllume";
 				$ExtensionL = "gif";
-			if ($etatLampe['etat']==off)
+			}else if ($etatLampe['etat']=="off"){
 				$Lampestate = "LampeEteint";
-				$ExtensionL = "png";
+				$ExtensionL = "png";}
 
-			if ($etatVentilateur['etat']==on)
+			if ($etatVentilateur['etat']=="on"){
 				$Ventilateurstate = "VentiAllume";
-				$ExtensionV = "gif";
-			if ($etatVentilateur['etat']==off)
+				$ExtensionV = "gif";}
+			else if ($etatVentilateur['etat']=="off"){
 				$Ventilateurstate = "VentiEteint";
-				$ExtensionV = "png";
+				$ExtensionV = "png";}
 		?>
 
 		<div id = "section">
@@ -171,7 +173,7 @@ $(document).ready(function(){
 		</div>
 		
 		<div id="Chambre">
-			
+			Niveau de luminosité = <?php echo addValue();?>
 
 			<br />
 			

@@ -27,8 +27,7 @@ function envoieTrame(String $trame){
     echo $content;
 }
 
-
-if($etat["etat"] == "off";
+if($etat["etat"] == "off") {
 
     envoieTrame("1008A1a121111");
     $req = $bdd->prepare("UPDATE actionneur SET etat=? WHERE id_actionneur = ?");
