@@ -147,14 +147,27 @@ $(document).ready(function(){
 
 			echo $etatLampe['etat'];
 			echo $etatVentilateur['etat'];
-			
+
+			if ($etatLampe['etat']==on)
+				$Lampestate = "LampeAllume";
+				$ExtensionL = "gif";
+			if ($etatLampe['etat']==off)
+				$Lampestate = "LampeEteint";
+				$ExtensionL = "png";
+
+			if ($etatVentilateur['etat']==on)
+				$Ventilateurstate = "VentiAllume";
+				$ExtensionV = "gif";
+			if ($etatVentilateur['etat']==off)
+				$Ventilateurstate = "VentiEteint";
+				$ExtensionV = "png";
 		?>
 
 		<div id = "section">
-			<a onclick="ChangerContenu(1)"><div id = "carre1"><br /><img src="view/Images/<?php echo $etatLampe['etat'] ?>.png"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
+			<a onclick="ChangerContenu(1)"><div id = "carre1"><br /><img src="view/Images/<?php echo $Lampestate ?>.<?php echo $ExtensionL ?>"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
 			<a onclick="ChangerContenu(2)"><div id = "carre2"><br /><img src="view/Images/temperature.png"  alt="Température" width="80"> <br /><h3>Température</h3></div></a>
 			<a onclick="ChangerContenu(3)"><div id = "carre3"><br /><img src="view/Images/volets.png"  alt="Volets" width="80"> <br /><h3>Volets</h3></div></a>
-			<a onclick="ChangerContenu(4)"><div id = "carre4"><br /><img src="view/Images/ventilateur.png"  alt="Ventilateur" width="80"> <br /><h3>Ventilateur</h3></div></a>
+			<a onclick="ChangerContenu(4)"><div id = "carre4"><br /><img src="view/Images/<?php echo $Ventilateurstate ?>.<?php echo $ExtensionV ?>"  alt="Ventilateur" width="80"> <br /><h3>Ventilateur</h3></div></a>
 		</div>
 		
 		<div id="Chambre">
