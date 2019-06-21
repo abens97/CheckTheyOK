@@ -29,7 +29,7 @@
 		
 		#Tableau{border-style: groove;margin:0 auto;border-color:white;display: table;table-layout: auto;font-size: 25px;}
 		#Chambre, #Salon, #Douche, #Escalier {display: none;width: 70%;margin: 0 auto;}
-
+		#Chambre {margin-left:35%;}
 		#ZoneDeTexte {background-color: white; opacity: 0.7;  border-radius: 18px;  text-align: center;display: table-cell; margin-top: 6%; color: grey;width: 47%;margin:0 auto;font-size: 22px;margin-left: 15px;margin-right: 15px;}
 		#ZoneDeTexte:hover {transform: scale(1.03);}
 		#ligne {display: row;margin: auto;align-content: center;padding-bottom: 1%;}
@@ -123,6 +123,7 @@ $(document).ready(function(){
 </script>
 </head>
 <html>	
+<!--
 		<div id="MaisonChgmnt">
 			<img src = "view/Images/home.png" alt="Changer de maison" width="30">
 			<div class="dropdown">
@@ -133,7 +134,8 @@ $(document).ready(function(){
 		        	<option value="M3"> Salon </option>
 	            </select>
 	        </div>     
-        </div> 
+        </div>
+--> 
 		<?php 
 
 			$req = $bdd->prepare("SELECT etat FROM actionneur WHERE id_actionneur = ?");
@@ -166,14 +168,19 @@ $(document).ready(function(){
 		?>
 
 		<div id = "section">
-			<a onclick="ChangerContenu(1)"><div id = "carre1"><br /><img src="view/Images/<?php echo $Lampestate ?>.<?php echo $ExtensionL ?>"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
+			<a onclick="ChangerContenu(1)" href=# ><div id = "carre1"><br /><img src="view/Images/<?php echo $Lampestate ?>.<?php echo $ExtensionL ?>"  alt="Lumière" width="80"> <br /><h3>Lumière</h3></div></a>
 			<a onclick="ChangerContenu(2)"><div id = "carre2"><br /><img src="view/Images/temperature.png"  alt="Température" width="80"> <br /><h3>Température</h3></div></a>
 			<a onclick="ChangerContenu(3)"><div id = "carre3"><br /><img src="view/Images/volets.png"  alt="Volets" width="80"> <br /><h3>Volets</h3></div></a>
 			<a onclick="ChangerContenu(4)"><div id = "carre4"><br /><img src="view/Images/<?php echo $Ventilateurstate ?>.<?php echo $ExtensionV ?>"  alt="Ventilateur" width="80"> <br /><h3>Ventilateur</h3></div></a>
 		</div>
 		
 		<div id="Chambre">
-			Niveau de luminosité = <?php echo addValue();?>
+				<div id='ZoneDeTexte'>
+				<div id="ligne">
+					Niveau de luminosité = <?php echo addValue();?>
+					</div>
+					<hr width="75%" color=#82A898>
+				</div>
 
 			<br />
 			
@@ -209,6 +216,7 @@ $(document).ready(function(){
 		</div>
 
 		<div id="Escalier">
+		<!--
 			<div id="ZoneDeTexte">
 				<div>
 					Le ventilateur est actuellement en marche/arrêt.
@@ -226,6 +234,7 @@ $(document).ready(function(){
 				</div>
 				<button id= "btn-submit2" type="submit" name="btn-submit2" >&#10143 Enregistrer</button>
 			</div>
+		-->
 		</div>
 
 </html> 
